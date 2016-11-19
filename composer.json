@@ -1,6 +1,12 @@
 {
     "name": "sgsoft-studio/webed",
     "description": "The CMS based on Laravel Framework.",
+    "authors": [
+        {
+            "name": "Tedozi Manson",
+            "email": "duyphan.developer@gmail.com"
+        }
+    ],
     "keywords": [
         "framework",
         "laravel",
