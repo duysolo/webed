@@ -1,0 +1,112 @@
+.show-admin-bar {
+  margin-top: 40px;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333333;
+  background-color: #ffffff;
+  font-weight: 400;
+  box-sizing: border-box; }
+  .show-admin-bar #headerAdminBar {
+    display: block !important;
+    min-height: 40px;
+    height: 40px;
+    border-radius: 0;
+    border: 0 none;
+    z-index: 10000;
+    top: 0;
+    position: fixed;
+    background-color: #222222;
+    width: 100%; }
+    .show-admin-bar #headerAdminBar,
+    .show-admin-bar #headerAdminBar * {
+      box-sizing: border-box; }
+    .show-admin-bar #headerAdminBar a {
+      text-decoration: none; }
+    .show-admin-bar #headerAdminBar .caret {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 2px;
+      vertical-align: middle;
+      border-top: 4px dashed;
+      border-top: 4px solid \9;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent; }
+    .show-admin-bar #headerAdminBar .logo {
+      float: left; }
+    .show-admin-bar #headerAdminBar .logo {
+      height: 40px;
+      line-height: 40px; }
+      .show-admin-bar #headerAdminBar .logo .navbar-brand {
+        display: inline-block;
+        line-height: normal; }
+    .show-admin-bar #headerAdminBar .admin-navbar-nav {
+      float: left;
+      list-style: none;
+      margin: 0 0 0 15px;
+      padding: 0; }
+      .show-admin-bar #headerAdminBar .admin-navbar-nav.admin-navbar-nav-right {
+        float: right; }
+      .show-admin-bar #headerAdminBar .admin-navbar-nav > li {
+        float: left;
+        position: relative;
+        display: block; }
+        .show-admin-bar #headerAdminBar .admin-navbar-nav > li:hover > ul, .show-admin-bar #headerAdminBar .admin-navbar-nav > li.open > ul {
+          display: block; }
+        .show-admin-bar #headerAdminBar .admin-navbar-nav > li > a {
+          padding: 10px 15px;
+          color: #9d9d9d;
+          text-decoration: none;
+          display: block;
+          height: 40px; }
+          .show-admin-bar #headerAdminBar .admin-navbar-nav > li > a:hover {
+            color: #ffffff; }
+      .show-admin-bar #headerAdminBar .admin-navbar-nav .dropdown-menu {
+        border-radius: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 0 0 0;
+        list-style: none;
+        font-size: 14px;
+        text-align: left;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        background-clip: padding-box; }
+        .show-admin-bar #headerAdminBar .admin-navbar-nav .dropdown-menu > li + li {
+          margin-top: 1px; }
+        .show-admin-bar #headerAdminBar .admin-navbar-nav .dropdown-menu > li > a {
+          display: block;
+          padding: 3px 20px;
+          clear: both;
+          font-weight: normal;
+          line-height: 1.42857;
+          color: #333333;
+          white-space: nowrap; }
+          .show-admin-bar #headerAdminBar .admin-navbar-nav .dropdown-menu > li > a:hover {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #999999; }
+        .show-admin-bar #headerAdminBar .admin-navbar-nav .dropdown-menu .divider {
+          height: 1px;
+          margin: 9px 0;
+          overflow: hidden;
+          background-color: #cccccc; }
+  @media (max-width: 767px) {
+    .show-admin-bar {
+      margin-top: 0; }
+      .show-admin-bar #headerAdminBar {
+        display: none !important; } }
+
+#headerAdminBar {
+  display: none !important; }
+
+/*# sourceMappingURL=admin-bar.css.map */

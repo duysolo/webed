@@ -1,0 +1,24 @@
+body {
+  &.on-loading {
+    background-color: #364150;
+    > * {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .page-spinner-bar {
+      opacity: 1;
+      visibility: visible;
+    }
+    .jquery-notific8-container,
+    .notific8-container {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+  .page-spinner-bar {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

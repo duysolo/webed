@@ -1,0 +1,11 @@
+{
+    "alias": "clean-blog",
+    "name": "Clean blog theme",
+    "author": "Tedozi Manson",
+    "description": "Clean blog theme",
+    "namespace": "WebEd\\Themes\\CleanBlog",
+    "version": "1.0",
+    "autoload": "psr-4",
+    "enabled": false,
+    "installed": false
+}

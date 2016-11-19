@@ -1,0 +1,17 @@
+<?php namespace DummyNamespace;
+
+use WebEd\Base\Core\Repositories\AbstractBaseRepository;
+use WebEd\Base\Caching\Services\Contracts\CacheableContract;
+
+use DummyNamespace\Contracts\DummyClassContract;
+
+class DummyClass extends AbstractBaseRepository implements DummyClassContract, CacheableContract
+{
+    protected $rules = [
+
+    ];
+
+    protected $editableFields = [
+        '*',
+    ];
+}

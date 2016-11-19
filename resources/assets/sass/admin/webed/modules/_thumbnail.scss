@@ -1,0 +1,10 @@
+.thumbnail {
+  a > img,
+  > img,
+  img {
+    width: 100%;
+  }
+}
+.theme-thumbnail {
+    border: 1px solid #333;
+}

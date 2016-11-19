@@ -1,0 +1,200 @@
+.page-auth {
+  background-color: #364150 !important;
+  .logo {
+    margin: 60px auto 0;
+    padding: 15px;
+    text-align: center
+  }
+  .content {
+    background-color: #eceef1;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    width: 400px;
+    margin: 40px auto 10px;
+    padding: 10px 30px 30px;
+    overflow: hidden;
+    position: relative;
+    h3 {
+      color: #4db3a5;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 400 !important
+    }
+    h4 {
+      color: #555;
+    }
+    .hint {
+      color: #999;
+      padding: 0;
+      margin: 15px 0 7px
+    }
+    .forget-form,
+    .register-form,
+    .login-form {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .forget-form,
+    .login-form {
+      padding: 0;
+      margin: 0
+    }
+    .form-control {
+      background-color: #dde3ec;
+      height: 43px;
+      color: #8290a3;
+      //border: 1px solid #dde3ec;
+      &:active,
+      &:focus {
+        border: 1px solid #c3ccda;
+      }
+      &::-moz-placeholder {
+        color: #8290a3;
+        opacity: 1
+      }
+      &:-ms-input-placeholder {
+        color: #8290a3
+      }
+      &::-webkit-input-placeholder {
+        color: #8290a3
+      }
+    }
+    select.form-control {
+      padding-left: 9px;
+      padding-right: 9px
+    }
+    .forget-form,
+    .register-form {
+      display: none;
+      .form-actions {
+        border: 0;
+        margin-bottom: 0;
+        padding-bottom: 20px
+      }
+    }
+    .form-title {
+      font-weight: 300;
+      margin-bottom: 25px
+    }
+    .form-actions {
+      clear: both;
+      border: 0;
+      border-bottom: 1px solid #eee;
+      padding: 25px 30px;
+      margin-left: -30px;
+      margin-right: -30px;
+      .checkbox {
+        margin-left: 0;
+        padding-left: 0
+      }
+      .btn {
+        margin-top: 1px;
+        font-weight: 600;
+        padding: 10px 20px !important
+      }
+      .btn-default {
+        font-weight: 600;
+        padding: 10px 25px !important;
+        color: #6c7a8d;
+        background-color: #fff;
+        border: none;
+        &:hover {
+          background-color: #fafaff;
+          color: #45b6af
+        }
+      }
+    }
+    .forget-password {
+      font-size: 14px;
+      float: right;
+      display: inline-block;
+      margin-top: 10px
+    }
+    .check {
+      color: #8290a3
+    }
+    .rememberme {
+      margin-left: 8px;
+      margin-top: 10px
+    }
+    .create-account {
+      margin: 0 -40px -30px;
+      padding: 15px 0 17px;
+      text-align: center;
+      background-color: #6c7a8d;
+      -webkit-border-radius: 0 0 7px 7px;
+      -moz-border-radius: 0 0 7px 7px;
+      -ms-border-radius: 0 0 7px 7px;
+      -o-border-radius: 0 0 7px 7px;
+      border-radius: 0 0 7px 7px;
+      > p {
+        margin: 0;
+        a {
+          font-weight: 600;
+          font-size: 14px;
+          color: #c3cedd
+        }
+      }
+      a {
+        display: inline-block;
+        margin-top: 5px
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    margin: 0 auto 30px 0;
+    padding: 10px;
+    color: #7a8ca5;
+    font-size: 13px
+  }
+  .create-account .btn {
+    color: #fff;
+  }
+  @media (max-width: 440px) {
+    .content, .logo {
+      margin-top: 10px
+    }
+    .content {
+      width: 280px;
+      h3 {
+        font-size: 22px
+      }
+    }
+    .forget-password {
+      display: inline-block;
+      margin-top: 20px
+    }
+    .login-options .social-icons {
+      float: left;
+      padding-top: 3px
+    }
+    .checkbox {
+      font-size: 13px
+    }
+  }
+}
+.login-options {
+  margin-bottom: 30px;
+  overflow: hidden;
+  h4 {
+    float: left;
+    font-weight: 600;
+    font-size: 15px;
+    color: #7d91aa !important
+  }
+  .social-icons {
+    float: right;
+    padding-top: 3px;
+    li a {
+      border-radius: 15px !important;
+      -moz-border-radius: 15px !important;
+      -webkit-border-radius: 15px !important
+    }
+  }
+}

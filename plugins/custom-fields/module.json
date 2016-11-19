@@ -1,0 +1,11 @@
+{
+    "alias": "webed-custom-fields",
+    "name": "Custom fields",
+    "author": "Tedozi Manson - <a href=\"https://github.com/duyphan2502\">https://github.com/duyphan2502</a>",
+    "description": "Custom fields management package",
+    "namespace": "WebEd\\Plugins\\CustomFields",
+    "version": "2.0",
+    "autoload": "psr-4",
+    "enabled": false,
+    "installed": false
+}

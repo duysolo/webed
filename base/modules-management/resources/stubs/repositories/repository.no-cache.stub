@@ -1,0 +1,16 @@
+<?php namespace DummyNamespace;
+
+use WebEd\Base\Core\Repositories\AbstractBaseRepository;
+
+use DummyNamespace\Contracts\RoleContract;
+
+class DummyClass extends AbstractBaseRepository implements DummyClassContract
+{
+    protected $rules = [
+
+    ];
+
+    protected $editableFields = [
+        '*',
+    ];
+}

@@ -1,0 +1,10 @@
+<?php namespace DummyNamespace;
+
+use WebEd\Base\Caching\Repositories\AbstractRepositoryCacheDecorator;
+
+use DummyNamespace\Contracts\DummyClassContract;
+
+class DummyClassCacheDecorator extends AbstractRepositoryCacheDecorator  implements DummyClassContract
+{
+
+}

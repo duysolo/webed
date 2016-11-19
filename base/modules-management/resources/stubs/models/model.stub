@@ -1,0 +1,15 @@
+<?php namespace DummyNamespace;
+
+use DummyNamespace\Contracts\DummyClassModelContract;
+use WebEd\Base\Core\Models\EloquentBase as BaseModel;
+
+class DummyClass extends BaseModel implements DummyClassModelContract
+{
+    protected $table = '{table}';
+
+    protected $primaryKey = 'id';
+
+    protected $fillable = [];
+
+    public $timestamps = false;
+}

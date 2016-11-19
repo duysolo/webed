@@ -1,0 +1,74 @@
+{
+    "name": "sgsoft-studio/webed",
+    "description": "The CMS based on Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel",
+        "webed",
+        "laravel webed",
+        "laravel website editor",
+        "laravel cms"
+    ],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/framework": "5.3.*",
+        "barryvdh/laravel-debugbar": "^2.2",
+        "studio-42/elfinder": "^2.1.0",
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "laravelcollective/html": "^5.3.0"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.0",
+        "symfony/css-selector": "3.1.*",
+        "symfony/dom-crawler": "3.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "WebEd\\Base\\Core\\": "base/core/src",
+            "WebEd\\Base\\Hook\\": "base/hook/src",
+            "WebEd\\Base\\Caching\\": "base/caching/src",
+            "WebEd\\Base\\ModulesManagement\\": "base/modules-management/src",
+            "WebEd\\Base\\ThemesManagement\\": "base/themes-management/src",
+            "WebEd\\Base\\Menu\\": "base/menu/src",
+            "WebEd\\Base\\Users\\": "base/users/src",
+            "WebEd\\Base\\AssetsManagement\\": "base/assets-management/src",
+            "WebEd\\Base\\Auth\\": "base/auth/src",
+            "WebEd\\Base\\ACL\\": "base/acl/src",
+            "WebEd\\Base\\Settings\\": "base/settings/src",
+            "WebEd\\Base\\Elfinder\\": "base/elfinder/src",
+            "WebEd\\Plugins\\Pages\\": "plugins/pages/src"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

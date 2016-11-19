@@ -1,0 +1,10 @@
+{
+    "alias": "webed-modules-management",
+    "name": "Modules management",
+    "author": "Tedozi Manson - <a href=\"https://github.com/duyphan2502\">https://github.com/duyphan2502</a>",
+    "description": "Manage modules, themes...",
+    "namespace": "WebEd\\Base\\ModulesManagement",
+    "version": "1.0",
+    "autoload": "psr-4",
+    "installed": true
+}

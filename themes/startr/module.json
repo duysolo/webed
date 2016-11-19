@@ -1,0 +1,11 @@
+{
+    "alias": "startr",
+    "name": "Startr theme",
+    "author": "Tedozi Manson",
+    "description": "Startr theme",
+    "namespace": "WebEd\\Themes\\Startr",
+    "version": "1.0",
+    "autoload": "psr-4",
+    "enabled": false,
+    "installed": true
+}

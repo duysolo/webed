@@ -1,0 +1,10 @@
+{
+    "alias": "webed-menu",
+    "name": "WebEd Menu",
+    "author": "Tedozi Manson",
+    "description": "WebEd menu management package.",
+    "namespace": "WebEd\\Base\\Menu",
+    "version": "2.0",
+    "autoload": "psr-4",
+    "installed": true
+}

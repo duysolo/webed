@@ -1,0 +1,11 @@
+<?php namespace DummyNamespace;
+
+class DummyClass extends AbstractController
+{
+    protected $module = '{alias}';
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+}

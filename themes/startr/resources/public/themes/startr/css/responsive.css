@@ -1,0 +1,51 @@
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	header.header-top[role="header"] hgroup nav ul > li > a{ padding:0 5px 0 9px}
+	header.header-top[role="header"] section{ top:14%}
+	.section-two section article{ padding-right:20px; padding-left:5%; padding-top:20px}
+	.pricing > section{ margin:0; width:32%; max-width:32%}
+	.team-pan section { margin-bottom:30px}
+	.team-pan figure img{ margin:0 auto; width:100%; max-width:100%; display:block}
+	.contact-form{ padding-left:20px; padding-right:20px}
+	.section-one article p br,.slider-pan section article br,.section-five header[role="title-page"] h4 br, .section-five header[role="title-page"] h2 br{ display:none}
+}
+/* xs */
+@media (max-width: 767px) {
+	header.header-top[role="header"] .container{ padding-top:10px; z-index:6}
+	header.header-top[role="header"] section h2{ font-size:26px; line-height:28px; margin-bottom:2px}
+	header.header-top[role="header"] section p{ font-size:15px; line-height:30px; margin:0 3%; padding-top:5px}
+	header.header-top[role="header"] section .video-button{ margin:4% auto; width:65px; height:65px; line-height:65px; font-size:35px}
+	header.header-top[role="header"] section a{ font-size:14px; padding:0 20px; line-height:55px}
+	header.header-top[role="header"] hgroup{ position:relative}
+	header.header-top[role="header"] hgroup nav { margin-top:0}
+	header.header-top[role="header"] hgroup nav .navbar-toggle{ position:absolute; margin:0; top:-48px; right:15px}
+
+	header.header-top[role="header"] .navbar-fixed-top h1 img{ width:60%}
+	header.header-top[role="header"] hgroup nav ul{ text-align:center; background-color:rgba(0,0,0,0.8); padding:10px}
+	header.header-top[role="header"] hgroup nav ul > li{ display:block;}
+	.section-two section article{ padding-left:0; padding-right:0; padding-top:0px}
+	.section-two section figure{ background-attachment:scroll; margin-top:20px; margin-bottom:20px}
+	.section-two section:last-child article{ padding-left:0}
+	.slider-pan section article{ margin:0 4%}
+	.slider-pan section article br,.section-five header[role="title-page"] h4 br, .section-five header[role="title-page"] h2 br,.section-one article p br{ display:none}
+	.pricing > section{ margin:0; display:block; max-width:100%; margin-bottom:30px}
+	.section-three header[role="title-page"]{ padding-bottom:20px}
+	.team-pan section { margin-bottom:30px}
+	.team-pan figure img{ margin:0 auto; width:100%; max-width:100%; display:block}
+	.contact-form{ padding-left:0; padding-right:0}
+	.contact-form input[type="email"]{ border-left:1px solid #dbdbdb; margin:20px 0}
+	.contact-form textarea{border-top:1px solid #dbdbdb;}
+	.footer{ padding:30px 0}
+	.socil-icons a{ margin:0 2px; width:30px; height:30px; font-size:15px; line-height:30px}
+	.footer nav{ padding-top:10px}
+
+}
+@media (max-width: 414px) {
+	header.header-top[role="header"] section h2{ font-size:36px; line-height:41px}
+	.subscribe-form button{ font-size:13px; padding:0 5px}
+	.subscribe-form input[type="email"]{ padding-right:120px}
+	.subscribe-form button i{ padding-right:0}
+}

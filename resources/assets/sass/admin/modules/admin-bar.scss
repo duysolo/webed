@@ -1,0 +1,137 @@
+.show-admin-bar {
+    margin-top       : 40px;
+    position         : relative;
+    font-family      : "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size        : 14px;
+    line-height      : 1.42857;
+    color            : #333333;
+    background-color : #ffffff;
+    font-weight      : 400;
+    box-sizing : border-box;
+    #headerAdminBar {
+        display          : block !important;
+        min-height       : 40px;
+        height           : 40px;
+        border-radius    : 0;
+        border           : 0 none;
+        z-index          : 10000;
+        top              : 0;
+        position         : fixed;
+        background-color : #222222;
+        width            : 100%;
+        &,
+        * {
+            box-sizing : border-box;
+        }
+        a {
+            text-decoration : none;
+        }
+        .caret {
+            display        : inline-block;
+            width          : 0;
+            height         : 0;
+            margin-left    : 2px;
+            vertical-align : middle;
+            border-top     : 4px dashed;
+            border-top     : 4px solid \9
+        ;
+            border-right   : 4px solid transparent;
+            border-left    : 4px solid transparent;
+        }
+        .logo {
+            float : left;
+        }
+        .logo {
+            height      : 40px;
+            line-height : 40px;
+            .navbar-brand {
+                display     : inline-block;
+                line-height : normal;
+            }
+        }
+        .admin-navbar-nav {
+            float      : left;
+            list-style : none;
+            margin     : 0 0 0 15px;
+            padding    : 0;
+            &.admin-navbar-nav-right {
+                float : right;
+            }
+            > li {
+                float    : left;
+                position : relative;
+                display  : block;
+                &:hover,
+                &.open {
+                    > ul {
+                        display : block;
+                    }
+                }
+                > a {
+                    padding         : 10px 15px;
+                    color           : #9d9d9d;
+                    text-decoration : none;
+                    display         : block;
+                    height          : 40px;
+                    &:hover {
+                        color : #ffffff;
+                    }
+                }
+            }
+            .dropdown-menu {
+                border-radius    : 0;
+                position         : absolute;
+                top              : 100%;
+                left             : 0;
+                z-index          : 1000;
+                display          : none;
+                float            : left;
+                min-width        : 160px;
+                padding          : 5px 0;
+                margin           : 0 0 0;
+                list-style       : none;
+                font-size        : 14px;
+                text-align       : left;
+                background-color : #ffffff;
+                border           : 1px solid #cccccc;
+                box-shadow       : 0 6px 12px rgba(0, 0, 0, 0.175);
+                background-clip  : padding-box;
+                > li {
+                    + li {
+                        margin-top : 1px;
+                    }
+                    > a {
+                        display     : block;
+                        padding     : 3px 20px;
+                        clear       : both;
+                        font-weight : normal;
+                        line-height : 1.42857;
+                        color       : #333333;
+                        white-space : nowrap;
+                        &:hover {
+                            text-decoration  : none;
+                            color            : #ffffff;
+                            background-color : #999999;
+                        }
+                    }
+                }
+                .divider {
+                    height           : 1px;
+                    margin           : 9px 0;
+                    overflow         : hidden;
+                    background-color : #cccccc;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        margin-top : 0;
+        #headerAdminBar {
+            display : none !important;
+        }
+    }
+}
+
+#headerAdminBar {
+    display : none !important;
+}
