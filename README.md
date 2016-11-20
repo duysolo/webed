@@ -42,4 +42,4 @@ Enjoy!
 ##Table of contents
 - [WebEd module comands](./documentation/console/module.md)
 - [WebEd theme commands](./documentation/console/theme.md)
-- [How to use custom fields](./documentation/console/plugins/custom-fields.md)
+- [How to use custom fields](./documentation/plugins/custom-fields.md)
