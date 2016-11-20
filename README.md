@@ -43,6 +43,14 @@ composer create-project --prefer-dist sgsoft-studio/webed webed
 php artisan cms:install
 ```
 
+Access to dashboard:
+> your-domain/admincp
+
+You can config admin route by modify the .env:
+```
+WEBED_ADMIN_ROUTE=admincp
+```
+
 Enjoy!
 
 ##Table of contents
