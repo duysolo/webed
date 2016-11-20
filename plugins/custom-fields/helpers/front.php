@@ -25,7 +25,7 @@ if (!function_exists('get_field')) {
                 'use_for_id' => $object->$objectModelPrimaryKey
             ]);
         if ($alias === null || !trim($alias)) {
-            return $field->get();
+            return $field->get()->toArray();
         }
 
         $field = $field
@@ -87,4 +87,3 @@ if (!function_exists('has_sub_field')) {
         return true;
     }
 }
-

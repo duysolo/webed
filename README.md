@@ -1,6 +1,5 @@
 # Welcome to WebEd
 ####A CMS based on Laravel
-![Build status](https://api.travis-ci.org/sgsoft-studio/webed.svg)
 ![Total downloads](https://poser.pugx.org/sgsoft-studio/webed/d/total.svg)
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/webed/v/stable.svg)
 ![License](https://poser.pugx.org/sgsoft-studio/webed/license.svg)
