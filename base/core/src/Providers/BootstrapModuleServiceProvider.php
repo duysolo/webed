@@ -67,6 +67,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
     private function generalSettings()
     {
         cms_settings()
+            ->addGroup('theme-options', 'Theme options')
             ->addSettingField('site_title', [
                 'group' => 'basic',
                 'type' => 'text',

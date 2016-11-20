@@ -6,6 +6,5 @@
     "namespace": "WebEd\\Plugins\\CustomFields",
     "version": "2.0",
     "autoload": "psr-4",
-    "enabled": false,
-    "installed": false
+    "enabled": false
 }

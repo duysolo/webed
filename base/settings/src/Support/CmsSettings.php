@@ -49,13 +49,20 @@ class CmsSettings
      */
     public function addGroup($groupKey, $groupTitle, $piority = 999)
     {
-        $this->groups[$groupKey] = [
-            'title' => $groupTitle,
-            'piority' => $piority,
-            'items' => [],
-        ];
+        if (!isset($this->groups[$groupKey])) {
+            $this->groups[$groupKey] = [
+                'title' => $groupTitle,
+                'piority' => $piority,
+                'items' => [],
+            ];
+        }
 
         return $this;
+    }
+
+    public function getGroup()
+    {
+        return $this->groups;
     }
 
     /**

@@ -45,7 +45,7 @@ trait Auth
             $this->incrementLoginAttempts($request);
         }
 
-        $this->flashMessagesHelper->addMessages([
+        \FlashMessages::addMessages([
             $this->getFailedLoginMessage(),
         ], 'danger')
             ->showMessagesOnSession();

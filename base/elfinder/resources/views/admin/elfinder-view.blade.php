@@ -78,7 +78,7 @@
             soundPath: '{{ asset('admin/packages/elfinder/sounds') }}',
             url: '{{ route('admin::elfinder.connect') }}',
             @if(Request::get('type', 'image') != 'file')
-            onlyMimes: ["image"],
+            //onlyMimes: ["image", "image/svg+xml"],
             @endif
             getFileCallback: function (file) {
                 var URL = file.url.replace(baseUrl, '/');

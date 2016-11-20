@@ -27,15 +27,21 @@ Please go to [laravel documentation page](https://laravel.com/docs/5.3/installat
 ##WebEd installation guide
 
 ####Checkout project
-> git clone https://github.com/sgsoft-studio/webed
-> composer install
+```
+git clone https://github.com/sgsoft-studio/webed
+composer install
+```
 
 or 
 
-> composer create-project --prefer-dist sgsoft-studio/webed webed
+```
+composer create-project --prefer-dist sgsoft-studio/webed webed
+```
 
 ####Install WebEd
-> php artisan cms:install
+```
+php artisan cms:install
+```
 
 Enjoy!
 

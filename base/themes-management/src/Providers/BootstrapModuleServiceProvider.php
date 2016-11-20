@@ -47,7 +47,6 @@ class BootstrapModuleServiceProvider extends ServiceProvider
         ]);
 
         cms_settings()
-            ->addGroup('theme-options', 'Theme options')
             ->addSettingField('top_menu', [
                 'group' => 'theme-options',
                 'type' => 'select',
