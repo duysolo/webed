@@ -50,7 +50,9 @@
             "WebEd\\Base\\ACL\\": "base/acl/src",
             "WebEd\\Base\\Settings\\": "base/settings/src",
             "WebEd\\Base\\Elfinder\\": "base/elfinder/src",
-            "WebEd\\Plugins\\Pages\\": "plugins/pages/src"
+            "WebEd\\Plugins\\Pages\\": "plugins/pages/src",
+            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
+            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src"
         }
     },
     "autoload-dev": {

@@ -54,6 +54,15 @@ WEBED_ADMIN_ROUTE=admincp
 Enjoy!
 
 ##Table of contents
-- [WebEd module comands](./documentation/console/module.md)
+- [WebEd module commands](./documentation/console/module.md)
 - [WebEd theme commands](./documentation/console/theme.md)
 - [How to use custom fields](./documentation/plugins/custom-fields.md)
+
+##Some screenshots
+![Login](./documentation/images/1.png)
+![Menu management](./documentation/images/2.png)
+![Custom fields](./documentation/images/3.png)
+![Custom fields](./documentation/images/4.png)
+![Elfinder](./documentation/images/5.png)
+![Plugins](./documentation/images/6.png)
+![Themes](./documentation/images/7.png)

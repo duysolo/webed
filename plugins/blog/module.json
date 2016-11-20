@@ -6,6 +6,6 @@
     "namespace": "WebEd\\Plugins\\Blog",
     "version": "2.0",
     "autoload": "psr-4",
-    "enabled": false,
-    "installed": false
+    "enabled": true,
+    "installed": true
 }
