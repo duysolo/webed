@@ -1,0 +1,9 @@
+{
+    "alias": "webed-settings",
+    "name": "Settings",
+    "author": "Tedozi Manson - <a href=\"https://github.com/duyphan2502\">https://github.com/duyphan2502</a>",
+    "description": "Manage CMS settings",
+    "namespace": "WebEd\\Base\\Settings",
+    "version": "2.0",
+    "autoload": "psr-4"
+}

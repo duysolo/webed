@@ -20,6 +20,7 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
+        "sgsoft-studio/base": "~2.0",
         "barryvdh/laravel-debugbar": "^2.2",
         "studio-42/elfinder": "^2.1.0",
         "yajra/laravel-datatables-oracle": "~6.0",
@@ -38,21 +39,9 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "WebEd\\Base\\Core\\": "base/core/src",
-            "WebEd\\Base\\Hook\\": "base/hook/src",
-            "WebEd\\Base\\Caching\\": "base/caching/src",
-            "WebEd\\Base\\ModulesManagement\\": "base/modules-management/src",
-            "WebEd\\Base\\ThemesManagement\\": "base/themes-management/src",
-            "WebEd\\Base\\Menu\\": "base/menu/src",
-            "WebEd\\Base\\Users\\": "base/users/src",
-            "WebEd\\Base\\AssetsManagement\\": "base/assets-management/src",
-            "WebEd\\Base\\Auth\\": "base/auth/src",
-            "WebEd\\Base\\ACL\\": "base/acl/src",
-            "WebEd\\Base\\Settings\\": "base/settings/src",
-            "WebEd\\Base\\Elfinder\\": "base/elfinder/src",
-            "WebEd\\Plugins\\Pages\\": "plugins/pages/src",
             "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
-            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src"
+            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
+            "WebEd\\Plugins\\Pages\\": "plugins/pages/src"
         }
     },
     "autoload-dev": {
