@@ -9,6 +9,24 @@ php artisan cms:install --refresh
 
 ![Plugins page](./images/plugins.png)
 
+####Get all modules information
+```
+php artisan cms:get:modules
+php artisan cms:get:modules --type=base
+php artisan cms:get:modules --type=plugins
+```
+
+####Export a base module
+When you need to modify a base core module. It's time to use export method.
+To know the alias of module, just run:
+```
+php artisan cms:get:modules --type=base
+```
+Then run
+```
+php artisan module:base:export {alias}
+```
+
 ####Disable plugins
 ```
 php artisan module:disable --all

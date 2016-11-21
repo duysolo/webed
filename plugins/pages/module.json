@@ -5,6 +5,6 @@
     "author": "Tedozi Manson - <a href=\"https://github.com/duyphan2502\">https://github.com/duyphan2502</a>",
     "description": "Pages management package",
     "namespace": "WebEd\\Plugins\\Pages",
-    "enabled": true,
-    "installed": true
+    "autoload": "psr-4",
+    "enabled": false
 }

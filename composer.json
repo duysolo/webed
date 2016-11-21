@@ -38,10 +38,7 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
-            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
-            "WebEd\\Plugins\\Pages\\": "plugins/pages/src"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

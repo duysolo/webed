@@ -1,5 +1,0 @@
-@extends('ViewExtendsFrom')
-
-@section('content')
-    {alias}
-@endsection
