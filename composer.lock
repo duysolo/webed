@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "afc30731a59c1a880b5bd102529ae3ef",
-    "content-hash": "5c344048bd2983c250489b97400dbb13",
+    "hash": "f8296db7cd11879d589f00ed4f8a6f64",
+    "content-hash": "fb1215616d28732a19fc6c6e462234c0",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1471,16 +1471,16 @@
         },
         {
             "name": "sgsoft-studio/base",
-            "version": "2.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/base.git",
-                "reference": "dad4b6ea4e8eec527f47d2da992a2a6d78af03dd"
+                "reference": "5463964f78370fbc49d1c1382438c894d3d7f7b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/base/zipball/dad4b6ea4e8eec527f47d2da992a2a6d78af03dd",
-                "reference": "dad4b6ea4e8eec527f47d2da992a2a6d78af03dd",
+                "url": "https://api.github.com/repos/sgsoft-studio/base/zipball/5463964f78370fbc49d1c1382438c894d3d7f7b8",
+                "reference": "5463964f78370fbc49d1c1382438c894d3d7f7b8",
                 "shasum": ""
             },
             "require": {
@@ -1521,7 +1521,7 @@
             ],
             "description": "WebEd core system",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-11-21 15:20:30"
+            "time": "2016-11-21 16:43:01"
         },
         {
             "name": "studio-42/elfinder",
