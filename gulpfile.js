@@ -49,8 +49,8 @@ var ElixirAssets = function () {
             /*Modules style*/
             mix
                 .sass('admin/modules/admin-bar.scss', publicPath.adminCss + 'admin-bar.css')
-                .sass('admin/modules/custom-fields/edit-field-group.scss', publicPath.adminModules + 'custom-fields/edit-field-group.css')
-                .sass('admin/modules/menu/menu-nestable.scss', publicPath.adminModules + 'menu/menu-nestable.css');
+                .sass('admin/modules/menu/menu-nestable.scss', publicPath.adminModules + 'menu/menu-nestable.css')
+                .sass('admin/modules/custom-fields/edit-field-group.scss', publicPath.adminModules + 'custom-fields/edit-field-group.css');
 
             /*Other pages style*/
             mix

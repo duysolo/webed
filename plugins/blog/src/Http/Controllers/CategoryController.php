@@ -17,8 +17,6 @@ class CategoryController extends BaseAdminController
     {
         parent::__construct();
 
-        $this->middleware('has-permission:view-categories');
-
         $this->repository = $repository;
 
         $this->breadcrumbs->addLink('Blog')
@@ -135,14 +133,24 @@ class CategoryController extends BaseAdminController
     {
         $data = [];
         if ($this->request->get('customActionType', null) === 'group_action') {
-            $this->middleware('has-permission:edit-categories');
+            if(!$this->userRepository->hasPermission($this->loggedInUser, 'edit-categories')) {
+                return [
+                    'customActionMessage' => 'You do not have permission',
+                    'customActionStatus' => 'danger',
+                ];
+            }
 
             $ids = (array)$this->request->get('id', []);
             $actionValue = $this->request->get('customActionValue');
 
             switch ($actionValue) {
                 case 'deleted':
-                    $this->middleware('has-permission:delete-categories');
+                    if(!$this->userRepository->hasPermission($this->loggedInUser, 'delete-categories')) {
+                        return [
+                            'customActionMessage' => 'You do not have permission',
+                            'customActionStatus' => 'danger',
+                        ];
+                    }
                     /**
                      * Delete pages
                      */
@@ -176,8 +184,6 @@ class CategoryController extends BaseAdminController
      */
     public function postUpdateStatus($id, $status)
     {
-        $this->middleware('has-permission:edit-categories');
-
         $data = [
             'status' => $status
         ];
@@ -190,8 +196,6 @@ class CategoryController extends BaseAdminController
      */
     public function getCreate()
     {
-        $this->middleware('has-permission:create-categories');
-
         $allCategories = get_categories();
         $categories = collect_all_categories_to_one_array(categories_with_indent_text($allCategories));
 
@@ -229,8 +233,6 @@ class CategoryController extends BaseAdminController
      */
     public function getEdit($id)
     {
-        $this->middleware('has-permission:edit-categories');
-
         $this->assets
             ->addJavascripts([
                 'jquery-ckeditor'
@@ -273,8 +275,6 @@ class CategoryController extends BaseAdminController
      */
     public function postEdit($id = null)
     {
-        $this->middleware('has-permission:edit-categories');
-
         $parentId = (int)$this->request->get('parent_id') === (int)$id ? null : $this->request->get('parent_id') ?: null;
 
         $data = [
@@ -329,7 +329,9 @@ class CategoryController extends BaseAdminController
      */
     private function createPost(array $data)
     {
-        $this->middleware('has-permission:create-categories');
+        if(!$this->userRepository->hasPermission($this->loggedInUser, 'create-categories')) {
+            return redirect()->to(route('admin::error', ['code' => 403]));
+        }
 
         $data['created_by'] = $this->loggedInUser->id;
 
@@ -352,8 +354,6 @@ class CategoryController extends BaseAdminController
      */
     public function deleteDelete($id)
     {
-        $this->middleware('has-permission:delete-categories');
-
         $result = $this->repository->delete($id);
 
         do_action('blog.categories.after-delete.delete', $id, $result, $this);

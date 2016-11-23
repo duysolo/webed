@@ -23,21 +23,64 @@ class RouteServiceProvider extends ServiceProvider
                     /**
                      * Put some route here
                      */
-                    $router->get('posts', 'PostController@getIndex')->name('admin::blog.posts.index.get');
-                    $router->post('posts', 'PostController@postListing')->name('admin::blog.posts.index.post');
-                    $router->get('posts/create', 'PostController@getCreate')->name('admin::blog.posts.create.get');
-                    $router->get('posts/edit/{id}', 'PostController@getEdit')->name('admin::blog.posts.edit.get');
-                    $router->post('posts/edit/{id}', 'PostController@postEdit')->name('admin::blog.posts.edit.post');
-                    $router->post('posts/update-status/{id}/{status}', 'PostController@postUpdateStatus')->name('admin::blog.posts.update-status.post');
-                    $router->delete('posts/{id}', 'PostController@deleteDelete')->name('admin::blog.posts.delete.delete');
+                    $router->get('posts', 'PostController@getIndex')
+                        ->name('admin::blog.posts.index.get')
+                        ->middleware('has-permission:view-posts');
 
-                    $router->get('categories', 'CategoryController@getIndex')->name('admin::blog.categories.index.get');
-                    $router->post('categories', 'CategoryController@postListing')->name('admin::blog.categories.index.post');
-                    $router->get('categories/create', 'CategoryController@getCreate')->name('admin::blog.categories.create.get');
-                    $router->get('categories/edit/{id}', 'CategoryController@getEdit')->name('admin::blog.categories.edit.get');
-                    $router->post('categories/edit/{id}', 'CategoryController@postEdit')->name('admin::blog.categories.edit.post');
-                    $router->post('categories/update-status/{id}/{status}', 'CategoryController@postUpdateStatus')->name('admin::blog.categories.update-status.post');
-                    $router->delete('categories/{id}', 'CategoryController@deleteDelete')->name('admin::blog.categories.delete.delete');
+                    $router->post('posts', 'PostController@postListing')
+                        ->name('admin::blog.posts.index.post')
+                        ->middleware('has-permission:view-posts');
+
+                    $router->get('posts/create', 'PostController@getCreate')
+                        ->name('admin::blog.posts.create.get')
+                        ->middleware('has-permission:create-posts');
+
+                    $router->get('posts/edit/{id}', 'PostController@getEdit')
+                        ->name('admin::blog.posts.edit.get')
+                        ->middleware('has-permission:edit-posts');
+
+                    $router->post('posts/edit/{id}', 'PostController@postEdit')
+                        ->name('admin::blog.posts.edit.post')
+                        ->middleware('has-permission:edit-posts');
+
+                    $router->post('posts/update-status/{id}/{status}', 'PostController@postUpdateStatus')
+                        ->name('admin::blog.posts.update-status.post')
+                        ->middleware('has-permission:edit-posts');
+
+                    $router->delete('posts/{id}', 'PostController@deleteDelete')
+                        ->name('admin::blog.posts.delete.delete')
+                        ->middleware('has-permission:delete-posts');
+
+                    /**
+                     * Categories
+                     */
+                    $router->get('categories', 'CategoryController@getIndex')
+                        ->name('admin::blog.categories.index.get')
+                        ->middleware('has-permission:view-categories');
+
+                    $router->post('categories', 'CategoryController@postListing')
+                        ->name('admin::blog.categories.index.post')
+                        ->middleware('has-permission:view-categories');
+
+                    $router->get('categories/create', 'CategoryController@getCreate')
+                        ->name('admin::blog.categories.create.get')
+                        ->middleware('has-permission:create-categories');
+
+                    $router->get('categories/edit/{id}', 'CategoryController@getEdit')
+                        ->name('admin::blog.categories.edit.get')
+                        ->middleware('has-permission:edit-categories');
+
+                    $router->post('categories/edit/{id}', 'CategoryController@postEdit')
+                        ->name('admin::blog.categories.edit.post')
+                        ->middleware('has-permission:edit-categories');
+
+                    $router->post('categories/update-status/{id}/{status}', 'CategoryController@postUpdateStatus')
+                        ->name('admin::blog.categories.update-status.post')
+                        ->middleware('has-permission:edit-categories');
+
+                    $router->delete('categories/{id}', 'CategoryController@deleteDelete')
+                        ->name('admin::blog.categories.delete.delete')
+                        ->middleware('has-permission:delete-categories');
                 });
             });
         });

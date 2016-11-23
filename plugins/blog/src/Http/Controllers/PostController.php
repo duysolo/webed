@@ -18,8 +18,6 @@ class PostController extends BaseAdminController
     {
         parent::__construct();
 
-        $this->middleware('has-permission:view-posts');
-
         $this->repository = $repository;
 
         $this->breadcrumbs->addLink('Blog')
@@ -145,14 +143,24 @@ class PostController extends BaseAdminController
     {
         $data = [];
         if ($this->request->get('customActionType', null) === 'group_action') {
-            $this->middleware('has-permission:edit-posts');
+            if(!$this->userRepository->hasPermission($this->loggedInUser, 'edit-posts')) {
+                return [
+                    'customActionMessage' => 'You do not have permission',
+                    'customActionStatus' => 'danger',
+                ];
+            }
 
             $ids = (array)$this->request->get('id', []);
             $actionValue = $this->request->get('customActionValue');
 
             switch ($actionValue) {
                 case 'deleted':
-                    $this->middleware('has-permission:delete-posts');
+                    if(!$this->userRepository->hasPermission($this->loggedInUser, 'delete-posts')) {
+                        return [
+                            'customActionMessage' => 'You do not have permission',
+                            'customActionStatus' => 'danger',
+                        ];
+                    }
                     /**
                      * Delete pages
                      */
@@ -186,8 +194,6 @@ class PostController extends BaseAdminController
      */
     public function postUpdateStatus($id, $status)
     {
-        $this->middleware('has-permission:edit-posts');
-
         $data = [
             'status' => $status
         ];
@@ -200,8 +206,6 @@ class PostController extends BaseAdminController
      */
     public function getCreate()
     {
-        $this->middleware('has-permission:create-posts');
-
         $this->assets
             ->addJavascripts([
                 'jquery-ckeditor'
@@ -231,8 +235,6 @@ class PostController extends BaseAdminController
      */
     public function getEdit($id)
     {
-        $this->middleware('has-permission:edit-posts');
-
         $this->assets
             ->addJavascripts([
                 'jquery-ckeditor'
@@ -268,8 +270,6 @@ class PostController extends BaseAdminController
      */
     public function postEdit($id = null)
     {
-        $this->middleware('has-permission:edit-posts');
-
         $data = [
             'page_template' => $this->request->get('page_template', null),
             'status' => $this->request->get('status'),
@@ -323,7 +323,9 @@ class PostController extends BaseAdminController
      */
     private function createPost(array $data)
     {
-        $this->middleware('has-permission:create-posts');
+        if(!$this->userRepository->hasPermission($this->loggedInUser, 'create-posts')) {
+            return redirect()->to(route('admin::error', ['code' => 403]));
+        }
 
         $data['created_by'] = $this->loggedInUser->id;
 
@@ -346,8 +348,6 @@ class PostController extends BaseAdminController
      */
     public function deleteDelete($id)
     {
-        $this->middleware('has-permission:delete-posts');
-
         $result = $this->repository->delete($id);
 
         do_action('blog.posts.after-delete.delete', $id, $result, $this);

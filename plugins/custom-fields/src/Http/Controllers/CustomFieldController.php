@@ -24,8 +24,6 @@ class CustomFieldController extends BaseAdminController
     {
         parent::__construct();
 
-        $this->middleware('has-permission:view-custom-fields');
-
         $this->getDashboardMenu($this->module);
 
         $this->breadcrumbs->addLink('Custom fields', route('admin::custom-fields.index.get'));
@@ -145,7 +143,12 @@ class CustomFieldController extends BaseAdminController
         $data = [];
         if ($this->request->get('customActionType', null) == 'group_action') {
 
-            $this->middleware('has-permission:edit-field-groups');
+            if(!$this->userRepository->hasPermission($this->loggedInUser, 'edit-field-groups')) {
+                return [
+                    'customActionMessage' => 'You do not have permission',
+                    'customActionStatus' => 'danger',
+                ];
+            }
 
             $ids = (array)$this->request->get('id', []);
 
@@ -153,7 +156,12 @@ class CustomFieldController extends BaseAdminController
 
             switch ($actionValue) {
                 case 'deleted':
-                    $this->middleware('has-permission:delete-field-groups');
+                    if(!$this->userRepository->hasPermission($this->loggedInUser, 'delete-field-groups')) {
+                        return [
+                            'customActionMessage' => 'You do not have permission',
+                            'customActionStatus' => 'danger',
+                        ];
+                    }
                     /**
                      * Delete pages
                      */
@@ -182,8 +190,6 @@ class CustomFieldController extends BaseAdminController
 
     public function postUpdateStatus($id, $status)
     {
-        $this->middleware('has-permission:edit-field-groups');
-
         $data = [
             'status' => $status
         ];
@@ -280,6 +286,10 @@ class CustomFieldController extends BaseAdminController
 
     private function createFieldGroup()
     {
+        if(!$this->userRepository->hasPermission($this->loggedInUser, 'create-field-groups')) {
+            return redirect()->to(route('admin::error', ['code' => 403]));
+        }
+
         return $this->repository->createFieldGroup(array_merge($this->request->except(['_token']), ['updated_by' => $this->loggedInUser->id]));
     }
 
@@ -290,8 +300,6 @@ class CustomFieldController extends BaseAdminController
 
     public function deleteDelete($id)
     {
-        $this->middleware('has-permission:delete-field-groups');
-
         $result = $this->repository->deleteFieldGroup($id);
 
         do_action('custom-fields.after-delete.delete', $id, $result, $this);

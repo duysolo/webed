@@ -16,8 +16,6 @@ class PageController extends BaseAdminController
     {
         parent::__construct();
 
-        $this->middleware('has-permission:view-pages');
-
         $this->repository = $pageRepository;
 
         $this->breadcrumbs->addLink('Pages', route('admin::pages.index.get'));
@@ -147,14 +145,24 @@ class PageController extends BaseAdminController
     {
         $data = [];
         if ($this->request->get('customActionType', null) === 'group_action') {
-            $this->middleware('has-permission:edit-pages');
+            if(!$this->userRepository->hasPermission($this->loggedInUser, 'edit-pages')) {
+                return [
+                    'customActionMessage' => 'You do not have permission',
+                    'customActionStatus' => 'danger',
+                ];
+            }
 
             $ids = (array)$this->request->get('id', []);
             $actionValue = $this->request->get('customActionValue');
 
             switch ($actionValue) {
                 case 'deleted':
-                    $this->middleware('has-permission:delete-pages');
+                    if(!$this->userRepository->hasPermission($this->loggedInUser, 'delete-pages')) {
+                        return [
+                            'customActionMessage' => 'You do not have permission',
+                            'customActionStatus' => 'danger',
+                        ];
+                    }
                     /**
                      * Delete pages
                      */
@@ -188,8 +196,6 @@ class PageController extends BaseAdminController
      */
     public function postUpdateStatus($id, $status)
     {
-        $this->middleware('has-permission:edit-pages');
-
         $data = [
             'status' => $status
         ];
@@ -202,8 +208,6 @@ class PageController extends BaseAdminController
      */
     public function getCreate()
     {
-        $this->middleware('has-permission:create-pages');
-
         $this->assets
             ->addJavascripts([
                 'jquery-ckeditor'
@@ -231,8 +235,6 @@ class PageController extends BaseAdminController
      */
     public function getEdit($id)
     {
-        $this->middleware('has-permission:edit-pages');
-
         $this->assets
             ->addJavascripts([
                 'jquery-ckeditor'
@@ -313,7 +315,9 @@ class PageController extends BaseAdminController
      */
     private function createPage(array $data)
     {
-        $this->middleware('has-permission:create-pages');
+        if(!$this->userRepository->hasPermission($this->loggedInUser, 'create-pages')) {
+            return redirect()->to(route('admin::error', ['code' => 403]));
+        }
 
         $data['created_by'] = $this->loggedInUser->id;
 
@@ -336,8 +340,6 @@ class PageController extends BaseAdminController
      */
     public function deleteDelete($id)
     {
-        $this->middleware('has-permission:delete-pages');
-
         $result = $this->repository->deletePage($id);
 
         do_action('pages.after-delete.delete', $id, $result, $this);
