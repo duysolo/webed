@@ -38,9 +38,7 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "WebEd\\Base\\Pages\\": "sgsoft-studio/pages/src",
-            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
