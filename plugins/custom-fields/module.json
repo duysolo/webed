@@ -5,6 +5,5 @@
     "description": "Custom fields management package",
     "namespace": "WebEd\\Plugins\\CustomFields",
     "version": "2.0",
-    "autoload": "psr-4",
-    "enabled": false
+    "autoload": "psr-4"
 }

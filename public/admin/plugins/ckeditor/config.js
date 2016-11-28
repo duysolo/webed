@@ -9,6 +9,5 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#AADC6E';
     config.filebrowserBrowseUrl = FILE_MANAGER_URL + '?method=ckeditor';
     config.extraPlugins = 'codeTag,insertpre';
-    //config.allowedContent = true;
-    config.extraAllowedContent = '*[id];*[class]';
+    config.allowedContent = true;
 };

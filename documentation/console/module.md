@@ -11,16 +11,16 @@ php artisan cms:install --refresh
 
 ####Get all modules information
 ```
-php artisan cms:get:modules
-php artisan cms:get:modules --type=base
-php artisan cms:get:modules --type=plugins
+php artisan module:list
+php artisan module:list --type=base
+php artisan module:list --type=plugins
 ```
 
 ####Export a base module
 When you need to modify a base core module. It's time to use export method.
 To know the alias of module, just run:
 ```
-php artisan cms:get:modules --type=base
+php artisan module:list --type=base
 ```
 Then run
 ```

@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use WebEd\Plugins\Pages\Repositories\Contracts\PageContract;
-use WebEd\Plugins\Pages\Repositories\PageRepository;
+use WebEd\Base\Pages\Repositories\Contracts\PageContract;
+use WebEd\Base\Pages\Repositories\PageRepository;
 
 class SlugWithoutSuffixController extends Controller
 {

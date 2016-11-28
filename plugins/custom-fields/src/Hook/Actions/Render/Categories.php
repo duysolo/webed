@@ -1,7 +1,7 @@
 <?php namespace WebEd\Plugins\CustomFields\Hook\Actions\Render;
 
 use WebEd\Base\Core\Models\Contracts\BaseModelContract;
-use WebEd\Plugins\Pages\Http\Controllers\PageController;
+use WebEd\Base\Pages\Http\Controllers\PageController;
 
 class Categories extends AbstractRenderer
 {

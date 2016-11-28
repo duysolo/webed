@@ -34,11 +34,6 @@ class ModuleProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../database' => base_path('database'),
         ], 'migrations');
-
-        //Register related facades
-        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('CustomFieldRules', CustomFieldRules::class);
-        $loader->alias('RenderCustomFields', RenderCustomFields::class);
     }
 
     /**
@@ -49,19 +44,16 @@ class ModuleProvider extends ServiceProvider
     public function register()
     {
         //Load helpers
-        $this->loadHelpers();
+        load_module_helpers(__DIR__);
+
+        //Register related facades
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('CustomFieldRules', CustomFieldRules::class);
+        $loader->alias('RenderCustomFields', RenderCustomFields::class);
 
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(RepositoryServiceProvider::class);
         $this->app->register(HookServiceProvider::class);
         $this->app->register(BootstrapModuleServiceProvider::class);
-    }
-
-    protected function loadHelpers()
-    {
-        $helpers = $this->app['files']->glob(__DIR__ . '/../../helpers/*.php');
-        foreach ($helpers as $helper) {
-            require_once $helper;
-        }
     }
 }

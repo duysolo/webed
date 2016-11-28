@@ -5,5 +5,5 @@ class Pages extends AbstractStore
     /**
      * @var string
      */
-    protected $repositoryInterface = 'WebEd\Plugins\Pages\Repositories\Contracts\PageContract';
+    protected $repositoryInterface = 'WebEd\Base\Pages\Repositories\Contracts\PageContract';
 }

@@ -97,10 +97,10 @@ class BootstrapModuleServiceProvider extends ServiceProvider
 
     private function registerPagesFields()
     {
-        if (interface_exists('\WebEd\Plugins\Pages\Repositories\Contracts\PageContract')) {
+        if (interface_exists('\WebEd\Base\Pages\Repositories\Contracts\PageContract')) {
             \CustomFieldRules::registerRule('Basic', 'Page template', 'page_template', get_templates('Page'))
                 ->registerRule('Basic', 'Page', 'page', function () {
-                    $pageRepository = $this->app->make(\WebEd\Plugins\Pages\Repositories\Contracts\PageContract::class);
+                    $pageRepository = $this->app->make(\WebEd\Base\Pages\Repositories\Contracts\PageContract::class);
                     $pages = $pageRepository->all([
                         'order' => 'ASC',
                         'title' => 'ASC',
@@ -122,7 +122,8 @@ class BootstrapModuleServiceProvider extends ServiceProvider
 
     private function registerBlogFields()
     {
-        if (interface_exists('\WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract') &&
+        if (
+            interface_exists('\WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract') &&
             interface_exists('\WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract')
         ) {
             /**

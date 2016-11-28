@@ -17,7 +17,7 @@ class PagesDatabaseSeeder extends Seeder
             'About Us',
         ];
         foreach ($pages as $key => $row) {
-            \WebEd\Plugins\Pages\Models\EloquentPage::create([
+            \WebEd\Base\Pages\Models\EloquentPage::create([
                 'title' => $row,
                 'page_template' => $row,
                 'status' => 'activated',
