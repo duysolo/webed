@@ -93,7 +93,7 @@ class CategoryController extends BaseAdminController
 
                 /*Buttons*/
                 $editBtn = link_to(route('admin::blog.categories.edit.get', ['id' => $item->id]), 'Edit', ['class' => 'btn btn-sm btn-outline green']);
-                $activeBtn = ($item->status != 'activated') ? \Form::button('<i class="fa fa-check"></i>', [
+                $activeBtn = ($item->status != 'activated') ? \Form::button('Active', [
                     'title' => 'Active this item',
                     'data-ajax' => $activeLink,
                     'data-method' => 'POST',
@@ -101,7 +101,7 @@ class CategoryController extends BaseAdminController
                     'class' => 'btn btn-outline blue btn-sm ajax-link',
                     'type' => 'button',
                 ]) : '';
-                $disableBtn = ($item->status != 'disabled') ? \Form::button('<i class="fa fa-times"></i>', [
+                $disableBtn = ($item->status != 'disabled') ? \Form::button('Disable', [
                     'title' => 'Disable this item',
                     'data-ajax' => $disableLink,
                     'data-method' => 'POST',
@@ -109,7 +109,7 @@ class CategoryController extends BaseAdminController
                     'class' => 'btn btn-outline yellow-lemon btn-sm ajax-link',
                     'type' => 'button',
                 ]) : '';
-                $deleteBtn = \Form::button('<i class="fa fa-trash"></i>', [
+                $deleteBtn = \Form::button('Delete', [
                     'title' => 'Delete this item',
                     'data-ajax' => $deleteLink,
                     'data-method' => 'DELETE',

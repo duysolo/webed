@@ -1,0 +1,9 @@
+{
+    "alias": "webed-backup",
+    "name": "WebEd backup",
+    "author": "Tedozi Manson",
+    "description": "Backup database and medias. Go to <a href=\"https://github.com/sgsoft-studio/webed/blob/master/documentation/plugins/backup.md\">WebEd backup</a> to know how to use it",
+    "namespace": "WebEd\\Plugins\\Backup",
+    "version": "1.0",
+    "autoload": "psr-4"
+}

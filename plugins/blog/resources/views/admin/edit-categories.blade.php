@@ -72,6 +72,14 @@
                                class="form-control"
                                value="{{ $object->slug or '' }}" autocomplete="off">
                     </div>
+                    @if($object->slug)
+                        <div class="form-group">
+                            <label class="control-label">
+                                <b>Visit page:</b>
+                            </label>
+                            <a href="{{ route('front.resolve-blog.get', ['slug' => $object->slug]) }}" target="_blank">{{ route('front.resolve-blog.get', ['slug' => $object->slug]) }}</a>
+                        </div>
+                    @endif
                     <div class="form-group">
                         <label class="control-label">
                             <b>Content</b>

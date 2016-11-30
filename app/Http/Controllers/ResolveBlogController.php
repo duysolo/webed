@@ -6,7 +6,7 @@ use WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\PostRepository;
 
-class SlugWithSuffixController extends Controller
+class ResolveBlogController extends Controller
 {
     /**
      * @var Resolvers\PageController

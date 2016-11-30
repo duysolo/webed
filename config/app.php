@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'My Application',
+    'name' => env('APP_NAME', 'WebEd CMS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -166,10 +166,6 @@ return [
         /*
          * Package Service Providers...
          */
-        /*Debug bar*/
-        Barryvdh\Debugbar\ServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
 
         /*WebEd*/
         WebEd\Base\Core\Providers\ModuleProvider::class,

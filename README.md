@@ -28,13 +28,6 @@ Please go to [laravel documentation page](https://laravel.com/docs/5.3/installat
 
 ####Checkout project
 ```
-git clone https://github.com/sgsoft-studio/webed
-composer install
-```
-
-or 
-
-```
 composer create-project --prefer-dist sgsoft-studio/webed webed
 ```
 
@@ -51,12 +44,20 @@ You can config admin route by modify the .env:
 WEBED_ADMIN_ROUTE=admincp
 ```
 
+If you see this message when enable plugins/themes, it's because of your server does not support composer dump-autoload
+helper. Try to run **composer dump-autoload** by yourself.
+
+
+>The base module of this class is enabled, but class not found: ***xxx***. Please review and add the namespace of this module to composer autoload section, then run **composer dump-autoload**
+
+
 Enjoy!
 
 ##Table of contents
 - [WebEd module commands](./documentation/console/module.md)
 - [WebEd theme commands](./documentation/console/theme.md)
 - [How to use custom fields](./documentation/plugins/custom-fields.md)
+- [How to use backup](./documentation/plugins/backup.md)
 
 ##Some screenshots
 ![Login](./documentation/images/1.png)

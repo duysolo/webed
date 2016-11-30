@@ -74,7 +74,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
             }
             return [
                 'model_title' => $category->title,
-                'url' => route('public.get-by-slug-with-suffix.get', ['slug' => $category->slug]),
+                'url' => route('front.resolve-blog.get', ['slug' => $category->slug]),
             ];
         });
     }

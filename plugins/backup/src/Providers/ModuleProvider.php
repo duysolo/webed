@@ -1,6 +1,7 @@
-<?php namespace WebEd\Themes\Startr\Providers;
+<?php namespace WebEd\Plugins\Backup\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use WebEd\Plugins\Backup\Facades\BackupFacade;
 
 class ModuleProvider extends ServiceProvider
 {
@@ -12,9 +13,9 @@ class ModuleProvider extends ServiceProvider
     public function boot()
     {
         /*Load views*/
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'webed-theme-startr');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'webed-backup');
         /*Load translations*/
-        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'webed-theme-startr');
+        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'webed-backup');
         /*Load migrations*/
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
@@ -23,11 +24,14 @@ class ModuleProvider extends ServiceProvider
             __DIR__ . '/../../resources/public' => public_path(),
         ], 'assets');
         $this->publishes([
-            __DIR__ . '/../../resources/views' => config('view.paths')[0] . '/vendor/startr',
+            __DIR__ . '/../../resources/views' => config('view.paths')[0] . '/vendor/webed-backup',
         ], 'views');
         $this->publishes([
-            __DIR__ . '/../../resources/lang' => base_path('resources/lang/vendor/startr'),
+            __DIR__ . '/../../resources/lang' => base_path('resources/lang/vendor/webed-backup'),
         ], 'lang');
+        $this->publishes([
+            __DIR__ . '/../../database' => base_path('database'),
+        ], 'migrations');
     }
 
     /**
@@ -38,18 +42,13 @@ class ModuleProvider extends ServiceProvider
     public function register()
     {
         //Load helpers
-        $this->loadHelpers();
+        load_module_helpers(__DIR__);
+
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Backup', BackupFacade::class);
 
         $this->app->register(RouteServiceProvider::class);
+        $this->app->register(RepositoryServiceProvider::class);
         $this->app->register(BootstrapModuleServiceProvider::class);
-        $this->app->register(HookServiceProvider::class);
-    }
-
-    protected function loadHelpers()
-    {
-        $helpers = $this->app['files']->glob(__DIR__ . '/../../helpers/*.php');
-        foreach ($helpers as $helper) {
-            require_once $helper;
-        }
     }
 }

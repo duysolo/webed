@@ -16,5 +16,18 @@
  * @var \Illuminate\Routing\Router $router
  *
  */
-$router->get('/{slug}.html', 'SlugWithSuffixController@handle')->name('public.get-by-slug-with-suffix.get');
-$router->get('/{slug?}', 'SlugWithoutSuffixController@handle')->name('public.get-by-slug.get');
+
+/**
+ * Use for pages
+ */
+$router->get('/{slug?}', 'ResolvePagesController@handle')->name('front.resolve-pages.get');
+
+/**
+ * Use for blog
+ */
+if (
+    interface_exists('WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract') &&
+    interface_exists('WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract')
+) {
+    $router->get('blog/{slug}.html', 'ResolveBlogController@handle')->name('front.resolve-blog.get');
+}

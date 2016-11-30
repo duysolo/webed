@@ -106,21 +106,21 @@ class CustomFieldController extends BaseAdminController
 
                 /*Buttons*/
                 $editBtn = link_to($editLink, 'Edit', ['class' => 'btn btn-outline green btn-sm']);
-                $activeBtn = ($item->status != 'activated') ? form()->button('<i class="fa fa-check"></i>', [
+                $activeBtn = ($item->status != 'activated') ? form()->button('Active', [
                     'title' => 'Active this item',
                     'data-ajax' => $activeLink,
                     'data-method' => 'POST',
                     'data-toggle' => 'confirmation',
                     'class' => 'btn btn-outline blue btn-sm ajax-link',
                 ]) : '';
-                $disableBtn = ($item->status != 'disabled') ? form()->button('<i class="fa fa-times"></i>', [
+                $disableBtn = ($item->status != 'disabled') ? form()->button('Disable', [
                     'title' => 'Disable this item',
                     'data-ajax' => $disableLink,
                     'data-method' => 'POST',
                     'data-toggle' => 'confirmation',
                     'class' => 'btn btn-outline yellow-lemon btn-sm ajax-link',
                 ]) : '';
-                $deleteBtn = form()->button('<i class="fa fa-trash"></i>', [
+                $deleteBtn = form()->button('Delete', [
                     'title' => 'Delete this item',
                     'data-ajax' => $deleteLink,
                     'data-method' => 'DELETE',

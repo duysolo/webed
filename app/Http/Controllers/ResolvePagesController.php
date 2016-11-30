@@ -4,7 +4,7 @@ use Illuminate\Routing\Controller;
 use WebEd\Base\Pages\Repositories\Contracts\PageContract;
 use WebEd\Base\Pages\Repositories\PageRepository;
 
-class SlugWithoutSuffixController extends Controller
+class ResolvePagesController extends Controller
 {
     /**
      * @var Resolvers\PageController
@@ -31,7 +31,7 @@ class SlugWithoutSuffixController extends Controller
     {
         if(!$slug) {
             $page = $this->repository
-                ->where('id', '=', get_settings('default_homepage'))
+                ->where('id', '=', do_filter('front.resolve-pages.get', get_settings('default_homepage')))
                 ->where('status', '=', 'activated')
                 ->first();
         } else {
@@ -42,8 +42,12 @@ class SlugWithoutSuffixController extends Controller
         }
 
         if(!$page) {
-            echo 'You need to setup your default homepage. Go through to Dashboard -> Configuration -> Settings';
-            die();
+            if ($slug === null) {
+                echo '<h2>You need to setup your default homepage. Create a page then go through to Admin Dashboard -> Configuration -> Settings</h2>';
+                die();
+            } else {
+                abort(404);
+            }
         }
 
         return $this->pageController->handle($page);

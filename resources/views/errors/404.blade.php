@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Pge not found.</div>
+                <div class="title">Page not found.</div>
             </div>
         </div>
     </body>
