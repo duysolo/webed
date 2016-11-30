@@ -1,4 +1,4 @@
-#How to use Custom Fields plugin
+#How to use Backup plugin
 
 ####Active this plugin
 Go through to **Admin Dashboard** --> **Plugins** --> Enable and install this plugin.
