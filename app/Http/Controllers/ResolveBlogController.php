@@ -6,7 +6,7 @@ use WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\PostRepository;
 
-class ResolveBlogController extends Controller
+class ResolveBlogController extends AbstractController
 {
     /**
      * @var Resolvers\PageController
@@ -41,6 +41,8 @@ class ResolveBlogController extends Controller
         Resolvers\CategoryController $CategoryController
     )
     {
+        parent::__construct();
+
         $this->repository = $repository;
         $this->controller = $controller;
 
@@ -61,6 +63,10 @@ class ResolveBlogController extends Controller
             ->first();
 
         if ($post) {
+            $post = do_filter('front.resolve-posts.get', $post);
+
+            \AdminBar::registerLink('Edit this post', route('admin::blog.posts.edit.get', ['id' => $post->id]));
+
             return $this->controller->handle($post);
         }
 
@@ -70,6 +76,10 @@ class ResolveBlogController extends Controller
             ->first();
 
         if($category) {
+            $category = do_filter('front.resolve-categories.get', $category);
+
+            \AdminBar::registerLink('Edit this category', route('admin::blog.categories.edit.get', ['id' => $category->id]));
+
             return $this->categoryController->handle($category);
         }
 

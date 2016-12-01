@@ -31,6 +31,9 @@ class BootstrapModuleServiceProvider extends ServiceProvider
 
     private function booted()
     {
+        \AdminBar::registerLink('Post', route('admin::blog.posts.create.get'), 'add-new');
+        \AdminBar::registerLink('Category', route('admin::blog.categories.create.get'), 'add-new');
+
         /**
          * Register to dashboard menu
          */

@@ -33,7 +33,7 @@ class HookServiceProvider extends ServiceProvider
      */
     private function booted()
     {
-        add_filter('front.resolve-pages.get', function ($pageId) {
+        add_filter('front.default-homepage.get', function ($pageId) {
             $frontPage = get_theme_options('front_page');
             if(!$frontPage) {
                 return $pageId;

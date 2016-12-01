@@ -4,7 +4,7 @@ use Illuminate\Routing\Controller;
 use WebEd\Base\Pages\Repositories\Contracts\PageContract;
 use WebEd\Base\Pages\Repositories\PageRepository;
 
-class ResolvePagesController extends Controller
+class ResolvePagesController extends AbstractController
 {
     /**
      * @var Resolvers\PageController
@@ -22,6 +22,8 @@ class ResolvePagesController extends Controller
      */
     public function __construct(PageContract $repository, Resolvers\PageController $controller)
     {
+        parent::__construct();
+
         $this->repository = $repository;
 
         $this->pageController = $controller;
@@ -31,7 +33,7 @@ class ResolvePagesController extends Controller
     {
         if(!$slug) {
             $page = $this->repository
-                ->where('id', '=', do_filter('front.resolve-pages.get', get_settings('default_homepage')))
+                ->where('id', '=', do_filter('front.default-homepage.get', get_settings('default_homepage')))
                 ->where('status', '=', 'activated')
                 ->first();
         } else {
@@ -49,6 +51,10 @@ class ResolvePagesController extends Controller
                 abort(404);
             }
         }
+
+        $page = do_filter('front.resolve-pages.get', $page);
+
+        \AdminBar::registerLink('Edit this page', route('admin::pages.edit.get', ['id' => $page->id]));
 
         return $this->pageController->handle($page);
     }
