@@ -1,6 +1,6 @@
-<?php namespace App\Http\Controllers\Resolvers;
+<?php namespace WebEd\Plugins\Blog\Http\Controllers\Front;
 
-use App\Http\Controllers\AbstractController;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Plugins\Blog\Models\Category;
 use WebEd\Plugins\Blog\Models\Contracts\CategoryModelContract;
 use WebEd\Plugins\Blog\Repositories\CategoryRepository;
@@ -8,7 +8,7 @@ use WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\PostRepository;
 
-class CategoryController extends AbstractController
+class CategoryController extends BaseFrontController
 {
     /**
      * @var PostRepository

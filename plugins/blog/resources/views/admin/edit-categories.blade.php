@@ -77,7 +77,7 @@
                             <label class="control-label">
                                 <b>Visit page:</b>
                             </label>
-                            <a href="{{ route('front.resolve-blog.get', ['slug' => $object->slug]) }}" target="_blank">{{ route('front.resolve-blog.get', ['slug' => $object->slug]) }}</a>
+                            <a href="{{ route('front.web.resolve-blog.get', ['slug' => $object->slug]) }}" target="_blank">{{ route('front.web.resolve-blog.get', ['slug' => $object->slug]) }}</a>
                         </div>
                     @endif
                     <div class="form-group">

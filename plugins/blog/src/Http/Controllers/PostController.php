@@ -90,7 +90,7 @@ class PostController extends BaseAdminController
             ->of($this->repository)
             ->with($this->groupAction())
             ->editColumn('id', function ($item) {
-                return \Form::customCheckbox(['id[]' => [$item->id]]);
+                return \Form::customCheckbox([['id[]', $item->id]]);
             })
             ->editColumn('status', function ($item) {
                 return \Html::label($item->status, $item->status);

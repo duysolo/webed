@@ -35,7 +35,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
          */
         \DashboardMenu::registerItem([
             'id' => 'webed-custom-fields',
-            'piority' => 12,
+            'piority' => 20.1,
             'parent_id' => null,
             'heading' => null,
             'title' => 'Custom fields',
@@ -129,23 +129,19 @@ class BootstrapModuleServiceProvider extends ServiceProvider
             /**
              * Register blog group
              */
+            $categories = get_categories();
+
             \CustomFieldRules::registerRuleGroup('Blog')
                 ->registerRule('Blog', 'Post template', 'blog.post_template', get_templates('Post'))
                 ->registerRule('Blog', 'Category template', 'blog.category_template', get_templates('Category'))
-                ->registerRule('Blog', 'Category', 'blog.category', function () {
-                    $allCategories = get_categories();
-                    $categories = collect_all_categories_to_one_array(categories_with_indent_text($allCategories));
-
+                ->registerRule('Blog', 'Category', 'blog.category', function () use ($categories) {
                     $categoriesArr = [];
                     foreach ($categories as $row) {
                         $categoriesArr[$row->id] = $row->indent_text . $row->title;
                     }
                     return $categoriesArr;
                 })
-                ->registerRule('Blog', 'Posts with related category', 'blog.post_with_related_category', function () {
-                    $allCategories = get_categories();
-                    $categories = collect_all_categories_to_one_array(categories_with_indent_text($allCategories));
-
+                ->registerRule('Blog', 'Posts with related category', 'blog.post_with_related_category', function () use ($categories) {
                     $categoriesArr = [];
                     foreach ($categories as $row) {
                         $categoriesArr[$row->id] = $row->indent_text . $row->title;

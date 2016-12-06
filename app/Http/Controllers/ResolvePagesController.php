@@ -1,10 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Base\Pages\Repositories\Contracts\PageContract;
 use WebEd\Base\Pages\Repositories\PageRepository;
 
-class ResolvePagesController extends AbstractController
+class ResolvePagesController extends BaseFrontController
 {
     /**
      * @var Resolvers\PageController
@@ -52,7 +52,7 @@ class ResolvePagesController extends AbstractController
             }
         }
 
-        $page = do_filter('front.resolve-pages.get', $page);
+        $page = do_filter('front.web.resolve-pages.get', $page);
 
         \AdminBar::registerLink('Edit this page', route('admin::pages.edit.get', ['id' => $page->id]));
 

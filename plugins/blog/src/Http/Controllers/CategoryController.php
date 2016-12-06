@@ -46,7 +46,8 @@ class CategoryController extends BaseAdminController
                 'activated' => 'Activated',
                 'disabled' => 'Disabled',
             ], null, [
-                'class' => 'table-group-action-input form-control input-inline input-small input-sm'
+                'class' => 'table-group-action-input form-control input-inline input-small input-sm',
+                'data-placemenmt' => 'left'
             ])
         ];
 
@@ -70,14 +71,13 @@ class CategoryController extends BaseAdminController
      */
     public function postListing(DataTables $dataTable)
     {
-        $allCategories = get_categories();
-        $categories = collect(collect_all_categories_to_one_array(categories_with_indent_text($allCategories)));
+        $categories = collect(get_categories());
 
         $data = $dataTable
             ->of($categories)
             ->with($this->groupAction())
             ->editColumn('id', function ($item) {
-                return \Form::customCheckbox(['id[]' => [$item->id]]);
+                return \Form::customCheckbox([['id[]', $item->id]]);
             })
             ->editColumn('title', function ($item) {
                 return $item->indent_text . $item->title;
@@ -133,7 +133,7 @@ class CategoryController extends BaseAdminController
     {
         $data = [];
         if ($this->request->get('customActionType', null) === 'group_action') {
-            if(!$this->userRepository->hasPermission($this->loggedInUser, 'edit-categories')) {
+            if (!$this->userRepository->hasPermission($this->loggedInUser, 'edit-categories')) {
                 return [
                     'customActionMessage' => 'You do not have permission',
                     'customActionStatus' => 'danger',
@@ -145,16 +145,14 @@ class CategoryController extends BaseAdminController
 
             switch ($actionValue) {
                 case 'deleted':
-                    if(!$this->userRepository->hasPermission($this->loggedInUser, 'delete-categories')) {
+                    if (!$this->userRepository->hasPermission($this->loggedInUser, 'delete-categories')) {
                         return [
                             'customActionMessage' => 'You do not have permission',
                             'customActionStatus' => 'danger',
                         ];
                     }
-                    /**
-                     * Delete pages
-                     */
-                    $result = $this->deleteDelete($ids);
+                    $result = $this->repository->delete($ids);
+                    do_action('blog.categories.after-delete.delete', $ids, $result, $this);
                     break;
                 case 'activated':
                 case 'disabled':
@@ -171,7 +169,6 @@ class CategoryController extends BaseAdminController
             }
             $data['customActionMessage'] = $result['messages'];
             $data['customActionStatus'] = $result['error'] ? 'danger' : 'success';
-
         }
         return $data;
     }
@@ -197,10 +194,9 @@ class CategoryController extends BaseAdminController
     public function getCreate()
     {
         $allCategories = get_categories();
-        $categories = collect_all_categories_to_one_array(categories_with_indent_text($allCategories));
 
         $selectArr = [];
-        foreach ($categories as $category) {
+        foreach ($allCategories as $category) {
             $selectArr[$category->id] = $category->indent_text . $category->title;
         }
         $this->dis['categories'] = $selectArr;
@@ -247,14 +243,13 @@ class CategoryController extends BaseAdminController
             return redirect()->back();
         }
 
-        $allCategories = get_categories();
-        $categories = collect_all_categories_to_one_array(categories_with_indent_text($allCategories));
+        $categories = get_categories();
 
         $selectArr = ['' => 'Select...'];
         $childCategories = [$id];
         $childCategories = $this->repository->getAllRelatedChildrenIds($item, $childCategories);
         foreach ($categories as $category) {
-            if(!in_array($category->id, $childCategories)) {
+            if (!in_array($category->id, $childCategories)) {
                 $selectArr[$category->id] = $category->indent_text . $category->title;
             }
         }
@@ -329,7 +324,7 @@ class CategoryController extends BaseAdminController
      */
     private function createPost(array $data)
     {
-        if(!$this->userRepository->hasPermission($this->loggedInUser, 'create-categories')) {
+        if (!$this->userRepository->hasPermission($this->loggedInUser, 'create-categories')) {
             return redirect()->to(route('admin::error', ['code' => 403]));
         }
 

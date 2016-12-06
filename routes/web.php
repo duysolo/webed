@@ -20,14 +20,4 @@
 /**
  * Use for pages
  */
-$router->get('/{slug?}', 'ResolvePagesController@handle')->name('front.resolve-pages.get');
-
-/**
- * Use for blog
- */
-if (
-    interface_exists('WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract') &&
-    interface_exists('WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract')
-) {
-    $router->get('blog/{slug}.html', 'ResolveBlogController@handle')->name('front.resolve-blog.get');
-}
+$router->get('/{slug?}', 'ResolvePagesController@handle')->name('front.web.resolve-pages.get');

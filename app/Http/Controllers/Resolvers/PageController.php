@@ -1,14 +1,12 @@
 <?php namespace App\Http\Controllers\Resolvers;
 
-use App\Http\Controllers\AbstractController;
-use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
-use WebEd\Plugins\Blog\Repositories\PostRepository;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Base\Pages\Models\Contracts\PageModelContract;
 use WebEd\Base\Pages\Models\EloquentPage;
 use WebEd\Base\Pages\Repositories\Contracts\PageContract;
 use WebEd\Base\Pages\Repositories\PageRepository;
 
-class PageController extends AbstractController
+class PageController extends BaseFrontController
 {
     /**
      * @param PageRepository $repository

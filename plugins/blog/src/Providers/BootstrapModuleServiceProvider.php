@@ -61,7 +61,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
          * Register menu widget
          */
         \MenuManagement::registerWidget('Categories', 'category', function () {
-            $categories = get_categories();
+            $categories = get_categories_with_children();
             return $this->parseMenuWidgetData($categories);
         });
 
@@ -77,7 +77,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
             }
             return [
                 'model_title' => $category->title,
-                'url' => route('front.resolve-blog.get', ['slug' => $category->slug]),
+                'url' => route('front.web.resolve-blog.get', ['slug' => $category->slug]),
             ];
         });
     }

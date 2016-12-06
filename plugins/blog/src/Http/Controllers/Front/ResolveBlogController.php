@@ -1,15 +1,15 @@
-<?php namespace App\Http\Controllers;
+<?php namespace WebEd\Plugins\Blog\Http\Controllers\Front;
 
-use Illuminate\Routing\Controller;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Plugins\Blog\Repositories\CategoryRepository;
 use WebEd\Plugins\Blog\Repositories\Contracts\CategoryRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\PostRepository;
 
-class ResolveBlogController extends AbstractController
+class ResolveBlogController extends BaseFrontController
 {
     /**
-     * @var Resolvers\PageController
+     * @var PostController
      */
     protected $controller;
 
@@ -19,7 +19,7 @@ class ResolveBlogController extends AbstractController
     protected $repository;
 
     /**
-     * @var Resolvers\CategoryController
+     * @var CategoryController
      */
     protected $categoryController;
 
@@ -30,15 +30,15 @@ class ResolveBlogController extends AbstractController
 
     /**
      * @param PostRepositoryContract|PostRepository $repository
-     * @param Resolvers\PostController $controller
+     * @param PostController $controller
      * @param CategoryRepositoryContract|CategoryRepository $categoryRepositoryContract
-     * @param Resolvers\CategoryController $CategoryController
+     * @param CategoryController $CategoryController
      */
     public function __construct(
         PostRepositoryContract $repository,
-        Resolvers\PostController $controller,
+        PostController $controller,
         CategoryRepositoryContract $categoryRepositoryContract,
-        Resolvers\CategoryController $CategoryController
+        CategoryController $CategoryController
     )
     {
         parent::__construct();

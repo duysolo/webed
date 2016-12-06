@@ -23,6 +23,10 @@ WebEd.DataTableAjax = function ($) {
                 dataTableHelper.setAjaxParam("id", dataTableHelper.getSelectedRows());
                 dataTableHelper.getDataTable().ajax.reload();
                 dataTableHelper.clearAjaxParams();
+                dataTableHelper.getTableWrapper().find('input[name=group_checkable]').prop('checked', false);
+                setTimeout(function () {
+                    dataTableHelper.getDataTable().ajax.reload();
+                }, 0);
             } else if (action.val() == "") {
                 WebEd.showNotification('Please select an action', 'danger');
             } else if (dataTableHelper.getSelectedRowsCount() === 0) {
