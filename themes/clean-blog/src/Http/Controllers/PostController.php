@@ -1,12 +1,12 @@
 <?php namespace WebEd\Themes\CleanBlog\Http\Controllers;
 
-use App\Http\Controllers\AbstractController;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Plugins\Blog\Models\Contracts\PostModelContract;
 use WebEd\Plugins\Blog\Models\Post;
 use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\PostRepository;
 
-class PostController extends AbstractController
+class PostController extends BaseFrontController
 {
     protected $module = 'clean-blog';
 

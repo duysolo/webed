@@ -195,7 +195,7 @@ class CategoryController extends BaseAdminController
     {
         $allCategories = get_categories();
 
-        $selectArr = [];
+        $selectArr = ['' => 'Select...'];
         foreach ($allCategories as $category) {
             $selectArr[$category->id] = $category->indent_text . $category->title;
         }

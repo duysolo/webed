@@ -26,12 +26,17 @@ Please go to [laravel documentation page](https://laravel.com/docs/5.3/installat
 
 ##WebEd installation guide
 
-####Checkout project
+####Add WebEd to your Laravel project
 ```
-composer create-project --prefer-dist sgsoft-studio/webed webed
+composer require sgsoft-studio/base
 ```
 
 ####Install WebEd
+Register the WebEd provider to **config/app.php**
+```
+WebEd\Base\Core\Providers\ModuleProvider::class,
+```
+Then
 ```
 php artisan cms:install
 ```

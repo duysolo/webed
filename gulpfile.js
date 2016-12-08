@@ -15,8 +15,6 @@ const publicPath = {
     adminImages: 'public/admin/images/',
     adminJs: 'public/admin/js/',
     adminModules: 'public/admin/modules/',
-    adminPackages: 'public/admin/packages/',
-    adminPages: 'public/admin/pages/',
     adminPlugins: 'public/admin/plugins/',
     adminTheme: 'public/admin/theme/',
     /**
@@ -54,13 +52,10 @@ var ElixirAssets = function () {
 
             /*Other pages style*/
             mix
-                .sass('admin/pages/login/login.scss', publicPath.adminPages + 'login/login.css')
-                .sass('admin/pages/user-profiles/user-profiles.scss', publicPath.adminPages + 'user-profiles/user-profiles.css');
+                .sass('admin/modules/users/user-profiles/user-profiles.scss', publicPath.adminModules + 'users/user-profiles/user-profiles.css');
 
             /*Copy items to public*/
             mix
-                .copy(customPath.assetsFolder + 'packages/admin', publicPath.adminPackages)
-                .copy(customPath.assetsFolder + 'js/admin/pages', publicPath.adminPages)
                 .copy(customPath.assetsFolder + 'js/admin/modules', publicPath.adminModules);
         },
         front: function (mix) {

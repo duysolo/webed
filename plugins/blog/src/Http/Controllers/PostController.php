@@ -216,7 +216,7 @@ class PostController extends BaseAdminController
 
         $this->dis['currentId'] = 0;
 
-        $this->dis['allCategories'] = categories_with_indent_text(get_categories());
+        $this->dis['allCategories'] = get_categories_with_children();
 
         $this->dis['object'] = $this->repository->getModel();
         $oldInputs = old();
@@ -252,7 +252,7 @@ class PostController extends BaseAdminController
             return redirect()->back();
         }
 
-        $this->dis['allCategories'] = categories_with_indent_text(get_categories());
+        $this->dis['allCategories'] = get_categories_with_children();
         $this->dis['categories'] = $item->categories()->getRelatedIds()->toArray();
 
         $this->setPageTitle('Edit post', $item->title);

@@ -1,11 +1,11 @@
-<?php namespace WebEd\Plugins\Backup\Providers;
+<?php namespace WebEd\Plugins\DashboardStyleGuide\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 
 class RouteServiceProvider extends ServiceProvider
 {
-    protected $namespace = 'WebEd\Plugins\Backup\Http\Controllers';
+    protected $namespace = 'WebEd\Plugins\DashboardStyleGuide\Http\Controllers';
 
     public function map(Router $router)
     {

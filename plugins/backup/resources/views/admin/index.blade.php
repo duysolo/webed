@@ -38,19 +38,19 @@
                            data-toggle="confirmation"
                            data-placement="left"
                            href="{{ route('admin::webed-backup.create.get', ['type' => 'database']) }}">
-                            <i class="fa fa-plus"></i> Backup Database
+                            <i class="fa fa-plus"></i> Database
                         </a>
-                        <a class="btn btn-transparent green btn-sm"
+                        <a class="btn btn-transparent yellow-lemon btn-sm"
                            data-toggle="confirmation"
                            data-placement="left"
                            href="{{ route('admin::webed-backup.create.get', ['type' => 'medias']) }}">
-                            <i class="fa fa-plus"></i> Backup medias
+                            <i class="fa fa-plus"></i> Medias
                         </a>
-                        <a class="btn btn-transparent green btn-sm"
+                        <a class="btn btn-transparent purple btn-sm"
                            data-toggle="confirmation"
                            data-placement="left"
                            href="{{ route('admin::webed-backup.create.get') }}">
-                            <i class="fa fa-plus"></i> Backup medias & database
+                            <i class="fa fa-plus"></i> Medias & Database
                         </a>
                         <a class="btn btn-transparent red-sunglo btn-sm"
                            data-toggle="confirmation"

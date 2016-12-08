@@ -1,6 +1,6 @@
 <?php namespace WebEd\Themes\CleanBlog\Http\Controllers;
 
-use App\Http\Controllers\AbstractController;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 use WebEd\Plugins\Blog\Repositories\PostRepository;
 use WebEd\Base\Pages\Models\Contracts\PageModelContract;
@@ -8,7 +8,7 @@ use WebEd\Base\Pages\Models\EloquentPage;
 use WebEd\Base\Pages\Repositories\Contracts\PageContract;
 use WebEd\Base\Pages\Repositories\PageRepository;
 
-class PageController extends AbstractController
+class PageController extends BaseFrontController
 {
     protected $module = 'clean-blog';
 

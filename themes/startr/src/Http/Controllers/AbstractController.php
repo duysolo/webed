@@ -1,6 +1,8 @@
 <?php namespace WebEd\Themes\Startr\Http\Controllers;
 
-abstract class AbstractController extends \App\Http\Controllers\AbstractController
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
+
+abstract class AbstractController extends BaseFrontController
 {
     /**
      * Override some menu attributes

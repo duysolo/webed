@@ -22,10 +22,6 @@ class ModuleProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
         $this->publishes([
-            __DIR__ . '/../../resources/assets' => resource_path('assets'),
-            __DIR__ . '/../../resources/public' => public_path(),
-        ], 'assets');
-        $this->publishes([
             __DIR__ . '/../../resources/views' => config('view.paths')[0] . '/vendor/webed-custom-fields',
         ], 'views');
         $this->publishes([
@@ -34,6 +30,12 @@ class ModuleProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../database' => base_path('database'),
         ], 'migrations');
+        $this->publishes([
+            __DIR__ . '/../../resources/assets' => resource_path('assets'),
+        ], 'webed-assets');
+        $this->publishes([
+            __DIR__ . '/../../resources/public' => public_path(),
+        ], 'webed-public-assets');
     }
 
     /**

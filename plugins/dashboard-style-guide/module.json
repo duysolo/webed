@@ -1,0 +1,9 @@
+{
+    "alias": "webed-dashboard-style-guide",
+    "name": "WebEd style guide for admin dashboard",
+    "author": "Tedozi Manson",
+    "description": "WebEd style guide for admin dashboard",
+    "namespace": "WebEd\\Plugins\\DashboardStyleGuide",
+    "version": "1.0",
+    "autoload": "psr-4"
+}

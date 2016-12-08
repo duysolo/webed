@@ -1,6 +1,7 @@
 <?php namespace WebEd\Plugins\CustomFields\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use WebEd\Plugins\Blog\Repositories\Contracts\PostRepositoryContract;
 
 class BootstrapModuleServiceProvider extends ServiceProvider
 {

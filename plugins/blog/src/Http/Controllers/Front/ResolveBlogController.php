@@ -65,6 +65,11 @@ class ResolveBlogController extends BaseFrontController
         if ($post) {
             $post = do_filter('front.resolve-posts.get', $post);
 
+            /**
+             * Update view count
+             */
+            increase_view_count($post, $post->id);
+
             \AdminBar::registerLink('Edit this post', route('admin::blog.posts.edit.get', ['id' => $post->id]));
 
             return $this->controller->handle($post);
@@ -77,6 +82,11 @@ class ResolveBlogController extends BaseFrontController
 
         if($category) {
             $category = do_filter('front.resolve-categories.get', $category);
+
+            /**
+             * Update view count
+             */
+            increase_view_count($category, $category->id);
 
             \AdminBar::registerLink('Edit this category', route('admin::blog.categories.edit.get', ['id' => $category->id]));
 

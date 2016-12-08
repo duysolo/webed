@@ -9,7 +9,10 @@ class RouteServiceProvider extends ServiceProvider
 
     public function map(Router $router)
     {
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        $router->group(['middleware' => 'web'], function (Router $router) {
+            $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        });
+
         $this->loadRoutesFrom(__DIR__ . '/../../routes/api.php');
     }
 }

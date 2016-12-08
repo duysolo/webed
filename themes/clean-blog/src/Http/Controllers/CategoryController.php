@@ -1,10 +1,10 @@
 <?php namespace WebEd\Themes\CleanBlog\Http\Controllers;
 
-use App\Http\Controllers\AbstractController;
+use WebEd\Base\Core\Http\Controllers\BaseFrontController;
 use WebEd\Plugins\Blog\Models\Category;
 use WebEd\Plugins\Blog\Models\Contracts\CategoryModelContract;
 
-class CategoryController extends AbstractController
+class CategoryController extends BaseFrontController
 {
     protected $module = 'clean-blog';
 
