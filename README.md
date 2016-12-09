@@ -47,6 +47,23 @@ You can config admin route by modify the .env:
 WEBED_ADMIN_ROUTE=admincp
 ```
 
+All available WebEd env config:
+```
+#Use for backup data
+DB_DUMP_PATH=/Applications/AMPPS/mysql/bin/
+
+#Caching service
+CACHE_DRIVER=file
+CACHE_REPOSITORY=true
+
+#Admin route alias
+WEBED_ADMIN_ROUTE=admincp
+
+#Recaptcha
+WEBED_RECAPTCHA_SITE_KEY=
+WEBED_RECAPTCHA_SECRET_KEY=
+```
+
 If you see this message when enable plugins/themes, it's because of your server does not support composer dump-autoload
 helper. Try to run **composer dump-autoload** by yourself.
 
