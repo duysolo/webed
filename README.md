@@ -18,8 +18,6 @@ Today, I would like to share you version 2 of that CMS. It's called **WebEd**.
 - Themes & plugins management.
 - Hook
 
-By default, WebEd comes with these plugins: **Pages**, **Blog**, **Custom Fields**.
-
 ##System Requirement
 On this projects, I use the latest Laravel version (currently 5.3). 
 Please go to [laravel documentation page](https://laravel.com/docs/5.3/installation) to check your system requirements.
@@ -56,13 +54,16 @@ helper. Try to run **composer dump-autoload** by yourself.
 >The base module of this class is enabled, but class not found: ***xxx***. Please review and add the namespace of this module to composer autoload section, then run **composer dump-autoload**
 
 
-Enjoy!
+##Plugins
+Download the plugins and places it at **/plugins** folder.
+
+[Plugins list](https://github.com/webed-plugins/readme)
 
 ##Table of contents
 - [WebEd module commands](./documentation/console/module.md)
 - [WebEd theme commands](./documentation/console/theme.md)
-- [How to use custom fields](./documentation/plugins/custom-fields.md)
-- [How to use backup](./documentation/plugins/backup.md)
+
+###I love github!
 
 ##Some screenshots
 ![Login](./documentation/images/1.png)
