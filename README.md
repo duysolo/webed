@@ -33,11 +33,11 @@ composer create-project --prefer-dist sgsoft-studio/webed webed
 ```
 composer require sgsoft-studio/base
 ```
-Register the WebEd provider to **config/app.php**
+- Register the WebEd provider to **config/app.php**
 ```
 WebEd\Base\Core\Providers\ModuleProvider::class,
 ```
-Modify auth entity: open **config/auth.php**
+- Modify auth entity: open **config/auth.php**
 ```
 'providers' => [
     'users' => [
@@ -46,6 +46,8 @@ Modify auth entity: open **config/auth.php**
     ],
 ],
 ```
+- After that, remove the default Laravel migrations (create_users_table, create_password_resets_table**)
+- Modify the database information in .env
 
 ###Then
 ```
