@@ -1587,16 +1587,16 @@
         },
         {
             "name": "sgsoft-studio/base",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/base.git",
-                "reference": "752a92d9fbab37c925cdabc126d8a2073e4ee8a2"
+                "reference": "ec60a604c339d455e7ed85d4db688453094462e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/base/zipball/752a92d9fbab37c925cdabc126d8a2073e4ee8a2",
-                "reference": "752a92d9fbab37c925cdabc126d8a2073e4ee8a2",
+                "url": "https://api.github.com/repos/sgsoft-studio/base/zipball/ec60a604c339d455e7ed85d4db688453094462e4",
+                "reference": "ec60a604c339d455e7ed85d4db688453094462e4",
                 "shasum": ""
             },
             "require": {
@@ -1637,7 +1637,7 @@
             ],
             "description": "WebEd core system",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-08 17:56:47"
+            "time": "2016-12-10 16:50:29"
         },
         {
             "name": "sgsoft-studio/caching",
@@ -1794,16 +1794,16 @@
         },
         {
             "name": "sgsoft-studio/modules-management",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/modules-management.git",
-                "reference": "ba3a83e8d3d9c514a0af4718e63de05fe6f2d12e"
+                "reference": "f768d09022d995a0af9997772b135caa77b6c4ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/modules-management/zipball/ba3a83e8d3d9c514a0af4718e63de05fe6f2d12e",
-                "reference": "ba3a83e8d3d9c514a0af4718e63de05fe6f2d12e",
+                "url": "https://api.github.com/repos/sgsoft-studio/modules-management/zipball/f768d09022d995a0af9997772b135caa77b6c4ca",
+                "reference": "f768d09022d995a0af9997772b135caa77b6c4ca",
                 "shasum": ""
             },
             "require": {
@@ -1828,7 +1828,7 @@
             ],
             "description": "WebEd modules-management",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-08 17:49:45"
+            "time": "2016-12-10 16:53:28"
         },
         {
             "name": "sgsoft-studio/pages",
@@ -1946,16 +1946,16 @@
         },
         {
             "name": "sgsoft-studio/themes-management",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/themes-management.git",
-                "reference": "246bb1849ea1012ce28075051f3fe8d285b3f547"
+                "reference": "9a788bf9d59fe9df96ab6b6de8acdd6a17b9a7dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/themes-management/zipball/246bb1849ea1012ce28075051f3fe8d285b3f547",
-                "reference": "246bb1849ea1012ce28075051f3fe8d285b3f547",
+                "url": "https://api.github.com/repos/sgsoft-studio/themes-management/zipball/9a788bf9d59fe9df96ab6b6de8acdd6a17b9a7dc",
+                "reference": "9a788bf9d59fe9df96ab6b6de8acdd6a17b9a7dc",
                 "shasum": ""
             },
             "require": {
@@ -1980,7 +1980,7 @@
             ],
             "description": "WebEd themes-management",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-08 17:54:42"
+            "time": "2016-12-10 17:05:29"
         },
         {
             "name": "sgsoft-studio/users",

@@ -46,8 +46,8 @@ WebEd\Base\Core\Providers\ModuleProvider::class,
     ],
 ],
 ```
-- After that, remove the default Laravel migrations (create_users_table, create_password_resets_table**)
-- Modify the database information in .env
+- After that, remove the default Laravel migrations (create_users_table, create_password_resets_table)
+- Modify the database information in **.env**
 
 ###Then
 ```
