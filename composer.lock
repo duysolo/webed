@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4056a0c7f9612e41ddca962864649d0f",
+    "hash": "1258542578b3aef310e200cbd5bad950",
     "content-hash": "98ae1123b54fe34dea9ee911672149fa",
     "packages": [
         {
@@ -365,20 +365,20 @@
         },
         {
             "name": "jeremeamia/SuperClosure",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeremeamia/super_closure.git",
-                "reference": "29a88be2a4846d27c1613aed0c9071dfad7b5938"
+                "reference": "443c3df3207f176a1b41576ee2a66968a507b3db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeremeamia/super_closure/zipball/29a88be2a4846d27c1613aed0c9071dfad7b5938",
-                "reference": "29a88be2a4846d27c1613aed0c9071dfad7b5938",
+                "url": "https://api.github.com/repos/jeremeamia/super_closure/zipball/443c3df3207f176a1b41576ee2a66968a507b3db",
+                "reference": "443c3df3207f176a1b41576ee2a66968a507b3db",
                 "shasum": ""
             },
             "require": {
-                "nikic/php-parser": "^1.2|^2.0",
+                "nikic/php-parser": "^1.2|^2.0|^3.0",
                 "php": ">=5.4",
                 "symfony/polyfill-php56": "^1.0"
             },
@@ -388,7 +388,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -419,7 +419,7 @@
                 "serialize",
                 "tokenizer"
             ],
-            "time": "2015-12-05 17:17:57"
+            "time": "2016-12-07 09:37:55"
         },
         {
             "name": "laravel/framework",
@@ -751,16 +751,16 @@
         },
         {
             "name": "maatwebsite/excel",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
-                "reference": "55d18b6a99b30b9003c2f174cc3ecd9ca79f1bf5"
+                "reference": "d9c398f7eba0ac9caf9c104dd0d55bd6a5ff231e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/55d18b6a99b30b9003c2f174cc3ecd9ca79f1bf5",
-                "reference": "55d18b6a99b30b9003c2f174cc3ecd9ca79f1bf5",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/d9c398f7eba0ac9caf9c104dd0d55bd6a5ff231e",
+                "reference": "d9c398f7eba0ac9caf9c104dd0d55bd6a5ff231e",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +814,7 @@
                 "import",
                 "laravel"
             ],
-            "time": "2016-10-18 16:43:26"
+            "time": "2016-12-09 19:11:09"
         },
         {
             "name": "maximebf/debugbar",
@@ -1473,16 +1473,16 @@
         },
         {
             "name": "sgsoft-studio/acl",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/acl.git",
-                "reference": "3f1408453c1145787b57e2f5b262dbfa275b26c1"
+                "reference": "06f802a962b62773a222be210fe0c2a738d006ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/acl/zipball/3f1408453c1145787b57e2f5b262dbfa275b26c1",
-                "reference": "3f1408453c1145787b57e2f5b262dbfa275b26c1",
+                "url": "https://api.github.com/repos/sgsoft-studio/acl/zipball/06f802a962b62773a222be210fe0c2a738d006ed",
+                "reference": "06f802a962b62773a222be210fe0c2a738d006ed",
                 "shasum": ""
             },
             "require": {
@@ -1507,7 +1507,7 @@
             ],
             "description": "WebEd ACL",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:43:01"
+            "time": "2016-12-08 17:43:46"
         },
         {
             "name": "sgsoft-studio/assets-management",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "sgsoft-studio/auth",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/auth.git",
-                "reference": "2b538ad24f9a177209c3b81a2c70a1e1aacffce0"
+                "reference": "569fdcbc6332c2070fd28196a622547e2d8c0e43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/auth/zipball/2b538ad24f9a177209c3b81a2c70a1e1aacffce0",
-                "reference": "2b538ad24f9a177209c3b81a2c70a1e1aacffce0",
+                "url": "https://api.github.com/repos/sgsoft-studio/auth/zipball/569fdcbc6332c2070fd28196a622547e2d8c0e43",
+                "reference": "569fdcbc6332c2070fd28196a622547e2d8c0e43",
                 "shasum": ""
             },
             "require": {
@@ -1583,20 +1583,20 @@
             ],
             "description": "WebEd auth",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:44:26"
+            "time": "2016-12-08 17:45:33"
         },
         {
             "name": "sgsoft-studio/base",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/base.git",
-                "reference": "9927187415cadb157b48b25dfa8231ca62ff8ac7"
+                "reference": "752a92d9fbab37c925cdabc126d8a2073e4ee8a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/base/zipball/9927187415cadb157b48b25dfa8231ca62ff8ac7",
-                "reference": "9927187415cadb157b48b25dfa8231ca62ff8ac7",
+                "url": "https://api.github.com/repos/sgsoft-studio/base/zipball/752a92d9fbab37c925cdabc126d8a2073e4ee8a2",
+                "reference": "752a92d9fbab37c925cdabc126d8a2073e4ee8a2",
                 "shasum": ""
             },
             "require": {
@@ -1637,20 +1637,20 @@
             ],
             "description": "WebEd core system",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:46:04"
+            "time": "2016-12-08 17:56:47"
         },
         {
             "name": "sgsoft-studio/caching",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/caching.git",
-                "reference": "29dfa6e7ecc209865bb7554faebe1ded18f8cd41"
+                "reference": "e4b4d166e3d395b9d9e6417692ec254b8d1b70d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/caching/zipball/29dfa6e7ecc209865bb7554faebe1ded18f8cd41",
-                "reference": "29dfa6e7ecc209865bb7554faebe1ded18f8cd41",
+                "url": "https://api.github.com/repos/sgsoft-studio/caching/zipball/e4b4d166e3d395b9d9e6417692ec254b8d1b70d7",
+                "reference": "e4b4d166e3d395b9d9e6417692ec254b8d1b70d7",
                 "shasum": ""
             },
             "require": {
@@ -1675,20 +1675,20 @@
             ],
             "description": "WebEd caching",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:47:20"
+            "time": "2016-12-08 17:46:41"
         },
         {
             "name": "sgsoft-studio/elfinder",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/elfinder.git",
-                "reference": "4ac0e3f4e951b697c8f11e43134f68c2bb1b2d47"
+                "reference": "02f2be9b8ad99a23cda856fe3eb241c52e261c97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/elfinder/zipball/4ac0e3f4e951b697c8f11e43134f68c2bb1b2d47",
-                "reference": "4ac0e3f4e951b697c8f11e43134f68c2bb1b2d47",
+                "url": "https://api.github.com/repos/sgsoft-studio/elfinder/zipball/02f2be9b8ad99a23cda856fe3eb241c52e261c97",
+                "reference": "02f2be9b8ad99a23cda856fe3eb241c52e261c97",
                 "shasum": ""
             },
             "require": {
@@ -1714,7 +1714,7 @@
             ],
             "description": "WebEd elfinder",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:47:43"
+            "time": "2016-12-08 17:47:50"
         },
         {
             "name": "sgsoft-studio/hook",
@@ -1756,16 +1756,16 @@
         },
         {
             "name": "sgsoft-studio/menu",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/menus.git",
-                "reference": "5629e22efa8c8f9aeadf7d116355b673b3f47e46"
+                "reference": "3a4d9a26be1fd41ab7b78b0f79007b52c2376843"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/menus/zipball/5629e22efa8c8f9aeadf7d116355b673b3f47e46",
-                "reference": "5629e22efa8c8f9aeadf7d116355b673b3f47e46",
+                "url": "https://api.github.com/repos/sgsoft-studio/menus/zipball/3a4d9a26be1fd41ab7b78b0f79007b52c2376843",
+                "reference": "3a4d9a26be1fd41ab7b78b0f79007b52c2376843",
                 "shasum": ""
             },
             "require": {
@@ -1790,20 +1790,20 @@
             ],
             "description": "WebEd menu",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:50:24"
+            "time": "2016-12-08 17:49:09"
         },
         {
             "name": "sgsoft-studio/modules-management",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/modules-management.git",
-                "reference": "55cd34d6852d332610a02bf1cc0c4f004490f5ca"
+                "reference": "ba3a83e8d3d9c514a0af4718e63de05fe6f2d12e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/modules-management/zipball/55cd34d6852d332610a02bf1cc0c4f004490f5ca",
-                "reference": "55cd34d6852d332610a02bf1cc0c4f004490f5ca",
+                "url": "https://api.github.com/repos/sgsoft-studio/modules-management/zipball/ba3a83e8d3d9c514a0af4718e63de05fe6f2d12e",
+                "reference": "ba3a83e8d3d9c514a0af4718e63de05fe6f2d12e",
                 "shasum": ""
             },
             "require": {
@@ -1828,20 +1828,20 @@
             ],
             "description": "WebEd modules-management",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 18:34:28"
+            "time": "2016-12-08 17:49:45"
         },
         {
             "name": "sgsoft-studio/pages",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/pages.git",
-                "reference": "d304e860fef70ad1692e7c0f984d1655e4f0a7b1"
+                "reference": "79e493612bc28ea8a0927ee982b732fc24f6c669"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/pages/zipball/d304e860fef70ad1692e7c0f984d1655e4f0a7b1",
-                "reference": "d304e860fef70ad1692e7c0f984d1655e4f0a7b1",
+                "url": "https://api.github.com/repos/sgsoft-studio/pages/zipball/79e493612bc28ea8a0927ee982b732fc24f6c669",
+                "reference": "79e493612bc28ea8a0927ee982b732fc24f6c669",
                 "shasum": ""
             },
             "require": {
@@ -1866,20 +1866,20 @@
             ],
             "description": "WebEd pages management",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:52:08"
+            "time": "2016-12-08 17:51:10"
         },
         {
             "name": "sgsoft-studio/settings",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/settings.git",
-                "reference": "36dbaa39fdaf827aac5e4df3a81080d272269c11"
+                "reference": "d8a2331b5c7d2076d3c8aedf3b5f266c5783c542"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/settings/zipball/36dbaa39fdaf827aac5e4df3a81080d272269c11",
-                "reference": "36dbaa39fdaf827aac5e4df3a81080d272269c11",
+                "url": "https://api.github.com/repos/sgsoft-studio/settings/zipball/d8a2331b5c7d2076d3c8aedf3b5f266c5783c542",
+                "reference": "d8a2331b5c7d2076d3c8aedf3b5f266c5783c542",
                 "shasum": ""
             },
             "require": {
@@ -1904,20 +1904,20 @@
             ],
             "description": "WebEd settings",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:52:40"
+            "time": "2016-12-08 17:52:07"
         },
         {
             "name": "sgsoft-studio/shortcode",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/shortcode.git",
-                "reference": "531c5f025b85eafe69f540ac7e770614a3858518"
+                "reference": "7e71f87d1ec25980b9fd2f261b0b60caa3cf7fe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/shortcode/zipball/531c5f025b85eafe69f540ac7e770614a3858518",
-                "reference": "531c5f025b85eafe69f540ac7e770614a3858518",
+                "url": "https://api.github.com/repos/sgsoft-studio/shortcode/zipball/7e71f87d1ec25980b9fd2f261b0b60caa3cf7fe1",
+                "reference": "7e71f87d1ec25980b9fd2f261b0b60caa3cf7fe1",
                 "shasum": ""
             },
             "require": {
@@ -1942,20 +1942,20 @@
             ],
             "description": "WebEd shortcode integration",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:53:39"
+            "time": "2016-12-08 17:53:47"
         },
         {
             "name": "sgsoft-studio/themes-management",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/themes-management.git",
-                "reference": "d3679b1a62c6e98cdd28273182eaa9fa21ece50e"
+                "reference": "246bb1849ea1012ce28075051f3fe8d285b3f547"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/themes-management/zipball/d3679b1a62c6e98cdd28273182eaa9fa21ece50e",
-                "reference": "d3679b1a62c6e98cdd28273182eaa9fa21ece50e",
+                "url": "https://api.github.com/repos/sgsoft-studio/themes-management/zipball/246bb1849ea1012ce28075051f3fe8d285b3f547",
+                "reference": "246bb1849ea1012ce28075051f3fe8d285b3f547",
                 "shasum": ""
             },
             "require": {
@@ -1980,20 +1980,20 @@
             ],
             "description": "WebEd themes-management",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 18:41:12"
+            "time": "2016-12-08 17:54:42"
         },
         {
             "name": "sgsoft-studio/users",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sgsoft-studio/users.git",
-                "reference": "88a60f79c65f6d84c6f4b137872661a349d9b713"
+                "reference": "7e5b8b3c3fadf6af28302c977e52a20fce21fcf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sgsoft-studio/users/zipball/88a60f79c65f6d84c6f4b137872661a349d9b713",
-                "reference": "88a60f79c65f6d84c6f4b137872661a349d9b713",
+                "url": "https://api.github.com/repos/sgsoft-studio/users/zipball/7e5b8b3c3fadf6af28302c977e52a20fce21fcf1",
+                "reference": "7e5b8b3c3fadf6af28302c977e52a20fce21fcf1",
                 "shasum": ""
             },
             "require": {
@@ -2018,20 +2018,20 @@
             ],
             "description": "WebEd users",
             "homepage": "http://sgsoftware.net",
-            "time": "2016-12-06 17:54:26"
+            "time": "2016-12-08 17:55:39"
         },
         {
             "name": "studio-42/elfinder",
-            "version": "2.1.18",
+            "version": "2.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Studio-42/elFinder.git",
-                "reference": "4f8b5564d9dfaaa4b3693a5d09b20129c147a791"
+                "reference": "8f89bea1611b5bb003490c4c686288f72855d052"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/4f8b5564d9dfaaa4b3693a5d09b20129c147a791",
-                "reference": "4f8b5564d9dfaaa4b3693a5d09b20129c147a791",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/8f89bea1611b5bb003490c4c686288f72855d052",
+                "reference": "8f89bea1611b5bb003490c4c686288f72855d052",
                 "shasum": ""
             },
             "require": {
@@ -2076,7 +2076,7 @@
             ],
             "description": "File manager for web",
             "homepage": "http://elfinder.org",
-            "time": "2016-11-21 12:44:59"
+            "time": "2016-12-10 01:13:42"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3063,16 +3063,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v6.22.2",
+            "version": "v6.22.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "18aeddbb091d27d84e4c855d59f0362d2da9f97b"
+                "reference": "3f3f353f010542e5360d1412bb846189ebc6d342"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/18aeddbb091d27d84e4c855d59f0362d2da9f97b",
-                "reference": "18aeddbb091d27d84e4c855d59f0362d2da9f97b",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/3f3f353f010542e5360d1412bb846189ebc6d342",
+                "reference": "3f3f353f010542e5360d1412bb846189ebc6d342",
                 "shasum": ""
             },
             "require": {
@@ -3119,7 +3119,7 @@
                 "laravel4",
                 "laravel5"
             ],
-            "time": "2016-12-01 02:54:52"
+            "time": "2016-12-07 08:59:09"
         }
     ],
     "packages-dev": [
@@ -3832,16 +3832,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.2",
+            "version": "5.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "336aff0ac52e306c98e7455bc3e8d7b0bf777a5e"
+                "reference": "de164acc2f2bb0b79beb892a36260264b2a03233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/336aff0ac52e306c98e7455bc3e8d7b0bf777a5e",
-                "reference": "336aff0ac52e306c98e7455bc3e8d7b0bf777a5e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/de164acc2f2bb0b79beb892a36260264b2a03233",
+                "reference": "de164acc2f2bb0b79beb892a36260264b2a03233",
                 "shasum": ""
             },
             "require": {
@@ -3852,7 +3852,7 @@
                 "ext-xml": "*",
                 "myclabs/deep-copy": "~1.3",
                 "php": "^5.6 || ^7.0",
-                "phpspec/prophecy": "^1.3.1",
+                "phpspec/prophecy": "^1.6.2",
                 "phpunit/php-code-coverage": "^4.0.3",
                 "phpunit/php-file-iterator": "~1.4",
                 "phpunit/php-text-template": "~1.2",
@@ -3910,20 +3910,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-03 08:33:00"
+            "time": "2016-12-09 02:48:53"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.4.2",
+            "version": "3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "90a08f5deed5f7ac35463c161f2e8fa0e5652faf"
+                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/90a08f5deed5f7ac35463c161f2e8fa0e5652faf",
-                "reference": "90a08f5deed5f7ac35463c161f2e8fa0e5652faf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
+                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
                 "shasum": ""
             },
             "require": {
@@ -3969,7 +3969,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-11-27 07:52:03"
+            "time": "2016-12-08 20:27:08"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

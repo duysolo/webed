@@ -24,17 +24,30 @@ Please go to [laravel documentation page](https://laravel.com/docs/5.3/installat
 
 ##WebEd installation guide
 
-####Add WebEd to your Laravel project
+####Method 1: Install directly
+```
+composer create-project --prefer-dist sgsoft-studio/webed webed
+```
+
+####Method 2: Add WebEd to your Laravel project
 ```
 composer require sgsoft-studio/base
 ```
-
-####Install WebEd
 Register the WebEd provider to **config/app.php**
 ```
 WebEd\Base\Core\Providers\ModuleProvider::class,
 ```
-Then
+Modify auth entity: open **config/auth.php**
+```
+'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => \WebEd\Base\Users\Models\EloquentUser::class,
+    ],
+],
+```
+
+###Then
 ```
 php artisan cms:install
 ```
