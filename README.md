@@ -1,8 +1,9 @@
 # Welcome to WebEd
 ####A CMS based on Laravel
-![Total downloads](https://poser.pugx.org/sgsoft-studio/webed/d/total.svg)
-![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/webed/v/stable.svg)
-![License](https://poser.pugx.org/sgsoft-studio/webed/license.svg)
+![Build status](https://travis-ci.org/sgsoft-studio/webed.svg)
+![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
+![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
+![License](https://poser.pugx.org/sgsoft-studio/base/license.svg)
 
 A few months ago, I published a CMS called [LaraWebEd](https://github.com/duyphan2502/LaraWebEd).
 Today, I would like to share you version 2 of that CMS. It's called **WebEd**.
