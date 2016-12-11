@@ -23,7 +23,7 @@ before_script:
     - mysql -u root -e 'SET @@GLOBAL.wait_timeout=28800;'
 
     # Create a new database
-    - mysql -u root -e "create database IF NOT EXISTS webed_v2;"
+    - mysql -u root -e "create database IF NOT EXISTS test;"
 
     # dump autload
     - composer dump-autoload
