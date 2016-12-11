@@ -1,0 +1,23 @@
+//** Default background color used for all tables.
+$table-bg : transparent;
+
+//** Background color used for `.table-striped`.
+
+$table-bg-accent : lighten($general-panel-bg-color, 3%);
+
+//** Background color used for `.table-hover`.
+$table-bg-hover : darken($general-panel-bg-color, 1%);
+$table-bg-active : $table-bg-hover;
+
+//** Border color for table and cell borders.
+$table-border-color : darken($general-panel-bg-color, 3%);
+
+$dropdown-shadow : 5px 5px rgba(#666, 0.1);
+$icon-size-normal : 14px !default;
+$brand-default : lighten(#b7c0ce, 1%) !default;
+$general-panel-bg-color : #f1f4f7 !default;
+$general-panel-border-color : darken(#f1f4f7, 3%) !default;
+$general-panel-font-color : #3f444a !default;
+$general-shadow : 0px 2px 3px 2px rgba(0, 0, 0, 0.03);
+$general-icon-color : darken($general-panel-bg-color, 15%);
+$page-content-solid-bg-color : darken($general-panel-bg-color, 1%) !default; // content solid bg color. default:#F0F2F7.

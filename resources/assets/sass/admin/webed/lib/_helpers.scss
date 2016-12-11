@@ -1,0 +1,44 @@
+@mixin lib-settings($_min-width: 0px, $_prefix: '') {
+    @media (min-width : $_min-width) {
+        $num : 50;
+        /*Margin & padding*/
+        @while ($num >= 0) {
+            .p#{$num}#{$_prefix} {
+                padding : #{$num}px !important;
+            }
+            .pt#{$num}#{$_prefix} {
+                padding-top : #{$num}px !important;
+            }
+            .pr#{$num}#{$_prefix} {
+                padding-right : #{$num}px !important;
+            }
+            .pb#{$num}#{$_prefix} {
+                padding-bottom : #{$num}px !important;
+            }
+            .pl#{$num}#{$_prefix} {
+                padding-left : #{$num}px !important;
+            }
+            .m#{$num}#{$_prefix} {
+                margin : #{$num}px !important;
+            }
+            .mt#{$num}#{$_prefix} {
+                margin-top : #{$num}px !important;
+            }
+            .mr#{$num}#{$_prefix} {
+                margin-right : #{$num}px !important;
+            }
+            .mb#{$num}#{$_prefix} {
+                margin-bottom : #{$num}px !important;
+            }
+            .ml#{$num}#{$_prefix} {
+                margin-left : #{$num}px !important;
+            }
+            $num : $num - 5;
+        }
+    }
+}
+
+@include lib-settings();
+@include lib-settings(768px, '-sm');
+@include lib-settings(992px, '-md');
+@include lib-settings(1200px, '-lg');

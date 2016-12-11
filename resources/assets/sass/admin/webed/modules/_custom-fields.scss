@@ -1,0 +1,227 @@
+/*Meta boxes*/
+.meta-box {
+    &:not(:last-child) {
+        margin-bottom : 30px;
+    }
+}
+
+.field-group-items {
+    padding-left : 0;
+    margin       : 0;
+    li {
+        list-style       : none;
+        border           : 1px solid #aaaaaa;
+        padding          : 0 0 0 50px;
+        position         : relative;
+        background-color : #ffffff;
+        margin-top       : -1px;
+        &:first-child {
+            margin-top : 0;
+        }
+    }
+    > li {
+        &:before {
+            border        : 1px solid #666666;
+            border-radius : 50%;
+            content       : attr(data-position);
+            height        : 30px;
+            left          : 10px;
+            line-height   : 28px;
+            margin-top    : -15px;
+            position      : absolute;
+            text-align    : center;
+            top           : 50%;
+            width         : 30px;
+            cursor        : move;
+            z-index       : 2;
+            color         : #666666;
+        }
+        &:after {
+            background-color : #eeeeee;
+            content          : "";
+            display          : block;
+            height           : 100%;
+            left             : 0;
+            position         : absolute;
+            top              : 0;
+            width            : 50px;
+            z-index          : 1;
+            cursor           : move;
+            border-right     : 1px solid #aaaaaa;
+        }
+        &:nth-child(2n+1) {
+            &:after {
+                background-color : #cccccc;
+            }
+        }
+        &.ui-sortable-helper {
+            &:after {
+                background-color : #95a5a6;
+            }
+        }
+    }
+}
+
+.field-group {
+    padding-left : 0;
+    > li {
+        padding-left : 0;
+    }
+}
+
+.field-group-items .field-group-items > li:before,
+.field-group-items .field-group-items > li:after {
+    //display : none;
+}
+
+.nestable-group .add-new-field .field-group-items .field-group-items > li {
+    padding-left : 50px;
+}
+
+.nestable-group .add-new-field .field-group-items .field-group-items > li:before,
+.nestable-group .add-new-field .field-group-items .field-group-items > li:after {
+    display : block;
+}
+
+.field-group-items li.clearfix:before,
+.field-group-items li.clearfix:after {
+    display : none;
+}
+
+.field-group-items li.clearfix {
+    background-color : #ffffff;
+    border           : 0 none;
+    list-style       : outside none none;
+    margin-top       : -1px;
+    padding          : 0 0 0 0;
+    position         : static;
+}
+
+.field-group-items li [class*="col-xs"] {
+    padding-top    : 10px;
+    padding-bottom : 10px;
+}
+
+.field-group-items li .col-xs-3:after {
+    content          : '';
+    position         : absolute;
+    top              : 0;
+    right            : 0;
+    height           : 100%;
+    width            : 1px;
+    background-color : #aaaaaa;
+}
+
+.field-group-items li .col-xs-9:after {
+    content          : '';
+    position         : absolute;
+    top              : 0;
+    left             : -1px;
+    height           : 100%;
+    width            : 1px;
+    background-color : #aaaaaa;
+}
+
+.scf-repeater-wrap {
+    overflow : visible;
+}
+
+.scf-repeater-wrap > .field-group-items {
+    min-width : 690px;
+}
+
+.field-group-items > li {
+    position : relative;
+    overflow : visible;
+}
+
+.field-group-items > li {
+    > .collapse-field-line,
+    > .remove-field-line {
+        opacity          : 0;
+        background-color : #ffffff;
+        border-radius    : 50% !important;
+        display          : block;
+        height           : 30px;
+        position         : absolute;
+        left             : -15px;
+        top              : -17px;
+        width            : 30px;
+        transition       : all 0.15s ease-in-out 0s;
+        transform        : rotate(45deg);
+        z-index          : 2;
+        border           : 1px solid #cccccc;
+        span {
+            width            : 20px;
+            height           : 1px;
+            background-color : #000000;
+            display          : block;
+            position         : absolute;
+            top              : 50%;
+            left             : 50%;
+            transform        : translate(-50%, -50%);
+            &:before {
+                content          : '';
+                display          : block;
+                width            : 1px;
+                height           : 20px;
+                background-color : #000000;
+                position         : absolute;
+                top              : 50%;
+                left             : 50%;
+                transform        : translate(-50%, -50%);
+            }
+        }
+        &:hover {
+            opacity : 1;
+            border  : 1px solid #e26a6a;
+            color   : #e26a6a;
+        }
+    }
+    .collapse-field-line {
+        left        : 34px;
+        transform   : rotate(0deg);
+        line-height : 26px;
+        text-align  : center;
+        color       : #000000;
+        &:before {
+            font-weight : 100;
+        }
+    }
+}
+
+.field-group-items > li:hover {
+    > .collapse-field-line,
+    > .remove-field-line {
+        opacity : 1;
+    }
+}
+
+.field-group-items > li > a.collapse-field-line.collapsed-line {
+    + .col-xs-12 {
+        height         : 50px;
+        overflow       : hidden;
+        pointer-events : none;
+        position       : relative;
+        &:before {
+            content     : '...';
+            left        : 15px;
+            line-height : 1;
+            @include center-y();
+        }
+        > * {
+            display : none;
+        }
+    }
+}
+
+/*Repeater fields*/
+/*Meta boxes*/
+
+.meta-box {
+    margin-top : 30px;
+    overflow   : visible;
+    &:first-child {
+        margin-top : 0;
+    }
+}

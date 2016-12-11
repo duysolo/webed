@@ -1,0 +1,19 @@
+/*
+@author Tedozi Manson <duyphan.developer@gmail.com> <github/duyphan2502>
+@created October 25 2016
+*/
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
+/*Custom variables for theme*/
+@import "variables/variables";
+/*Custom mixins for theme*/
+@import "mixins/mixins";
+/*Theme external libraries*/
+@import "lib/lib";
+/*Theme external components: carousel,... other plugin css*/
+@import "components/components";
+/*Theme modules*/
+@import "modules/modules";
+/*Theme special pages*/
+@import "layout/layout";
+@import "pages/pages";

@@ -1,0 +1,136 @@
+/*Menu*/
+@import "../../webed/mixins/mixins";
+
+.dd-list {
+    .dd-list {
+        padding-left : 40px;
+    }
+}
+
+.dd-item {
+    position : relative;
+    > .item-details {
+        border-bottom : 1px solid #cccccc;
+        border-left   : 1px solid #cccccc;
+        border-right  : 1px solid #cccccc;
+        display       : none;
+        margin-bottom : 5px;
+        margin-top    : -5px;
+        padding       : 10px;
+        max-width     : 350px;
+        .fields {
+            display : table;
+            > label {
+                display : table-row;
+                span.text {
+                    display       : table-cell;
+                    width         : 1%;
+                    white-space   : nowrap;
+                    font-weight   : 700;
+                    font-size     : 13px;
+                    padding-right : 10px;
+                }
+                input[type="text"] {
+                    display       : table-cell;
+                    width         : 100%;
+                    border        : 1px solid #aaaaaa;
+                    height        : 30px;
+                    padding       : 0 5px;
+                    margin-bottom : 10px;
+                    font-weight   : 400;
+                }
+            }
+        }
+    }
+    .dd3-content > .fa {
+        cursor    : pointer;
+        font-size : 18px;
+    }
+    &.active > .item-details {
+        display : block;
+        > label {
+            float   : left;
+            width   : 100%;
+            display : block;
+        }
+        > div.text-right {
+            float : none;
+            clear : both;
+        }
+    }
+}
+
+.dd3-content {
+    width            : 350px;
+    background-color : #ffffff;
+    border           : 0 none;
+    height           : 40px;
+    padding          : 9px 10px;
+    @include lib-css(border-radius, 0, 1);
+    .show-item-details {
+        background-color : #cccccc;
+        left             : 309px;
+        line-height      : 38px;
+        position         : absolute;
+        text-align       : center;
+        top              : 1px;
+        width            : 40px;
+        color            : #000000;
+        border-left      : 1px solid #aaaaaa;
+        &.active .fa:before {
+            content : '\f106';
+        }
+    }
+    > span.text.pull-left {
+        display       : inline-block;
+        max-width     : 200px;
+        white-space   : nowrap;
+        overflow      : hidden;
+        text-overflow : ellipsis;
+    }
+    > span.text.pull-right {
+        margin-right  : 35px;
+        display       : inline-block;
+        max-width     : 85px;
+        white-space   : nowrap;
+        overflow      : hidden;
+        text-overflow : ellipsis;
+    }
+}
+
+.dd3-handle {
+    position    : absolute;
+    margin      : 0;
+    left        : 0;
+    top         : 0;
+    cursor      : move;
+    width       : 350px;
+    text-indent : 100%;
+    white-space : nowrap;
+    overflow    : hidden;
+    border      : 1px solid #aaaaaa;
+    background  : transparent;
+    height      : 40px;
+    @include lib-css(border-radius, 0, 1);
+    &:hover {
+        background-color : transparent;
+    }
+    &:before {
+        display : none;
+    }
+}
+
+/*Menu*/
+.box-link-menus {
+    .box-body {
+        ul {
+            margin     : 0;
+            list-style : none;
+            padding    : 0;
+            ul {
+                padding-left : 18px;
+            }
+        }
+    }
+}
+

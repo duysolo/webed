@@ -1,0 +1,19 @@
+.page-breadcrumb {
+    li {
+        &:after {
+            content     : "\f111";
+            font-family : FontAwesome;
+            font-size   : 5px;
+            margin      : 0 7px;
+            position    : relative;
+            top         : -3px;
+            opacity     : .4;
+        }
+        &:last-child:after {
+            display : none;
+        }
+        i {
+            margin-right : 5px;
+        }
+    }
+}

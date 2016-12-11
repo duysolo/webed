@@ -1,0 +1,53 @@
+body, h1, h2, h3, h4, h5, h6, * {
+    font-family : 'Open Sans', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.block {
+    display : block;
+}
+
+.inline-block {
+    display : inline-block;
+}
+
+.v-middle {
+    vertical-align : middle;
+    tr, td {
+        vertical-align : middle !important;
+    }
+}
+
+.row {
+    margin : 0 -10px;
+}
+[class*='col-'] {
+    padding : 0 10px;
+}
+
+.layout-2columns {
+    $_sidebar-width : 300px;
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    margin         : 0 -10px;
+    &.sidebar-left {
+        .column.left {
+            width : $_sidebar-width;
+        }
+        .column.main {
+            width : calc(100% - #{$_sidebar-width});
+        }
+    }
+    &.sidebar-right {
+        .column.right {
+            width : $_sidebar-width;
+        }
+        .column.main {
+            width : calc(100% - #{$_sidebar-width});
+        }
+    }
+    .column {
+        padding : 0 10px;
+    }
+
+}
