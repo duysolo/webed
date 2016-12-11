@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Filesystem\Filesystem;
 use WebEd\Base\ACL\Models\EloquentRole;
 use WebEd\Base\Users\Models\EloquentUser;
 
@@ -35,7 +34,6 @@ class CmsInstallTest extends TestCase
             $this->createSuperAdminRole();
             $this->createAdminUser();
             $this->registerInstallModuleService();
-            \Artisan::call('cache:clear');
 
             $this->assertTrue(true);
         } catch (\Exception $exception) {
