@@ -13,11 +13,19 @@ cache:
         - $HOME/.composer/cache
 
 services:
-    - sqlite
+    - mysql
 
 before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction --dev
 
+    # prevent MySQL went away error
+    - mysql -u root -e 'SET @@GLOBAL.wait_timeout=28800;'
+
+    # Create a new database
+    - mysql -u root -e "create database IF NOT EXISTS webed_v2;"
+
+    # dump autload
+    - composer dump-autoload
 script:
-    - vendor/sgsoft-studio/base/src
+    #
