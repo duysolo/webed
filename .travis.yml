@@ -15,9 +15,8 @@ services:
     - sqlite
 
 before_script:
-    - composer install
-    - travis_retry composer self-update
-    - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
+    - composer self-update
+    - composer install --prefer-source --no-interaction --dev
 
 script:
     #- vendor/bin/phpunit
