@@ -95,6 +95,11 @@ Download the plugins and places it at **/plugins** folder.
 - [WebEd module commands](./documentation/console/module.md)
 - [WebEd theme commands](./documentation/console/theme.md)
 
+##Need more support?
+- Email: duyphan.developer@gmail.com
+- Facebook: [Tedozi Manson](https://www.facebook.com/duyphan.developer)
+- Skype: tedozi.manson
+
 ###I love github!
 
 ##Some screenshots
