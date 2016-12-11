@@ -10,6 +10,16 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
     protected $baseUrl = 'http://localhost';
 
     /**
+     * @var \Illuminate\Foundation\Application
+     */
+    protected $app;
+
+    protected function setup()
+    {
+        $this->app = $this->createApplication();
+    }
+
+    /**
      * Creates the application.
      *
      * @return \Illuminate\Foundation\Application

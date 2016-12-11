@@ -6,23 +6,6 @@ use WebEd\Base\Users\Models\EloquentUser;
 class CmsInstallTest extends TestCase
 {
     /**
-     * @var \Illuminate\Foundation\Application|mixed
-     */
-    protected $app;
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-
-        $this->app = app();
-    }
-
-    /**
      * Works like php artisan cms:install
      *
      * @return void
@@ -30,14 +13,15 @@ class CmsInstallTest extends TestCase
     public function testCmsInstall()
     {
         try {
-            \Artisan::call('migrate');
+            \Artisan::call('migrate:refresh');
+            \Artisan::call('cache:clear');
             $this->createSuperAdminRole();
             $this->createAdminUser();
             $this->registerInstallModuleService();
 
             $this->assertTrue(true);
         } catch (\Exception $exception) {
-            $this->assertTrue(false);
+            $this->assertTrue(false, $exception->getMessage());
         }
     }
 
@@ -46,7 +30,6 @@ class CmsInstallTest extends TestCase
         $role = new EloquentRole();
         $role->name = 'Super Admin';
         $role->slug = 'super-admin';
-        $role->save();
     }
 
     protected function createAdminUser()
