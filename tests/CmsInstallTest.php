@@ -7,26 +7,6 @@ use WebEd\Base\Users\Models\EloquentUser;
 class CmsInstallTest extends TestCase
 {
     /**
-     * @var Filesystem
-     */
-    protected $files;
-
-    /**
-     * @var array
-     */
-    protected $container = [];
-
-    /**
-     * @var array
-     */
-    protected $dbInfo = [];
-
-    /**
-     * @var EloquentRole
-     */
-    protected $role;
-
-    /**
      * @var \Illuminate\Foundation\Application|mixed
      */
     protected $app;
@@ -36,11 +16,9 @@ class CmsInstallTest extends TestCase
      *
      * @return void
      */
-    public function __construct(Filesystem $filesystem)
+    public function __construct()
     {
         parent::__construct();
-
-        $this->files = $filesystem;
 
         $this->app = app();
     }
