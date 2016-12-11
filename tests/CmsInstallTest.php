@@ -50,7 +50,7 @@ class CmsInstallTest extends TestCase
      *
      * @return void
      */
-    public function install()
+    public function testCmsInstall()
     {
         try {
             \Artisan::call('migrate');
@@ -61,7 +61,7 @@ class CmsInstallTest extends TestCase
 
             $this->assertTrue(true);
         } catch (\Exception $exception) {
-            throw new Exception($exception->getMessage(), ERROR_CODE);
+            $this->assertTrue(false);
         }
     }
 
