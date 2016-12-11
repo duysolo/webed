@@ -1,3 +1,5 @@
+language: php
+
 sudo: true
 
 php:
@@ -9,7 +11,7 @@ php:
 
 cache:
     directories:
-    - $HOME/.composer/cache
+        - $HOME/.composer/cache
 
 services:
     - sqlite
