@@ -24,13 +24,5 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
         <!--Setup DB-->
-        <env name="DB_CONNECTION" value="mysql"/>
-        <env name="DB_HOST" value="localhost"/>
-        <env name="DB_DATABASE" value="test"/>
-        <env name="DB_USERNAME" value="root"/>
-        <env name="DB_PASSWORD" value=""/>
-        <env name="DB_PORT" value="3306"/>
-
-        <env name="CACHE_REPOSITORY" value="false"/>
     </php>
 </phpunit>
