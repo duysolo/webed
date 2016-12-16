@@ -34,7 +34,13 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
+            "WebEd\\Plugins\\DashboardStyleGuide\\": "plugins/dashboard-style-guide/src",
+            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
+            "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
+            "WebEd\\Themes\\WebedDocs\\": "themes/docs/src",
+            "WebEd\\Plugins\\IDE\\": "plugins/ide/src"
         }
     },
     "autoload-dev": {

@@ -4,6 +4,10 @@
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/webed/v/stable.svg)
 ![License](https://poser.pugx.org/sgsoft-studio/webed/license.svg)
 
+##Demo & documentation
+- [Documentation page](http://webed-docs.hitbui.com/docs/documentation.html)
+- Demo site: comming soon!
+
 ####WebEd is a free open source!
 
 ###There are some features of this CMS:
@@ -78,6 +82,7 @@ DB_DUMP_PATH=/Applications/AMPPS/mysql/bin/
 #Caching service
 CACHE_DRIVER=file
 CACHE_REPOSITORY=true
+CACHE_REPOSITORY_LIFETIME=-1
 
 #Admin route alias
 WEBED_ADMIN_ROUTE=admincp
