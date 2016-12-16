@@ -13,17 +13,17 @@ cache:
         - $HOME/.composer/cache
 
 services:
-    - mysql
+    - sqlite
 
 before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction --dev
 
     # prevent MySQL went away error
-    - mysql -u root -e 'SET @@GLOBAL.wait_timeout=28800;'
+    #- mysql -u root -e 'SET @@GLOBAL.wait_timeout=28800;'
 
     # Create a new database
-    - mysql -u root -e "create database IF NOT EXISTS test;"
+    #- mysql -u root -e "create database IF NOT EXISTS test;"
 
     # dump autload
     - composer dump-autoload
