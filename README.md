@@ -1,7 +1,7 @@
 # Welcome to WebEd - **Website Editor**
 ####A CMS based on Laravel
-![Total downloads](https://poser.pugx.org/sgsoft-studio/webed/d/total.svg)
-![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/webed/v/stable.svg)
+![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
+![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
 ![License](https://poser.pugx.org/sgsoft-studio/webed/license.svg)
 
 ##Demo & documentation
