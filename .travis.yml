@@ -13,7 +13,7 @@ cache:
         - $HOME/.composer/cache
 
 services:
-    - sqlite
+    - mysql
 
 before_script:
     - composer self-update
