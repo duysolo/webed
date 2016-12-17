@@ -35,10 +35,11 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
-            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
             "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
             "WebEd\\Plugins\\DashboardStyleGuide\\": "plugins/dashboard-style-guide/src",
+            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
+            "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
+            "WebEd\\Themes\\WebedDocs\\": "themes/docs/src",
             "WebEd\\Plugins\\IDE\\": "plugins/ide/src"
         }
     },

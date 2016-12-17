@@ -1,23 +1,35 @@
-# Welcome to WebEd
+# Welcome to WebEd - **Website Editor**
 ####A CMS based on Laravel
 ![Build status](https://travis-ci.org/sgsoft-studio/webed.svg)
 ![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
 ![License](https://poser.pugx.org/sgsoft-studio/base/license.svg)
 
-A few months ago, I published a CMS called [LaraWebEd](https://github.com/duyphan2502/LaraWebEd).
-Today, I would like to share you version 2 of that CMS. It's called **WebEd**.
+##Demo & documentation
+- [Documentation page](http://webed-docs.hitbui.com/docs/documentation.html)
+- Demo site: comming soon!
 
-####WebEd is always free!
+####WebEd is a free open source!
 
 ###There are some features of this CMS:
 - Modular packages.
 - Manage files with Elfinder.
 - ACL
 - Menu management with drag & drop
-- **Database caching** (repository pattern)
+- Database caching
 - Themes & plugins management.
 - Hook
+
+###The future
+I'm working on:
+- Multi language
+- Contact form
+- Form builder
+
+I will work on:
+- Ecommerce package
+- CRM package
+- HRM package
 
 ##System Requirement
 On this projects, I use the latest Laravel version (currently 5.3). 
@@ -71,6 +83,7 @@ DB_DUMP_PATH=/Applications/AMPPS/mysql/bin/
 #Caching service
 CACHE_DRIVER=file
 CACHE_REPOSITORY=true
+CACHE_REPOSITORY_LIFETIME=-1
 
 #Admin route alias
 WEBED_ADMIN_ROUTE=admincp
@@ -91,6 +104,11 @@ helper. Try to run **composer dump-autoload** by yourself.
 Download the plugins and places it at **/plugins** folder.
 
 [Plugins list](https://github.com/webed-plugins/readme)
+
+##Themes
+Download the themes and places it at **/themes** folder.
+
+[Themes list](https://github.com/webed-themes/readme)
 
 ##Table of contents
 - [WebEd module commands](./documentation/console/module.md)

@@ -10,3 +10,6 @@ npm-debug.log
 sgsoft-studio
 other-repos
 plugins
+themes
+resources/views/front
+/composer.lock
