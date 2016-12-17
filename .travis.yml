@@ -30,5 +30,12 @@ before_script:
 
     # Create a new database
     - mysql -u root -e "create database IF NOT EXISTS test;"
+
+    # add the database credentials
+    - sed 's/DB_DATABASE=webed_v2/DB_DATABASE=test/g' .env > environment
+    - sed 's/DB_USERNAME=root/DB_USERNAME=root/g' environment > .env
+    - sed 's/DB_PASSWORD=mysql/DB_PASSWORD=/g' .env > environment
+    - rm .env
+    - mv environment .env
 script:
     #
