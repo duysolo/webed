@@ -1,5 +1,9 @@
 #Change log
 
+##2.0.13 - 2016-12-18
+###Modify
+- Add cors
+
 ##2.0.12 - 2016-12-18
 ###Modify
 - Add class Constants to manage const
