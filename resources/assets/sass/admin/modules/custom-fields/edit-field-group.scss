@@ -1,0 +1,138 @@
+/*Custom fields*/
+.line-group-container {
+    width      : 100%;
+    .line-group {
+        width : 700px;
+        &:before {
+            content: 'Or';
+            display: block;
+            width: 100%;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        &:first-child:before {
+            display : none;
+        }
+        .rule-line {
+            position : relative;
+            margin-bottom : 10px;
+            &:hover .remove-rule-line {
+                opacity : 1;
+            }
+        }
+        .remove-rule-line {
+            opacity          : 0;
+            background-color : #cccccc;
+            border-radius    : 50% !important;
+            display          : block;
+            height           : 30px;
+            position         : absolute;
+            right            : 0;
+            top              : 0;
+            width            : 30px;
+            transition       : all 0.15s ease-in-out 0s;
+            transform        : rotate(45deg);
+            span {
+                width            : 20px;
+                height           : 1px;
+                background-color : #000000;
+                display          : block;
+                position         : absolute;
+                top              : 50%;
+                left             : 50%;
+                transform        : translate(-50%, -50%);
+                &:before {
+                    content          : '';
+                    display          : block;
+                    width            : 1px;
+                    height           : 20px;
+                    background-color : #000000;
+                    position         : absolute;
+                    top              : 50%;
+                    left             : 50%;
+                    transform        : translate(-50%, -50%);
+                }
+            }
+            &:hover {
+                opacity : 1;
+            }
+        }
+        .rule-a,
+        .rule-type,
+        .rules-b-group {
+            width       : 220px;
+            margin-left : 5px !important;
+        }
+        .rule-a {
+            margin-left : 0 !important;
+        }
+        .rule-type {
+            width : 130px;
+        }
+        .location-add-rule-and {
+            margin-left : 5px;
+        }
+    }
+    > .line-group:first-child > .rule-line:first-child .remove-rule-line {
+        display : none !important;
+    }
+}
+
+.custom-fields-rules .rules-b-group .form-control {
+    margin-left : 0;
+}
+
+/*Sortable list*/
+.field-table-header {
+    padding-left : 51px;
+    margin       : 0;
+    .list-group-item {
+        border : 1px solid #aaaaaa;
+        border-radius: 0;
+        padding : 10px 15px;
+        &:not(:first-child) {
+            border-left : 0 none;
+        }
+    }
+}
+
+.field-group-items {
+    &.edit-field-group-items {
+        margin-top : -1px;
+    }
+    .item-details {
+        display : none;
+    }
+    li.active {
+        > .item-details {
+            display : block;
+        }
+        > .field-column {
+            border-bottom : 1px solid #aaaaaa;
+        }
+        > .item-details {
+            > .line {
+                margin-bottom : 0;
+                border-bottom : 1px solid #aaaaaa;
+            }
+            > .options > .line {
+                border-bottom : 1px solid #aaaaaa;
+                margin-bottom : 0;
+            }
+        }
+    }
+    > li > .field-column > .show-item-details {
+        background-color : #cccccc;
+        border-left      : 1px solid #aaaaaa;
+        color            : #000000;
+        height           : 39px;
+        line-height      : 39px;
+        position         : absolute;
+        right            : 0;
+        text-align       : center;
+        top              : 0;
+        width            : 39px;
+    }
+}

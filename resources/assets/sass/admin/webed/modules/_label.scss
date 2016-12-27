@@ -1,0 +1,99 @@
+/***
+Customized Bootstrap Labels
+***/
+
+.label {
+    text-shadow : none !important;
+    font-size   : 14px;
+    font-weight : 400;
+    padding     : 3px 6px 3px 6px;
+    color       : #ffffff;
+    &.label-sm {
+        font-size : 13px;
+        padding   : 2px 5px 2px 5px;
+    }
+    h1 &,
+    h2 &,
+    h3 &,
+    h4 &,
+    h5 &,
+    h6 & {
+        font-size : 75%;
+    }
+}
+
+/* Labels variants */
+.label-deleted,
+.label-default {
+    @include label-variant($brand-default);
+}
+
+.label-primary {
+    @include label-variant($brand-primary);
+}
+
+.label-activated,
+.label-success {
+    @include label-variant($brand-success);
+}
+
+.label-info {
+    @include label-variant($brand-info);
+}
+
+.label-warning {
+    @include label-variant($brand-warning);
+}
+
+.label-disabled,
+.label-danger {
+    @include label-variant($brand-danger);
+}
+
+/***
+Iconic labels
+***/
+
+.label.label-icon {
+    padding      : 4px 0 4px 4px;
+    margin-right : 2px;
+    text-align   : center !important;
+
+    > i {
+        font-size  : 12px;
+        text-align : center !important;
+    }
+
+    .ie8 &,
+    .ie9 & {
+        padding : 3px 0 3px 3px;
+    }
+}
+
+/***
+Text states
+***/
+
+.text-default {
+    color : $brand-default;
+}
+
+.text-primary {
+    color : $brand-primary;
+}
+
+.text-success {
+    color : $brand-success;
+}
+
+.text-info {
+    color : $brand-info;
+}
+
+.text-warning {
+    color : $brand-warning;
+}
+
+.text-danger {
+    color : $brand-danger;
+}

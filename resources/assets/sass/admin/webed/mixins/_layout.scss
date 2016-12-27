@@ -1,0 +1,56 @@
+@mixin center-x($_position: absolute) {
+    display  : inline-block;
+    position : $_position;
+    left     : 50%;
+    @include lib-css(transform, translateX(-50%), 1);
+}
+
+@mixin center-y($_position: absolute) {
+    display  : inline-block;
+    position : $_position;
+    top      : 50%;
+    @include lib-css(transform, translateY(-50%), 1);
+}
+
+@mixin center-all($_position: absolute) {
+    display  : inline-block;
+    position : $_position;
+    top      : 50%;
+    left     : 50%;
+    @include lib-css(transform, translate(-50%, -50%), 1);
+}
+
+/*
+|
+| When you have a container with fixed width
+| and you want the background of this container
+| is full
+|
+*/
+@mixin full-bg($_background-color: inherit) {
+    position : relative;
+    &:before {
+        content          : '';
+        display          : block;
+        position         : absolute;
+        width            : 1000%;
+        left             : 50%;
+        margin-left      : -500%;
+        height           : 100%;
+        background-color : $_background-color;
+        z-index          : 0;
+    }
+    > * {
+        position : relative;
+    }
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: '';
+        display : table;
+        clear: both;
+    }
+}
+

@@ -1,0 +1,72 @@
+@each $name, $colors in $component-colors {
+    .bg-#{$name} {
+        background : map-get($colors, base) !important;
+    }
+
+    .bg-#{$name}-opacity {
+        background : rgba(map-get($colors, base), 0.8) !important;
+    }
+
+    .bg-hover-#{$name}:hover {
+        background : map-get($colors, base) !important;
+    }
+
+    .font-#{$name} {
+        color : map-get($colors, base) !important;
+    }
+
+    .bg-font-#{$name} {
+        color : map-get($colors, font) !important;
+    }
+
+    .border-#{$name} {
+        border-color : map-get($colors, base) !important;
+    }
+
+    .border-top-#{$name} {
+        border-top-color : map-get($colors, base) !important;
+    }
+
+    .border-bottom-#{$name} {
+        border-bottom-color : map-get($colors, base) !important;
+    }
+
+    .border-left-#{$name} {
+        border-left-color : map-get($colors, base) !important;
+    }
+
+    .border-right-#{$name} {
+        border-right-color : map-get($colors, base) !important;
+    }
+
+    // pseudo classes
+    .bg-before-#{$name}:before,
+    .bg-after-#{$name}:after {
+        background : map-get($colors, base) !important;
+    }
+
+    .border-before-#{$name}:before,
+    .border-after-#{$name}:after {
+        border-color : map-get($colors, base) !important;
+    }
+
+    .border-top-before-#{$name}:before,
+    .border-top-after-#{$name}:after {
+        border-top-color : map-get($colors, base) !important;
+    }
+
+    .border-bottom-before-#{$name}:before,
+    .border-bottom-after-#{$name}:after {
+        border-bottom-color : map-get($colors, base) !important;
+    }
+
+    .border-left-before-#{$name}:before,
+    .border-left-after-#{$name}:after {
+        border-left-color : map-get($colors, base) !important;
+    }
+
+    .border-right-before-#{$name}:before,
+    .border-right-after-#{$name}:after {
+        border-right-color : map-get($colors, base) !important;
+    }
+}

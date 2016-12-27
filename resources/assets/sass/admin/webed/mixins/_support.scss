@@ -1,0 +1,48 @@
+@mixin lib-css($_property, $_value, $_addPrefix: 0) {
+    #{$_property}: $_value;
+    @if($_addPrefix == 1) {
+        -webkit-#{$_property}: $_value;
+        -ms-#{$_property}: $_value;
+        -moz-#{$_property}: $_value;
+        -o-#{$_property}: $_value;
+    }
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin placeholder() {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+    :-ms-input-placeholder {
+        @content;
+    }
+}

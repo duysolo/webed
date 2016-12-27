@@ -1,5 +1,12 @@
 #Change log
 
+##2.0.14 - 2016-12-27
+- Refactor data table renderer.
+- Add hook filter before edit, delete (pages, menus).
+
+##2.0.13 - 2016-12-19
+- Caching: remove magic method __call in AbstractRepositoryCacheDecorator
+
 ##2.0.13 - 2016-12-18
 ###Modify
 - Add cors

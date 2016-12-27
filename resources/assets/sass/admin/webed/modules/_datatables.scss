@@ -1,0 +1,427 @@
+/***
+Datatables general customization
+***/
+
+.table-checkable {
+    tr > th:first-child,
+    tr > td:first-child {
+        text-align    : center;
+        max-width     : 50px;
+        min-width     : 40px;
+        padding-left  : 0;
+        padding-right : 0;
+    }
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    border-bottom : 2px solid $table-border-color;
+    outline       : none !important;
+}
+
+// remove bottom border
+table.dataTable.no-footer {
+    border-bottom-color : $table-border-color;
+}
+
+table.dataTable tr.heading > th {
+    background-color : $table-bg-accent;
+}
+
+// columb order
+table.dataTable td,
+table.dataTable th {
+    &.sorting_1,
+    &.sorting_2,
+    &.sorting_3 {
+        background : $table-bg-accent !important;
+    }
+}
+
+/***
+Extended pagination
+***/
+
+.paging_bootstrap_extended {
+    margin    : 5px 0 0 0 !important;
+    padding   : 0 !important;
+    float     : none !important;
+    font-size : 13px;
+}
+
+.dataTables_extended_wrapper {
+    margin-top : 10px;
+
+    .seperator {
+        padding : 0 2px;
+    }
+
+    .table.dataTable {
+        margin : 20px 0 !important;
+    }
+
+    div.dataTables_paginate,
+    div.dataTables_length,
+    div.dataTables_info {
+        display  : inline-block;
+        float    : none !important;
+        padding  : 0 !important;
+        margin   : 0 !important;
+        position : static !important;
+    }
+
+    .table-group-actions > span {
+        font-size : 13px;
+    }
+
+    // scroller extension integration
+    &.DTS {
+        .paging_bootstrap_extended {
+            display : inline-block;
+        }
+
+        .dataTables_info {
+            display     : inline-block;
+            padding-top : 8px !important;
+
+            .seperator {
+                display : none;
+            }
+        }
+
+        .dataTables_scrollHead {
+            border-bottom : 0 !important;
+            .dataTables_scrollHeadInner {
+                .table.dataTable {
+                    margin-bottom : 0 !important;
+                }
+            }
+        }
+
+        .dataTables_scrollBody {
+            border-bottom : 0 !important;
+            .table.dataTable {
+                margin : 0 !important;
+            }
+        }
+    }
+}
+
+@media (max-width : 480px) {
+
+    .dataTables_extended_wrapper div.dataTables_paginate,
+    .dataTables_extended_wrapper div.dataTables_length,
+    .dataTables_extended_wrapper div.dataTables_info {
+        display       : block;
+        margin-bottom : 10px !important;
+    }
+
+    .dataTables_extended_wrapper .seperator {
+        display : none !important;
+    }
+}
+
+.dataTables_extended_wrapper div.dataTables_length label {
+    margin    : 0 !important;
+    padding   : 0 !important;
+    font-size : 13px;
+    float     : none !important;
+    display   : inline-block !important;
+}
+
+.table-container .table-actions-wrapper {
+    display : none;
+}
+
+/***
+Scroller Extension
+***/
+
+.dataTables_scroll {
+    margin-bottom : 10px;
+}
+
+.dataTables_scrollHead {
+    border-bottom : 2px solid $table-border-color !important;
+
+    thead {
+        th {
+            border-bottom : 0 !important;
+        }
+    }
+}
+
+.dataTables_scrollBody {
+    border-bottom : 1px solid $table-border-color !important;
+}
+
+.table-both-scroll .dataTables_scrollBody {
+    border-bottom : 0 !important;
+}
+
+/***
+Datatables processing
+***/
+
+.dataTables_wrapper .dataTables_processing {
+    width              : 200px;
+    display            : inline-block;
+    padding            : 7px;
+    left               : 50%;
+    margin-left        : -100px;
+    margin-top         : 10px;
+    text-align         : center;
+    color              : $general-panel-font-color;
+    border             : 1px solid darken($general-panel-bg-color, 3%);
+    background         : darken($general-panel-bg-color, 1);
+    vertical-align     : middle;
+    -webkit-box-shadow : 0 1px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow    : 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+/***
+Tool Buttons
+***/
+
+.dt-button-background {
+    display : none !important;
+}
+
+div.dt-button-collection {
+    border     : 1px solid #eeeeee;
+    background : #ffffff;
+    box-shadow : $dropdown-shadow;
+    padding    : 0;
+
+    > a.dt-button {
+        background  : none;
+        padding     : 8px 16px;
+        font-weight : 300;
+        margin      : 1px 1px;
+        box-shadow  : none !important;
+        border      : 0 !important;
+
+        > span {
+            font-size : 14px;
+            color     : #333333;
+        }
+
+        &.active {
+            background : lighten(#eeeeee, 3%) !important;
+            box-shadow : none !important;
+            border     : 0 !important;
+
+            > span {
+                color : #333333;
+            }
+        }
+    }
+}
+
+button.dt-button,
+div.dt-button,
+a.dt-button {
+    background-image : none !important;
+    padding          : 6px 12px !important;
+
+    &:last-child {
+        margin-right : 0;
+    }
+}
+
+.dataTables_wrapper .dt-buttons {
+    float : right;
+
+    .portlet.light & {
+        margin-top : -64px;
+    }
+
+    .portlet.box & {
+        margin-top : -50px;
+    }
+}
+
+/***
+Rot Details
+***/
+
+.dataTable .row-details.row-details-close {
+    background : url("../img/datatable-row-openclose.png") no-repeat 0 0;
+}
+
+.dataTable .row-details.row-details-open {
+    background : url("../img/datatable-row-openclose.png") no-repeat 0 -23px;
+}
+
+/***
+Sorting
+***/
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    cursor : pointer;
+
+    &:after {
+        display : none;
+    }
+}
+
+table.dataTable thead .sorting {
+    background : url('../plugins/datatables/images/sort_both.png') no-repeat center right;
+}
+
+table.dataTable thead .sorting_asc {
+    background : url('../plugins/datatables/images/sort_asc.png') no-repeat center right;
+}
+
+table.dataTable thead .sorting_desc {
+    background : url('../plugins/datatables/images/sort_desc.png') no-repeat center right;
+}
+
+table.dataTable thead .sorting_asc_disabled {
+    background : url('../plugins/datatables/images/sort_asc_disabled.png') no-repeat center right;
+}
+
+table.dataTable thead .sorting_desc_disabled {
+    background : url('../plugins/datatables/images/sort_desc_disabled.png') no-repeat center right;
+}
+
+table.dataTable th:active {
+    outline : none;
+}
+
+/***
+Fixed Header
+***/
+
+table.dataTable.fixedHeader-floating {
+    margin-top         : 0 !important;
+    margin-bottom      : 0 !important;
+    border             : 1px solid darken($table-border-color, 3%);
+
+    -webkit-box-shadow : 0 1px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow    : 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header-fixed thead > tr > th {
+    border-top : 0;
+}
+
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+    border-bottom : 0;
+    padding       : 10px 18px;
+    border-top    : 1px solid $table-border-color;
+    font-weight   : 600;
+}
+
+/***
+Responsive Datatables
+***/
+.table.dataTable.dt-responsive
+.table.dataTable.responsive {
+    width : 100%;
+}
+
+table.dataTable.dtr-column > tbody > tr > td.control,
+table.dataTable.dtr-column > tbody > tr > th.control {
+    text-align : center;
+    width      : 14px;
+}
+
+table.dataTable.dtr-column > tbody > tr > td.control:before, table.dataTable.dtr-column > tbody > tr > th.control:before {
+    margin-left : -8px;
+    text-align  : center;
+    text-indent : 0;
+    line-height : 0;
+}
+
+table.dataTable.dtr-column > tbody > tr > td.control:before,
+table.dataTable.dtr-column > tbody > tr > th.control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    box-shadow       : none !important;
+    background-color : darken($general-panel-bg-color, 20%);
+    font-weight      : 300;
+    vertical-align   : middle;
+    line-height      : 16px;
+    border           : 0;
+}
+
+table.dataTable.dtr-column > tbody > tr.parent td.control:before,
+table.dataTable.dtr-column > tbody > tr.parent th.control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    background-color : $brand-success;
+    font-weight      : 300;
+    vertical-align   : middle;
+    border           : 0;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    top : 10px;
+}
+
+table.dataTable.dtr-column > tbody > tr > td.control:before,
+table.dataTable.dtr-column > tbody > tr > th.control:before {
+    text-align : center;
+    margin-top : -8px;
+}
+
+table.dataTable > tbody > tr.child ul li {
+    border : 0;
+}
+
+// firefox fix for ajax datatables in portlet
+@-moz-document url-prefix() {
+    .portlet-datatable {
+        .dataTables_wrapper {
+            .table-responsive {
+                padding : 0 2px !important;
+            }
+        }
+    }
+}
+
+// datatable buttons fix on mobile mode
+
+@media (max-width : $screen-xs-max) { /* 767px */
+
+    .portlet.box .dataTables_wrapper .dt-buttons,
+    .portlet.light .dataTables_wrapper .dt-buttons {
+        margin-top    : 0;
+        margin-bottom : 20px;
+
+        > .dt-button {
+            margin-top : 5px;
+        }
+    }
+}
+
+// datatable dropdown menu fix
+
+.table-scrollable .dataTable th > .btn-group,
+.table-scrollable .dataTable td > .btn-group {
+    position   : absolute;
+    margin-top : -2px;
+}
+
+// popover plugin integration
+.dataTable td .popover-content .btn-group {
+    position : static !important;
+}
+
+.table .btn-group .btn {
+    margin-left  : 0;
+    margin-right : -1px;
+}
+
+table.dataTable thead .no-sort {
+    background-image : none !important;
+}

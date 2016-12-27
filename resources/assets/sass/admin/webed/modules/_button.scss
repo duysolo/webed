@@ -1,0 +1,120 @@
+/***
+Custom buttons based on bootstrap SASS
+***/
+
+.btn {
+    outline : none !important;
+    &:hover {
+        transition : all 0.3s;
+    }
+}
+
+.btn:not(.btn-sm):not(.btn-lg) {
+    line-height : 1.44;
+}
+
+/***
+Custom color buttons
+***/
+
+@each $name, $colors in $component-colors {
+    .btn.#{$name}:not(.btn-outline) {
+        @include button-variant(map-get($colors, font), map-get($colors, base), map-get($colors, base));
+    }
+
+    .btn.btn-outline.#{$name} {
+        border-color : map-get($colors, base);
+        color        : map-get($colors, base);
+        background   : none;
+
+        &:hover,
+        &:active,
+        &:active:hover,
+        &:active:focus,
+        &:focus,
+        &.active {
+            border-color     : map-get($colors, base);
+            color            : map-get($colors, font);
+            background-color : map-get($colors, base);
+        }
+    }
+
+    .btn.#{$name}-stripe {
+        border-left : 4px solid map-get($colors, base) !important;
+    }
+
+    .btn.#{$name}.btn-no-border:not(.active) {
+        border-color : transparent;
+    }
+}
+
+/* Circle Buttons */
+
+.btn-circle {
+    border-radius : 25px !important;
+    overflow      : hidden;
+}
+
+.btn-circle-right {
+    border-radius : 0 25px 25px 0 !important;
+}
+
+.btn-circle-left {
+    border-radius : 25px 0 0 25px !important;
+}
+
+.btn-circle-bottom {
+    border-radius : 0 0 25px 25px !important;
+}
+
+.btn-circle-top {
+    border-radius : 25px 25px 0 0 !important;
+}
+
+.btn-icon-only {
+    height        : 34px;
+    width         : 34px;
+    text-align    : center;
+    padding-left  : 0;
+    padding-right : 0;
+
+    > [class^="icon-"],
+    > i {
+        text-align : center;
+        margin-top : 2px;
+    }
+}
+
+.btn-group.btn-group-circle {
+    > .btn {
+        &:first-child {
+            border-radius : 25px 0 0 25px !important;
+        }
+
+        &:last-child {
+            border-radius : 0 25px 25px 0 !important;
+        }
+    }
+}
+
+.btn-group.btn-group-devided {
+    > .btn {
+        margin-right : 5px;
+
+        &:last-child {
+            margin-right : 0;
+        }
+    }
+}
+
+.btn-group-vertical.btn-group-vertical-circle {
+    > .btn {
+        &:first-child {
+            border-radius : 25px 25px 0 0 !important;
+        }
+
+        &:last-child {
+            border-radius : 0 0 25px 25px !important;
+        }
+    }
+}

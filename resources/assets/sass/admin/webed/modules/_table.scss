@@ -1,0 +1,26 @@
+.table.vertical-middle {
+    td,
+    tr,
+    th {
+        vertical-align : middle;
+    }
+}
+
+.table .btn {
+    margin-top   : 0;
+    margin-left  : 0;
+    margin-right : 5px;
+}
+
+.table .mt-checkbox {
+    padding-left  : 0;
+    margin-bottom : 0;
+    span {
+        position : static;
+        display  : block;
+        &:after {
+            top  : 3px;
+            left : 7px;
+        }
+    }
+}

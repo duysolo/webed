@@ -1,0 +1,13 @@
+.list-group {
+    .list-group-item {
+        padding : 0;
+        &.active a {
+            color : #ffffff;
+        }
+    }
+    a {
+        display : block;
+        padding : 10px;
+        color   : #000000;
+    }
+}
