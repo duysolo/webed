@@ -48,7 +48,7 @@ var WebEdManageMenu = function () {
             /**
              * Change details value
              */
-            $body.on('change keyup', '.dd-item .item-details .fields input[type=text]', function (event) {
+            $body.on('change keyup', '.dd-item .item-details .fields input[type=text], .dd-item .item-details .fields select', function (event) {
                 event.preventDefault();
                 var $current = $(this);
                 var $label = $current.closest('label'),
@@ -81,6 +81,7 @@ var WebEdManageMenu = function () {
             $listItem.find('[data-field=title] input[type=text]').val(array_get(data, 'title', ''));
             $listItem.find('[data-field=icon_font] input[type=text]').val(array_get(data, 'icon_font', ''));
             $listItem.find('[data-field=css_class] input[type=text]').val(array_get(data, 'css_class', ''));
+            $listItem.find('[data-field=target] select').val(array_get(data, 'target', ''));
 
             if (itemType !== 'custom-link') {
                 $listItem.find('[data-field=url]').remove();
@@ -97,6 +98,7 @@ var WebEdManageMenu = function () {
             $listItem.data('model_title', array_get(data, 'model_title', ''));
             $listItem.data('icon_font', array_get(data, 'icon_font', ''));
             $listItem.data('css_class', array_get(data, 'css_class', ''));
+            $listItem.data('target', array_get(data, 'target', ''));
 
             if (array_get(data, 'children', [])) {
                 $listItem.append(renderListGroup(array_get(data, 'children')));
@@ -144,6 +146,7 @@ var WebEdManageMenu = function () {
                     url: $_box.find('input[type=text][data-field=url]').val(),
                     css_class: $_box.find('input[type=text][data-field=css_class]').val(),
                     icon_font: $_box.find('input[type=text][data-field=icon_font]').val(),
+                    target: $_box.find('select[data-field=target]').val(),
                 };
 
                 if (!data.title || !data.url) {

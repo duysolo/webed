@@ -1,5 +1,35 @@
 #Change log
 
+##2.0.15 - 2016-12-31
+- Pages: 
+    + Add CreatePageRequest
+    + Fix bugs pages list cannot use group actions
+    + Add PagesListDataTable to filter pages.index.get, datatables.pages.index.post
+    + Rename EloquentPage to Page
+- ACL
+    + Add field created_by, updated_by, timestamps to table roles
+    + Separate create and update roles into 2 method
+    + Rename model EloquentPermission to Permission, EloquentRole to Role
+    + Use form request to update/create roles
+    + Save author and modifier when update/create roles
+    + Rename RoleContract to RoleRepositoryContract, PermissionContract to PermissionRepositoryContract
+    + Refactor
+- Menus:
+    + Separate create/update method      
+    + Add target field
+    + Use form request
+    + Refactor
+- Users:
+    + Rename UserContract to UserRepositoryContract
+    + Rename EloquentUser to User
+    + Add form request
+    + Use soft deletes
+    + Refactor
+- Base:
+    + Add soft deletes to repositories
+- Caching:
+    + Add soft deletes repositories cache
+
 ##2.0.14 - 2016-12-27
 - Refactor data table renderer.
 - Add hook filter before edit, delete (pages, menus).
