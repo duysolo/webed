@@ -1,5 +1,14 @@
 #Change log
 
+##2.0.16 - 2017-01-03
+- Limit permissions to view admin menu items
+- Modify before-edit hook
+- Base:
+    + Refactor admin js
+    + Refactor label collective
+- Caching:
+    + Ignore cache when use eager loading
+
 ##2.0.15 - 2016-12-31
 - Pages: 
     + Add CreatePageRequest
