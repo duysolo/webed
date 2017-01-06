@@ -4,6 +4,7 @@ elixir.config.sourcemaps = true;
 elixir.config.production = true;
 
 const customPath = {
+    basePath: './',
     assetsFolder: './resources/assets/',
 };
 const publicPath = {
@@ -49,7 +50,7 @@ var ElixirAssets = function () {
                 .sass('admin/modules/admin-bar.scss', publicPath.adminCss + 'admin-bar.css')
                 .sass('admin/modules/menu/menu-nestable.scss', publicPath.adminModules + 'menu/menu-nestable.css')
                 .sass('admin/modules/custom-fields/edit-field-group.scss', publicPath.adminModules + 'custom-fields/edit-field-group.css')
-                .sass('admin/modules/ecommerce/ecommerce.scss', publicPath.adminModules + 'ecommerce/ecommerce.css')
+                .sass(customPath.basePath + 'plugins/ecommerce-product-attributes/resources/assets/sass/admin/modules/ecommerce/ecommerce-product-attributes.scss', publicPath.adminModules + 'ecommerce/product-attributes/ecommerce-product-attributes.css')
             ;
 
             /*Other pages style*/

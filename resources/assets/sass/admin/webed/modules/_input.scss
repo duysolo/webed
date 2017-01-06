@@ -181,7 +181,7 @@ $color-checked : $color-hover;
         @include opacity(0);
     }
 
-    > span {
+    > span:not(.text) {
         border     : 1px solid transparent;
         position   : absolute;
         top        : 1px;
@@ -197,13 +197,13 @@ $color-checked : $color-hover;
         }
     }
 
-    &:hover > input:not([disabled]) ~ span,
-    > input:focus ~ span {
+    &:hover > input:not([disabled]) ~ span:not(.text),
+    > input:focus ~ span:not(.text) {
         background : $color-hover;
         @include transition('all 0.3s');
     }
 
-    > input:checked ~ span {
+    > input:checked ~ span:not(.text) {
         @include transition('all 0.3s');
         background : $color-checked;
 
@@ -212,37 +212,37 @@ $color-checked : $color-hover;
         }
     }
 
-    &:hover > input:not([disabled]):checked ~ span,
-    > input:checked ~ span {
+    &:hover > input:not([disabled]):checked ~ span:not(.text),
+    > input:checked ~ span:not(.text) {
         @include transition('all 0.3s');
         background : $color-hover;
     }
 
-    > input:disabled ~ span {
+    > input:disabled ~ span:not(.text) {
         @include opacity(0.6);
         pointer-events : none;
     }
 
     &.mt-radio-outline,
     &.mt-checkbox-outline {
-        > span {
+        > span:not(.text) {
             border     : 1px solid darken($color-default, 5%);
             background : none;
         }
 
-        &:hover > input:not([disabled]) ~ span,
-        > input:focus ~ span {
+        &:hover > input:not([disabled]) ~ span:not(.text),
+        > input:focus ~ span:not(.text) {
             border     : 1px solid darken($color-default, 5%);
             background : none;
         }
 
-        > input:checked ~ span {
+        > input:checked ~ span:not(.text) {
             border     : 1px solid darken($color-default, 5%);
             background : none;
         }
 
-        &:hover > input:not([disabled]):checked ~ span,
-        > input:checked ~ span {
+        &:hover > input:not([disabled]):checked ~ span:not(.text),
+        > input:checked ~ span:not(.text) {
             border     : 1px solid darken($color-default, 5%);
             background : none;
         }
@@ -250,7 +250,7 @@ $color-checked : $color-hover;
 }
 
 .mt-radio {
-    > span {
+    > span:not(.text) {
         @include lib-css(border-radius, 50%, 1);
         &:after {
             left          : 5px;
@@ -262,7 +262,7 @@ $color-checked : $color-hover;
         }
     }
 
-    > input:disabled ~ span {
+    > input:disabled ~ span:not(.text) {
         &:after {
             background : $color-tick;
         }
@@ -277,7 +277,7 @@ $color-checked : $color-hover;
 }
 
 .mt-checkbox {
-    > span {
+    > span:not(.text) {
         &:after {
             left         : 6px;
             top          : 2px;
@@ -289,7 +289,7 @@ $color-checked : $color-hover;
         }
     }
 
-    > input:disabled ~ span {
+    > input:disabled ~ span:not(.text) {
         &:after {
             border-color : $color-tick;
         }
@@ -344,6 +344,8 @@ $color-checked : $color-hover;
 
 .mt-radio, .mt-checkbox {
     font-weight : 400;
+    min-width : 18px;
+    min-height: 18px;
     + .help-block {
         margin-top : -10px;
     }

@@ -1,5 +1,11 @@
 #Change log
 
+##2.0.17 - 2017-01-06
+- Refactor datatable
+- Add helper sort_item_with_children, flash_messages
+- Refactor custom checkbox, custom radio
+- Fix bugs cannot save menu when use cache
+
 ##2.0.16 - 2017-01-03
 - Limit permissions to view admin menu items
 - Modify before-edit hook
