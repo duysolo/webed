@@ -1,5 +1,8 @@
 #Change log
 
+##2.0.18 - 2017-01-08
+- Refactor query builder
+
 ##2.0.17 - 2017-01-06
 - Refactor datatable
 - Add helper sort_item_with_children, flash_messages
