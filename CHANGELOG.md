@@ -1,5 +1,12 @@
 #Change log
 
+##2.0.22 - 2017-01-12
+- Pages: Allow user can change the routes of pages.
+- Base: set default params for helper get_image
+
+##2.0.21 - 2017-01-12
+- Refactor the way to check ACL
+
 ##2.0.20 - 2017-01-12
 - Add helper custom_strip_tags, limit_chars
 - Refactor load themes, modules

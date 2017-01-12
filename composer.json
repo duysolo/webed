@@ -35,9 +35,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
             "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
-            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
             "WebEd\\Plugins\\DashboardStyleGuide\\": "plugins/dashboard-style-guide/src",
             "WebEd\\Plugins\\Ecommerce\\": "plugins/ecommerce/src",
             "WebEd\\Plugins\\IDE\\": "plugins/ide/src",
@@ -45,7 +43,9 @@
             "WebEd\\Plugins\\Ecommerce\\Addons\\Coupons\\": "plugins/ecommerce-coupons/src",
             "WebEd\\Themes\\Comestics\\": "themes/comestics/src",
             "WebEd\\Themes\\Cosmetics\\": "themes/cosmetics/src",
-            "WebEd\\Plugins\\Blocks\\": "plugins/blocks/src"
+            "WebEd\\Plugins\\Blocks\\": "plugins/blocks/src",
+            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
+            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src"
         }
     },
     "autoload-dev": {

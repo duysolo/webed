@@ -16,26 +16,20 @@ services:
     - mysql
 
 before_script:
-    - composer self-update
-    - composer install --prefer-source --no-interaction --dev
-
-    # copy .env
-    - php -r "file_exists('.env') || copy('.env.example', '.env');"
-
-    # dump autload
-    - composer dump-autoload
-
     # prevent MySQL went away error
     - mysql -u root -e 'SET @@GLOBAL.wait_timeout=28800;'
 
     # Create a new database
     - mysql -u root -e "create database IF NOT EXISTS test;"
 
-    # add the database credentials
-    - sed 's/DB_DATABASE=webed_v2/DB_DATABASE=test/g' .env > environment
-    - sed 's/DB_USERNAME=root/DB_USERNAME=root/g' environment > .env
-    - sed 's/DB_PASSWORD=mysql/DB_PASSWORD=/g' .env > environment
-    - rm .env
-    - mv environment .env
+    # copy .env
+    - php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+    # update composer
+    - composer self-update
+    - composer update
+
+    # dump autload
+    - composer dump-autoload
 script:
     #
