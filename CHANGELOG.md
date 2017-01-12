@@ -1,5 +1,12 @@
 #Change log
 
+##2.0.20 - 2017-01-12
+- Add helper custom_strip_tags, limit_chars
+- Refactor load themes, modules
+
+##2.0.19 - 2017-01-11
+- Refactor
+
 ##2.0.18 - 2017-01-08
 - Refactor query builder
 

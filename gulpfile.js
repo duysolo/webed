@@ -39,7 +39,9 @@ var ElixirAssets = function () {
                     'admin/webed/webed.js',
                     'admin/webed/components/**/*.js',
                 ], publicPath.adminJs + 'webed-core.js')
-                .scripts('admin/script.js', publicPath.adminJs + 'script.js');
+                .scripts('admin/script.js', publicPath.adminJs + 'script.js')
+                .scripts(customPath.basePath + 'plugins/ecommerce-coupons/resources/assets/js/admin/modules/ecommerce-coupons/ecommerce-coupons.js', publicPath.adminModules + 'ecommerce/coupons/ecommerce-coupons.js')
+            ;
 
             /*Global style*/
             mix
@@ -51,6 +53,7 @@ var ElixirAssets = function () {
                 .sass('admin/modules/menu/menu-nestable.scss', publicPath.adminModules + 'menu/menu-nestable.css')
                 .sass('admin/modules/custom-fields/edit-field-group.scss', publicPath.adminModules + 'custom-fields/edit-field-group.css')
                 .sass(customPath.basePath + 'plugins/ecommerce-product-attributes/resources/assets/sass/admin/modules/ecommerce/ecommerce-product-attributes.scss', publicPath.adminModules + 'ecommerce/product-attributes/ecommerce-product-attributes.css')
+                .sass(customPath.basePath + 'plugins/ecommerce-coupons/resources/assets/sass/admin/modules/ecommerce/ecommerce-coupons.scss', publicPath.adminModules + 'ecommerce/coupons/ecommerce-coupons.css')
             ;
 
             /*Other pages style*/
