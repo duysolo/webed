@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "botble-cms",
+  "private_key_id": "b6dc6ae3cbdb96db96db5924a84494a36baefbfa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCECtyw/5rt70DG\nz2DoJBeasy0G8kg+iAeJZEsqVeBsMwRkWJqYs21RJV+qxAspt689CVgZwy+7UE58\nE6fk4sJ6NjB7ODn3K2cEQvWin6DVxaY0gm6Et0IiG0OvsqGRoS9PGHbb2c1iAWjA\nMc16LmaNTP5UclVo8B20kTRGnF+IyUMVOta5aYlYI6D6qgOat3Gqo4P0N0P6Ggbj\nsw+V3Df4QfpfqkHV7bRGMc1KcxJVNGIcZfu68X5IYHerFfZoEBebNyWrlrpi0bJ7\nmi4UJHh0bmgaE3P6m9rqzkoN1iHrcPaW1SbhXYz0B7f52MB7jKc1LhbQtsYRsTWX\n5o/IrStbAgMBAAECggEAfcS21qRwFofX5EXs4NBX51MY5U/qvhzlSNlNuwJXI9go\nK8g1YJMu4aa+i7H1jAPYl0OKNeezVDA2wXobZikS4kMxRHyWwbYGhomc3Aw9rsB3\nAfbme+Ttyfy8KOL1f/fOTwFXXSsEtH/xHXeSZvlBVv9qFFdewPhM4wuXhlY1rNvg\nAdszYh9GqPas4RdzEcFzFTGKgDluEqE8RqM6JE0EAvQHE1v6ukbrni/8Q6gMuujQ\ncdx3662lbI/9uqe366zs6JL1b/+jn+4jBhm+fCJKlsxtx317pa9nlvXPJ0QmcTmx\nkUC/GULG64o8QOLp1X8Iry+ny+nA7IaCd0ZtV8QlmQKBgQDC4fXnviJBOzyBG3by\nH3XHVYJ0goItqmKyNmrqbDql9ElKRRBmIYyTfOAs/e1XzAx0Vi0B+yMHkcdrIQ6S\nBjLm4xn/yrhI+fMQ89LTiiSu8hhU18pxvT5RxhCPDvWJtv1pbPSPtGqEaZr2YjfW\nn4iSKGICJvd2ggWRJ9DfYBjktwKBgQCtc8+Pd3rvcnlZIbinwnT0K1pvcD9n/vPt\npYuQMqtROiqr4eEOZYvbfIMJs5fEgW50AdcEzAAuLEnEKDRi8f8DbeGZwxMPoUji\npVtBdzm4QXDsJcPw+1aVU4UsIH8bA74cAe+VIQ6K3/4ebnHzDFfh5H6oMjQWw7xU\nXZwjurRyfQKBgQCjhE79VIaPbzGULsQ94fHEAFaGhd7OjDFl0M0ixw7qoi9AlvRs\njWfTdKrwdVtJGJe2oXwANoUs27+Uftcn5PWezxzIiILaEIdHSR4ziqy+8blCrxFZ\nH+2DVYodTvLsy1KTu+z0CvB5C9cPNlgdyBwibqnVnnZyxCQBqIPUeWBJvwKBgQCg\nIcMF2HCOj0iomRE5D7WZlkyvhRmEkUPxqlvmjGDNZL3wYWC9QdKUl6cCVeNPb47h\nWrF/pDamagzQI635iyC7sb4NjqMSUvxPAgn1rnSDPydZXKRA3klZIvpXesjdz967\nTK47J4GdhJ2+yog4srSPv7uO3IpqWdqMqL913PCqoQKBgERUilSYhvw19dim11NF\nNabREmwshyI3U/4EVHHN6RoyAZVgXmcxeDmjVmj36YzNCJUzlFsDjLrrcyYH9Lz2\nes1SCGNyrSMNF/yW1rgpB7JzSqRcRJ1PpWuZNPpQsvB4m1cWn25K+LoLqDo9OHsq\noyaT6XBcTfV69uXbzpjjrU75\n-----END PRIVATE KEY-----\n",
+  "client_email": "botble-cms@botble-cms.iam.gserviceaccount.com",
+  "client_id": "113101231196374159892",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/botble-cms%40botble-cms.iam.gserviceaccount.com"
+}

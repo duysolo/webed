@@ -1,5 +1,28 @@
 #Change log
 
+##2.0.23 - 2017-01-13
+- Base:
+    + Add hook dashboard statistics
+    + Add method count() to query builder
+    + Remove debugbar. If you wanna use, add it by yourself
+    + Add analytics
+    + Move javascript plugins to **assets-management** repository
+- Assets management:
+    + Contains javascript plugins
+    + Add morris, jvectormap
+- Caching:
+    + Add method count() to query builder
+- Pages: 
+    + Show dashboard statistics
+- Modules management: 
+    + Show dashboard statistics
+    + Refactor
+- Themes management: 
+    + Show dashboard statistics
+    + Refactor
+- Users: 
+    + Show dashboard statistics
+
 ##2.0.22 - 2017-01-12
 - Pages: Allow user can change the routes of pages.
 - Base: set default params for helper get_image

@@ -13,3 +13,4 @@ plugins
 themes
 resources/views/front
 /composer.lock
+base

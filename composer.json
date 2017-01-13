@@ -20,7 +20,9 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "sgsoft-studio/base": "2.*"
+        "sgsoft-studio/base": "2.*",
+        "google/apiclient": "~1.1",
+        "barryvdh/laravel-debugbar": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -35,6 +37,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
+            "WebEd\\Base\\Analytics\\": "base/analytics/src",
             "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
             "WebEd\\Plugins\\DashboardStyleGuide\\": "plugins/dashboard-style-guide/src",
             "WebEd\\Plugins\\Ecommerce\\": "plugins/ecommerce/src",

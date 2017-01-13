@@ -166,6 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*WebEd*/
         WebEd\Base\Core\Providers\ModuleProvider::class,
