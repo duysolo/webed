@@ -1,5 +1,9 @@
 #Change log
 
+##2.0.24 - 2017-01-13
+- Base: 
+    + Make WebEd Analytics as plugin.
+
 ##2.0.23 - 2017-01-13
 - Base:
     + Add hook dashboard statistics
