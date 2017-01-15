@@ -1,5 +1,10 @@
 #Change log
 
+##2.0.27 - 2017-01-16
+- Base: 
+    + Refactor the repositories
+    + Add method pushModel()
+
 ##2.0.24 - 2017-01-13
 - Base: 
     + Make WebEd Analytics as plugin.
