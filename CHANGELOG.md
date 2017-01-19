@@ -1,5 +1,12 @@
 #Change log
 
+##2.0.28 - 2017-01-19
+- Check require related plugins when enable, install plugins, themes.
+- Add some methods to check plugins version
+- Refactor shortcode
+- Add method removeItem() in DashboardMenu helper
+- Refactor
+
 ##2.0.27 - 2017-01-16
 - Base: 
     + Refactor the repositories
