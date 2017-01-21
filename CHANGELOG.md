@@ -1,5 +1,8 @@
 #Change log
 
+##2.0.31 - 2017-01-21
+- Add method withViewTracker() to repository
+
 ##2.0.28 - 2017-01-19
 - Check require related plugins when enable, install plugins, themes.
 - Add some methods to check plugins version
