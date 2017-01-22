@@ -21,7 +21,8 @@
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
         "sgsoft-studio/base": "2.*",
-        "barryvdh/laravel-debugbar": "^2.3"
+        "barryvdh/laravel-debugbar": "^2.3",
+        "google/apiclient": "~1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -35,7 +36,11 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "WebEd\\Plugins\\Analytics\\": "plugins/analytics/src",
+            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
+            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
+            "WebEd\\Themes\\Sedna\\": "themes/sedna/src"
         }
     },
     "autoload-dev": {

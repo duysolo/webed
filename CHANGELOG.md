@@ -1,5 +1,14 @@
 #Change log
 
+##2.0.32 - 2017-01-23
+- Database repository
+    + Add method getByCriteria(), pushCriteria()
+- Base:
+    + Add helper pagination_advanced()
+    + Refactor front controller
+- Themes:
+    + Do not need to specify the theme slug in views
+
 ##2.0.31 - 2017-01-21
 - Add method withViewTracker() to repository
 
