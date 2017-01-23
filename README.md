@@ -23,13 +23,8 @@
 ###The future
 I'm working on:
 - Multi language
-- Contact form
 - Form builder
-
-I will work on:
 - Ecommerce package
-- CRM package
-- HRM package
 
 ##System Requirement
 On this projects, I use the latest Laravel version (currently 5.3). 
@@ -110,10 +105,6 @@ Download the themes and places it at **/themes** folder.
 
 [Themes list](https://github.com/webed-themes/readme)
 
-##Table of contents
-- [WebEd module commands](./documentation/console/module.md)
-- [WebEd theme commands](./documentation/console/theme.md)
-
 ##Need more support?
 - Email: duyphan.developer@gmail.com
 - Facebook: [Tedozi Manson](https://www.facebook.com/duyphan.developer)
@@ -123,9 +114,7 @@ Download the themes and places it at **/themes** folder.
 
 ##Some screenshots
 ![Login](./documentation/images/1.png)
-![Menu management](./documentation/images/2.png)
-![Custom fields](./documentation/images/3.png)
-![Custom fields](./documentation/images/4.png)
-![Elfinder](./documentation/images/5.png)
-![Plugins](./documentation/images/6.png)
-![Themes](./documentation/images/7.png)
+![Dashboard statistics](./documentation/images/2.png)
+![Categories](./documentation/images/3.png)
+![Menus](./documentation/images/4.png)
+![Settings](./documentation/images/5.png)

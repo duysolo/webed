@@ -1,5 +1,12 @@
 #Change log
 
+##2.0.33 - 2017-01-23
+- Base:
+    + Add hook header_custom_menu to header
+    + Fix method count() in repository query builder
+    + Refactor
+- Update Readme
+
 ##2.0.32 - 2017-01-23
 - Database repository
     + Add method getByCriteria(), pushCriteria()
