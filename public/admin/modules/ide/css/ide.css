@@ -1,0 +1,52 @@
+body {
+    background-color : #333333;
+}
+
+#editor {
+    margin        : 0;
+    position      : absolute;
+    top           : 0;
+    bottom        : 0;
+    left          : 0;
+    right         : 0;
+    border        : none;
+    border-radius : 0;
+    font-size     : 13px !important;
+    font-family   : "Source Code Pro", Consolas, "Courier New", "Lucida Sans Typewriter", sans-serif !important;
+    font-weight   : 400;
+}
+
+.full-height {
+    height   : 100%;
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow : auto;
+}
+
+.code-editor-wrapper {
+    width    : auto;
+    position : relative;
+}
+
+.code-editor-wrapper > .main {
+    width : calc(100% - 250px);
+    float : left;
+    position : relative;
+}
+
+.code-editor-wrapper > .sidebar {
+    width : 250px;
+    float : left;
+    position : relative;
+}
+
+#tree {
+    padding : 10px;
+    background-color : #333333;
+}
+
+.vakata-context, .vakata-context ul {
+    z-index : 100000;
+}

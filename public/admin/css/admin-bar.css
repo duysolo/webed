@@ -1,0 +1,167 @@
+/*
+|
+| When you have a container with fixed width
+| and you want the background of this container
+| is full
+|
+*/
+body.show-admin-bar {
+  margin-top: 40px !important;
+  position: relative;
+}
+
+#admin_bar {
+  height: 40px;
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 960px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 1000000;
+}
+
+#admin_bar,
+#admin_bar * {
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+#admin_bar a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#admin_bar ul {
+  list-style: none;
+}
+
+#admin_bar .admin-bar-container {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 15px;
+}
+
+#admin_bar .admin-bar-container:before, #admin_bar .admin-bar-container:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#admin_bar .admin-bar-logo {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 15px;
+}
+
+#admin_bar .admin-navbar-nav {
+  margin: 0;
+  padding: 0 15px;
+  float: left;
+}
+
+#admin_bar .admin-navbar-nav li {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+}
+
+#admin_bar .admin-navbar-nav > li {
+  float: left;
+  margin: 0 0 0 15px;
+}
+
+#admin_bar .admin-navbar-nav > li:first-child {
+  margin-left: 0;
+}
+
+#admin_bar .admin-navbar-nav > li > a {
+  color: #cccccc;
+}
+
+#admin_bar .admin-navbar-nav > li > a:hover {
+  color: #ffffff;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown > a:after {
+  content: '';
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #ffffff;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown:hover > .admin-bar-dropdown-menu {
+  display: block;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  margin: -1px 0 0 0;
+  background-color: #ffffff;
+  padding: 5px 0;
+  border-radius: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid #cccccc;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #ffffff;
+  position: absolute;
+  left: 3px;
+  top: -8px;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown-menu * {
+  color: #333333;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown-menu li {
+  line-height: 1;
+  padding: 2px 0;
+  height: auto;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown-menu li a {
+  display: block;
+  padding: 5px;
+}
+
+#admin_bar .admin-navbar-nav .admin-bar-dropdown-menu li a:hover {
+  background-color: #cccccc;
+}
+
+#admin_bar .admin-navbar-nav-right {
+  float: right;
+}
+
+#admin_bar .admin-navbar-nav-right .admin-bar-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+#admin_bar .admin-navbar-nav-right .admin-bar-dropdown-menu:before {
+  left: auto;
+  right: 3px;
+}
+
+/*# sourceMappingURL=admin-bar.css.map */

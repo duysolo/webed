@@ -1,0 +1,124 @@
+/*Menu*/
+/*
+|
+| When you have a container with fixed width
+| and you want the background of this container
+| is full
+|
+*/
+.dd-list .dd-list {
+  padding-left: 40px; }
+
+.dd-item {
+  position: relative; }
+  .dd-item > .item-details {
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    display: none;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    padding: 10px;
+    max-width: 350px; }
+    .dd-item > .item-details .fields {
+      display: table; }
+      .dd-item > .item-details .fields > label {
+        display: table-row; }
+        .dd-item > .item-details .fields > label span.text {
+          display: table-cell;
+          width: 1%;
+          white-space: nowrap;
+          font-weight: 700;
+          font-size: 13px;
+          padding-right: 10px; }
+        .dd-item > .item-details .fields > label select,
+        .dd-item > .item-details .fields > label input[type="text"] {
+          display: table-cell;
+          width: 100%;
+          border: 1px solid #aaaaaa;
+          height: 30px;
+          padding: 0 5px;
+          margin-bottom: 10px;
+          font-weight: 400; }
+  .dd-item .dd3-content > .fa {
+    cursor: pointer;
+    font-size: 18px; }
+  .dd-item.active > .item-details {
+    display: block; }
+    .dd-item.active > .item-details > label {
+      float: left;
+      width: 100%;
+      display: block; }
+    .dd-item.active > .item-details > div.text-right {
+      float: none;
+      clear: both; }
+
+.dd3-content {
+  width: 350px;
+  background-color: #ffffff;
+  border: 0 none;
+  height: 40px;
+  padding: 9px 10px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0; }
+  .dd3-content .show-item-details {
+    background-color: #cccccc;
+    left: 309px;
+    line-height: 38px;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 40px;
+    color: #000000;
+    border-left: 1px solid #aaaaaa; }
+    .dd3-content .show-item-details.active .fa:before {
+      content: '\f106'; }
+  .dd3-content > span.text.pull-left {
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .dd3-content > span.text.pull-right {
+    margin-right: 35px;
+    display: inline-block;
+    max-width: 85px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.dd3-handle {
+  position: absolute;
+  margin: 0;
+  left: 0;
+  top: 0;
+  cursor: move;
+  width: 350px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #aaaaaa;
+  background: transparent;
+  height: 40px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0; }
+  .dd3-handle:hover {
+    background-color: transparent; }
+  .dd3-handle:before {
+    display: none; }
+
+/*Menu*/
+.box-link-menus .box-body ul {
+  margin: 0;
+  list-style: none;
+  padding: 0; }
+  .box-link-menus .box-body ul ul {
+    padding-left: 18px; }
+
+/*# sourceMappingURL=menu-nestable.css.map */
