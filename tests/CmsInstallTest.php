@@ -1,6 +1,6 @@
 <?php
 
-class CmsInstallTest extends TestCase
+class CmsInstallTest extends Tests\TestCase
 {
     /**
      * @var \WebEd\Base\ACL\Repositories\RoleRepository

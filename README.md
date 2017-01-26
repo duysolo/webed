@@ -1,40 +1,116 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Welcome to WebEd - **Website Editor**
+####A CMS based on Laravel 5.4
+![Build status](https://travis-ci.org/sgsoft-studio/webed.svg)
+![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
+![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
+![License](https://poser.pugx.org/sgsoft-studio/base/license.svg)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+##Demo & documentation
+- [Documentation page](http://webed-docs.hitbui.com/docs/documentation.html)
+- [Demo page](http://webed.hitbui.com/admincp)
 
-## About Laravel
+####WebEd is a free open source!
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+###Some cool features of WebEd CMS:
+- Modular packages.
+- Manage files with Elfinder.
+- ACL.
+- Menu management with drag & drop.
+- Database caching.
+- Themes & plugins management.
+- Hook (actions hook, filters hook).
+- Manage pages, blocks, blog, contact form, Google Analytics, custom fields...
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+##System Requirement
+On this projects, I use the latest Laravel version (currently 5.4). 
+Please go to [laravel documentation page](https://laravel.com/docs/5.4/installation) to check your system requirements.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+##WebEd installation guide
 
-## Learning Laravel
+####Method 1: Install directly
+```
+composer create-project --prefer-dist sgsoft-studio/webed webed
+```
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+####Method 2: Add WebEd to your Laravel project
+```
+composer require sgsoft-studio/base:2.1.*
+```
+- Register the WebEd provider to **config/app.php**
+```
+WebEd\Base\Core\Providers\ModuleProvider::class,
+```
+- Modify auth entity: open **config/auth.php**
+```
+'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => \WebEd\Base\Users\Models\EloquentUser::class,
+    ],
+],
+```
+- After that, remove the default Laravel migrations (create_users_table, create_password_resets_table)
+- Modify the database information in **.env**
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+###Then
+```
+composer dump-autoload
+php artisan cms:install
+```
 
-## Contributing
+Access to dashboard:
+> your-domain/admincp
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+You can config admin route by modify the .env:
+```
+WEBED_ADMIN_ROUTE=admincp
+```
 
-## Security Vulnerabilities
+All available WebEd env config:
+```
+#Use for backup data
+DB_DUMP_PATH=/Applications/AMPPS/mysql/bin/
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+#Caching service
+CACHE_DRIVER=file
+CACHE_REPOSITORY=true
+CACHE_REPOSITORY_LIFETIME=-1
 
-## License
+#Admin route alias
+WEBED_ADMIN_ROUTE=admincp
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+If you see this message when enable plugins/themes, it's because of your server does not support composer dump-autoload
+helper. Try to run **composer dump-autoload** by yourself.
+
+
+>The base module of this class is enabled, but class not found: ***xxx***. Please review and add the namespace of this module to composer autoload section, then run **composer dump-autoload**
+
+
+##Plugins
+Download the plugins and places it at **/plugins** folder.
+
+[Plugins list](https://github.com/webed-plugins/readme)
+
+##Themes
+Download the themes and places it at **/themes** folder.
+
+[Themes list](https://github.com/webed-themes/readme)
+
+##Table of contents
+- [WebEd module commands](./documentation/console/module.md)
+- [WebEd theme commands](./documentation/console/theme.md)
+
+##Need more support?
+- Email: [duyphan.developer@gmail.com](mailto:duyphan.developer@gmail.com)
+- Facebook: [Tedozi Manson](https://www.facebook.com/duyphan.developer)
+- Skype: tedozi.manson
+
+###I love github!
+
+##Some screenshots
+![Login](./documentation/images/1.png)
+![Dashboard statistics](./documentation/images/2.png)
+![Categories](./documentation/images/3.png)
+![Menus](./documentation/images/4.png)
+![Settings](./documentation/images/5.png)
