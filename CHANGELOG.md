@@ -1,5 +1,11 @@
 #Change log
 
+##2.1.5 - 2017-01-28
+- Upgrade to Laravel 5.4
+- Fix bugs
+- Add exceptions handler
+- Refactor
+
 ##2.0.33 - 2017-01-23
 - Base:
     + Add hook header_custom_menu to header
