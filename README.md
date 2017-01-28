@@ -7,7 +7,8 @@
 
 ##Demo & documentation
 - [Documentation page](http://webed-docs.hitbui.com/docs/documentation.html)
-- [Demo page](http://webed.hitbui.com/admincp) (demo/demo1234)
+- Demo site: [webed.hitbui.com](http://webed.hitbui.com)
+- Admin demo site: [webed.hitbui.com/admincp](http://webed.hitbui.com/admincp) (demo/demo1234)
 
 ####WebEd is a free open source!
 
