@@ -7,7 +7,12 @@
 Homestead.json
 Homestead.yaml
 .env
-plugins
-themes
-base
+/plugins
+/themes
+/base
 composer.lock
+/config/webed-*.php
+/public/admin
+/public/themes
+/public/uploads
+storage
