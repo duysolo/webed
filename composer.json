@@ -19,8 +19,6 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "barryvdh/laravel-debugbar": "^2.3",
-        "google/apiclient": "~1.1",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "sgsoft-studio/base": "3.0.*"
@@ -36,7 +34,15 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "WebEd\\Plugins\\Analytics\\": "plugins/analytics/src",
+            "WebEd\\Plugins\\Blog\\": "plugins/blog/src",
+            "WebEd\\Plugins\\Captcha\\": "plugins/captcha/src",
+            "WebEd\\Plugins\\ContactForm\\": "plugins/contact-form/src",
+            "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
+            "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
+            "WebEd\\Plugins\\Blocks\\": "plugins/blocks/src",
+            "WebEd\\Themes\\NongDanViet\\": "themes/nongdanviet/src"
         }
     },
     "scripts": {

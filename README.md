@@ -46,7 +46,7 @@ WebEd\Base\Core\Providers\ModuleProvider::class,
 'providers' => [
     'users' => [
         'driver' => 'eloquent',
-        'model' => \WebEd\Base\Users\Models\EloquentUser::class,
+        'model' => \WebEd\Base\Users\Models\User::class,
     ],
 ],
 ```
