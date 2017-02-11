@@ -41,15 +41,6 @@ composer require sgsoft-studio/base:2.1.*
 ```
 WebEd\Base\Core\Providers\ModuleProvider::class,
 ```
-- Modify auth entity: open **config/auth.php**
-```
-'providers' => [
-    'users' => [
-        'driver' => 'eloquent',
-        'model' => \WebEd\Base\Users\Models\User::class,
-    ],
-],
-```
 - After that, remove the default Laravel migrations (create_users_table, create_password_resets_table)
 - Modify the database information in **.env**
 
@@ -79,6 +70,7 @@ CACHE_REPOSITORY_LIFETIME=-1
 
 #Admin route alias
 WEBED_ADMIN_ROUTE=admincp
+WEBED_API_ROUTE=api
 ```
 
 If you see this message when enable plugins/themes, it's because of your server does not support composer dump-autoload
