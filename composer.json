@@ -42,7 +42,13 @@
             "WebEd\\Plugins\\CustomFields\\": "plugins/custom-fields/src",
             "WebEd\\Plugins\\Backup\\": "plugins/backup/src",
             "WebEd\\Plugins\\Blocks\\": "plugins/blocks/src",
-            "WebEd\\Themes\\NongDanViet\\": "themes/nongdanviet/src"
+            "WebEd\\Plugins\\Ecommerce\\": "plugins/ecommerce/src",
+            "WebEd\\Plugins\\DashboardStyleGuide\\": "plugins/dashboard-style-guide/src",
+            "WebEd\\Plugins\\IDE\\": "plugins/ide/src",
+            "WebEd\\Themes\\Cosmetics\\": "themes/cosmetics/src",
+            "WebEd\\Plugins\\Ecommerce\\Addons\\Coupons\\": "plugins/ecommerce-coupons/src",
+            "WebEd\\Plugins\\Ecommerce\\Addons\\Customers\\": "plugins/ecommerce-customers/src",
+            "WebEd\\Plugins\\Ecommerce\\Addons\\ProductAttributes\\": "plugins/ecommerce-product-attributes/src"
         }
     },
     "scripts": {

@@ -1,5 +1,10 @@
 #Change log
 
+##3.0.8 - 2017-02-24
+- Fix bugs
+- Refactor criterias
+- Refactor repository caching
+
 ##3.0.2 - 2017-02-11
 - Set auth configs globally
 - Use '--force' publish data when install themes
