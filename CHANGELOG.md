@@ -1,5 +1,11 @@
 #Change log
 
+##3.0.10 - 2017-03-13
+- Fix bugs
+- Add command theme:make:action, command, controller, criteria, datatable, facade, middleware, models, provider, repository, request, service, support, view
+- Group the cache key
+- Refactor
+
 ##3.0.8 - 2017-02-24
 - Fix bugs
 - Refactor criterias
