@@ -14,7 +14,7 @@
 ###Donate
 If you interested in and wanna help me on WebEd development.
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HHYAZHGM6QKLU)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/duyphan2502)
 
 ###Some cool features of WebEd CMS:
 - Modular packages.
