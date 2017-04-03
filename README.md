@@ -39,7 +39,7 @@ composer create-project --prefer-dist sgsoft-studio/webed webed
 
 ####Method 2: Add WebEd to your Laravel project
 ```
-composer require sgsoft-studio/base:3.0.*
+composer require sgsoft-studio/base:3.1.*
 ```
 - Register the WebEd provider to **config/app.php**
 ```
