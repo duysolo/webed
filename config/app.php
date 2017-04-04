@@ -177,7 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        WebEd\Base\Core\Providers\ModuleProvider::class,
+        WebEd\Base\Providers\ModuleProvider::class,
 
     ],
 

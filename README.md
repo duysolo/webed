@@ -43,7 +43,7 @@ composer require sgsoft-studio/base:3.1.*
 ```
 - Register the WebEd provider to **config/app.php**
 ```
-WebEd\Base\Core\Providers\ModuleProvider::class,
+WebEd\Base\Providers\ModuleProvider::class,
 ```
 - After that, remove the default Laravel migrations (create_users_table, create_password_resets_table)
 - Modify the database information in **.env**
