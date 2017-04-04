@@ -1,22 +1,22 @@
-# Welcome to WebEd - **Website Editor**
-####A CMS based on Laravel 5.4
+# Welcome to WebEd CMS
+#### A CMS based on Laravel 5.4
 ![Build status](https://travis-ci.org/sgsoft-studio/webed.svg)
 ![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
 
-##Demo & documentation
+## Demo & documentation
 - [Documentation page](http://webed-docs.hitbui.com/docs/documentation.html)
 - Demo site: [webed.hitbui.com](http://webed.hitbui.com)
 - Admin demo site: [webed.hitbui.com/admincp](http://webed.hitbui.com/admincp) (demo/demo1234)
 
-####WebEd is a free open source!
+#### WebEd is a free open source!
 
-###Donate
+### Donate
 If you interested in and wanna help me on WebEd development.
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/duyphan2502)
 
-###Some cool features of WebEd CMS:
+### Some cool features of WebEd CMS:
 - Modular packages.
 - Manage files with Elfinder.
 - ACL.
@@ -26,18 +26,18 @@ If you interested in and wanna help me on WebEd development.
 - Hook (actions hook, filters hook).
 - Manage pages, blocks, blog, contact form, Google Analytics, custom fields...
 
-##System Requirement
+## System Requirement
 On this projects, I use the latest Laravel version (currently 5.4). 
 Please go to [laravel documentation page](https://laravel.com/docs/5.4/installation) to check your system requirements.
 
-##WebEd installation guide
+## WebEd installation guide
 
-####Method 1: Install directly
+#### Method 1: Install directly
 ```
 composer create-project --prefer-dist sgsoft-studio/webed webed
 ```
 
-####Method 2: Add WebEd to your Laravel project
+#### Method 2: Add WebEd to your Laravel project
 ```
 composer require sgsoft-studio/base:3.1.*
 ```
@@ -48,7 +48,7 @@ WebEd\Base\Providers\ModuleProvider::class,
 - After that, remove the default Laravel migrations (create_users_table, create_password_resets_table)
 - Modify the database information in **.env**
 
-###Then
+### Then
 ```
 composer dump-autoload
 php artisan cms:install
@@ -84,28 +84,27 @@ helper. Try to run **composer dump-autoload** by yourself.
 >The base module of this class is enabled, but class not found: ***xxx***. Please review and add the namespace of this module to composer autoload section, then run **composer dump-autoload**
 
 
-##Plugins
+## Plugins
 Download the plugins and places it at **/plugins** folder.
 
 [Plugins list](https://github.com/webed-plugins/readme)
+These plugins still not compatible with WebEd 3.1. I'm working on them.
 
-##Themes
+## Themes
 Download the themes and places it at **/themes** folder.
 
 [Themes list](https://github.com/webed-themes/readme)
 
-##Table of contents
+## Table of contents
 - [WebEd module commands](./documentation/console/module.md)
 - [WebEd theme commands](./documentation/console/theme.md)
 
-##Need more support?
+## Need more support?
 - Email: [duyphan.developer@gmail.com](mailto:duyphan.developer@gmail.com)
 - Facebook: [Tedozi Manson](https://www.facebook.com/duyphan.developer)
 - Skype: tedozi.manson
 
-###I love github!
-
-##Some screenshots
+## Some screenshots
 ![Login](./documentation/images/1.png)
 ![Dashboard statistics](./documentation/images/2.png)
 ![Categories](./documentation/images/3.png)
