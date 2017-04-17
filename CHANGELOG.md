@@ -1,5 +1,10 @@
 #Change log
 
+##3.1.9
+- Fix bugs
+- Make default theme.
+- Move custom fields as core dependency.
+
 ##3.0.10 - 2017-03-13
 - Fix bugs
 - Add command theme:make:action, command, controller, criteria, datatable, facade, middleware, models, provider, repository, request, service, support, view
