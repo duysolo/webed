@@ -1,5 +1,10 @@
 #Change log
 
+##3.1.12 - 2017-04-20
+- Fix bugs
+- Done the default theme.
+- Refactor 
+
 ##3.1.9
 - Fix bugs
 - Make default theme.

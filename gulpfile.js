@@ -1,76 +1,9 @@
 const elixir = require('laravel-elixir');
 
 elixir.config.sourcemaps = true;
-elixir.config.production = true;
+elixir.inProduction = true;
 
-const customPath = {
-    basePath: './',
-    assetsFolder: './resources/assets/',
-};
-const publicPath = {
-    /**
-     * Admin paths
-     */
-    admin: 'public/admin/',
-    adminCss: 'public/admin/css/',
-    adminImages: 'public/admin/images/',
-    adminJs: 'public/admin/js/',
-    adminModules: 'public/admin/modules/',
-    adminPlugins: 'public/admin/plugins/',
-    adminTheme: 'public/admin/theme/',
-    /**
-     * Front paths
-     */
-};
-
-/**
- * We don't need to use Vuejs now
- */
-//require('laravel-elixir-vue');
-
-var ElixirAssets = function () {
-    "use strict";
-    return {
-        admin: function (mix) {
-            /*Admin script*/
-            mix
-                .scripts([
-                    'admin/helpers/**/*.js',
-                    'admin/webed/webed.js',
-                    'admin/webed/components/**/*.js',
-                ], publicPath.adminJs + 'webed-core.js')
-                .scripts('admin/script.js', publicPath.adminJs + 'script.js')
-                .scripts(customPath.basePath + 'plugins/ecommerce/resources/assets/js/admin/modules/ecommerce/ecommerce.js', publicPath.adminModules + 'ecommerce/ecommerce.js')
-                .scripts(customPath.basePath + 'plugins/ecommerce-coupons/resources/assets/js/admin/modules/ecommerce-coupons/ecommerce-coupons.js', publicPath.adminModules + 'ecommerce/coupons/ecommerce-coupons.js')
-            ;
-
-            /*Global style*/
-            mix
-                .sass('admin/webed/style.scss', publicPath.adminCss + 'style.css');
-
-            /*Modules style*/
-            mix
-                .sass('admin/modules/admin-bar.scss', publicPath.adminCss + 'admin-bar.css')
-                .sass('admin/modules/menu/menu-nestable.scss', publicPath.adminModules + 'menu/menu-nestable.css')
-                .sass('admin/modules/custom-fields/edit-field-group.scss', publicPath.adminModules + 'custom-fields/edit-field-group.css')
-                .sass(customPath.basePath + 'plugins/ecommerce/resources/assets/sass/admin/modules/ecommerce/ecommerce.scss', publicPath.adminModules + 'ecommerce/ecommerce.css')
-                .sass(customPath.basePath + 'plugins/ecommerce-product-attributes/resources/assets/sass/admin/modules/ecommerce/ecommerce-product-attributes.scss', publicPath.adminModules + 'ecommerce/product-attributes/ecommerce-product-attributes.css')
-                .sass(customPath.basePath + 'plugins/ecommerce-coupons/resources/assets/sass/admin/modules/ecommerce/ecommerce-coupons.scss', publicPath.adminModules + 'ecommerce/coupons/ecommerce-coupons.css')
-            ;
-
-            /*Other pages style*/
-            mix
-                .sass('admin/modules/users/user-profiles/user-profiles.scss', publicPath.adminModules + 'users/user-profiles/user-profiles.css');
-
-            /*Copy items to public*/
-            mix
-                .copy(customPath.assetsFolder + 'js/admin/modules', publicPath.adminModules);
-        },
-        front: function (mix) {
-
-        },
-    }
-}();
+const publicPath = 'public/';
 
 /*
  |--------------------------------------------------------------------------
@@ -79,10 +12,38 @@ var ElixirAssets = function () {
  |
  | Elixir provides a clean, fluent API for defining some basic Gulp tasks
  | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
+ | file for your application as well as publishing vendor resources.
  |
  */
-elixir(mix => {
-    //ElixirAssets.front(mix);
-    ElixirAssets.admin(mix);
+
+elixir((mix) => {
+    mix
+        /*Core stylesheets*/
+        .sass('./core/assets-management/resources/assets/sass/style.scss', publicPath + 'admin/css')
+        .sass('./core/assets-management/resources/assets/sass/admin-bar.scss', publicPath + 'admin/css')
+
+        /*Core scripts*/
+        .rollup('./core/assets-management/resources/assets/js/webed-core.js', publicPath + 'admin/js')
+        .rollup('./core/assets-management/resources/assets/js/script.js', publicPath + 'admin/js')
+
+        /*Datatables*/
+        .rollup('./core/assets-management/resources/assets/js/Components/DataTables/DataTable.js', publicPath + 'admin/modules/datatables/webed.datatable.js')
+        .rollup('./core/assets-management/resources/assets/js/Components/DataTables/DataTableAjax.js', publicPath + 'admin/modules/datatables/webed.datatable.ajax.js')
+
+        .copy('./' + publicPath + 'admin/modules/auth', 'core/base/resources/public/admin/modules/auth')
+        .copy('./' + publicPath + 'admin/modules/datatables', 'core/base/resources/public/admin/modules/datatables')
+        .copy('./' + publicPath + 'admin/css', 'core/base/resources/public/admin/css')
+        .copy('./' + publicPath + 'admin/js', 'core/base/resources/public/admin/js')
+
+        /*Menus*/
+        .sass('./core/menu/resources/assets/sass/admin/modules/menu/menu-nestable.scss', publicPath + 'admin/modules/menu')
+        .rollup('./core/menu/resources/assets/js/admin/modules/menu/edit-menu.js', publicPath + 'admin/modules/menu')
+        .copy('./' + publicPath + 'admin/modules/menu', 'core/menu/resources/public/admin/modules/menu')
+
+        /*Custom fields*/
+        .sass('./core/custom-fields/resources/assets/sass/admin/modules/custom-fields/edit-field-group.scss', publicPath + 'admin/modules/custom-fields')
+        .rollup('./core/custom-fields/resources/assets/js/admin/modules/custom-fields/edit-field-group.js', publicPath + 'admin/modules/custom-fields')
+        .rollup('./core/custom-fields/resources/assets/js/admin/modules/custom-fields/use-custom-fields.js', publicPath + 'admin/modules/custom-fields')
+        .copy('./' + publicPath + 'admin/modules/custom-fields', 'core/custom-fields/resources/public/admin/modules/custom-fields')
+    ;
 });
