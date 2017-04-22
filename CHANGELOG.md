@@ -1,5 +1,11 @@
 #Change log
 
+##3.1.13 - 2017-04-23
+- Fix bugs
+- Improve layouts
+- Show language bar on login page
+- Show form actions fixed top on pages, blog.
+
 ##3.1.12 - 2017-04-20
 - Fix bugs
 - Done the default theme.
