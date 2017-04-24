@@ -1,5 +1,9 @@
 #Change log
 
+##3.1.15 - 2017-04-24
+- Add static blocks
+- Refactor shortcode
+
 ##3.1.13 - 2017-04-23
 - Fix bugs
 - Improve layouts
