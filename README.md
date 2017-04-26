@@ -5,9 +5,9 @@
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
 
 ## Demo & documentation
-- [Documentation page](http://webed-docs.hitbui.com/docs/documentation.html)
-- Demo site: [webed.hitbui.com](http://webed.hitbui.com)
-- Admin demo site: [webed.hitbui.com/admincp](http://webed.hitbui.com/admincp) (demo/demo1234)
+- [Documentation page]: comming soon
+- Demo site: [http://newstv.sgsoft-studio.com/](http://newstv.sgsoft-studio.com/)
+- Admin demo site: [http://newstv.sgsoft-studio.com/admincp](http://newstv.sgsoft-studio.com/admincp) (demo/demo1234)
 
 #### WebEd is a free open source!
 
