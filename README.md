@@ -6,8 +6,8 @@
 
 ## Demo & documentation
 - [Documentation page]: comming soon
-- Demo site: [http://newstv.sgsoft-studio.com/](http://newstv.sgsoft-studio.com/)
-- Admin demo site: [http://newstv.sgsoft-studio.com/admincp](http://newstv.sgsoft-studio.com/admincp) (demo/demo1234)
+- Demo site: [https://newstv.sgsoft-studio.com/](https://newstv.sgsoft-studio.com/)
+- Admin demo site: [https://newstv.sgsoft-studio.com/admincp](https://newstv.sgsoft-studio.com/admincp) (demo/demo1234)
 
 #### WebEd is a free open source!
 
