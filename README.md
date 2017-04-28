@@ -4,10 +4,13 @@
 ![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
 
-## Demo & documentation
-- [Documentation page]: comming soon
+## Demo
 - Demo site: [https://newstv.sgsoft-studio.com/](https://newstv.sgsoft-studio.com/)
 - Admin demo site: [https://newstv.sgsoft-studio.com/admincp](https://newstv.sgsoft-studio.com/admincp) (demo/demo1234)
+
+### Documentation
+- [Documentation page](http://docs.webed.dev/)
+- Link repos documentation: [github.com/sgsoft-studio/docs-site](https://github.com/sgsoft-studio/docs-site)
 
 #### WebEd is a free open source!
 
