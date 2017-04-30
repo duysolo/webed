@@ -9,7 +9,7 @@
 - Admin demo site: [https://newstv.sgsoft-studio.com/admincp](https://newstv.sgsoft-studio.com/admincp) (demo/demo1234)
 
 ### Documentation
-- [Documentation page](http://docs.webed.dev/)
+- [Documentation page](https://webed.sgsoft-studio.com/docs/3.1/overview)
 - Link repos documentation: [github.com/sgsoft-studio/docs-site](https://github.com/sgsoft-studio/docs-site)
 
 #### WebEd is a free open source!
