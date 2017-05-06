@@ -35,21 +35,9 @@ Please go to [laravel documentation page](https://laravel.com/docs/5.4/installat
 
 ## WebEd installation guide
 
-#### Method 1: Install directly
 ```
 composer create-project --prefer-dist sgsoft-studio/webed webed
 ```
-
-#### Method 2: Add WebEd to your Laravel project
-```
-composer require sgsoft-studio/base:3.1.*
-```
-- Register the WebEd provider to **config/app.php**
-```
-WebEd\Base\Providers\ModuleProvider::class,
-```
-- After that, remove the default Laravel migrations (create_users_table, create_password_resets_table)
-- Modify the database information in **.env**
 
 ### Then
 ```
@@ -90,13 +78,11 @@ helper. Try to run **composer dump-autoload** by yourself.
 ## Plugins
 Download the plugins and places it at **/plugins** folder.
 
-[Plugins list](https://github.com/webed-plugins/readme)
-These plugins still not compatible with WebEd 3.1. I'm working on them.
+[Plugins list](https://github.com/webed-plugins)
+All plugins with released version is `3.1.*` will stable with WebEd 3.1.
 
 ## Themes
 Download the themes and places it at **/themes** folder.
-
-[Themes list](https://github.com/webed-themes/readme)
 
 ## Table of contents
 - [WebEd module commands](./documentation/console/module.md)
