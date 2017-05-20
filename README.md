@@ -81,10 +81,6 @@ Download the plugins and places it at **/plugins** folder.
 [Plugins list](https://github.com/webed-plugins)
 All plugins with released version is `3.1.*` will stable with WebEd 3.1.
 
-## Table of contents
-- [WebEd module commands](./documentation/console/module.md)
-- [WebEd theme commands](./documentation/console/theme.md)
-
 ## Need more support?
 - Email: [duyphan.developer@gmail.com](mailto:duyphan.developer@gmail.com)
 - Facebook: [Tedozi Manson](https://www.facebook.com/duyphan.developer)
