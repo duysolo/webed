@@ -1,12 +1,12 @@
 # Welcome to WebEd CMS
-#### A CMS based on Laravel 5.4
+#### A CMS based on Laravel 5.5
 ![Build status](https://travis-ci.org/sgsoft-studio/webed.svg)
 ![Total downloads](https://poser.pugx.org/sgsoft-studio/base/d/total.svg)
 ![Latest Stable Version](https://poser.pugx.org/sgsoft-studio/base/v/stable.svg)
 
 ## Demo
-- Demo site: [https://newstv.sgsoft-studio.com/](https://newstv.sgsoft-studio.com/)
-- Admin demo site: [https://newstv.sgsoft-studio.com/admincp](https://newstv.sgsoft-studio.com/admincp) (demo/demo1234)
+- Demo site: [https://cms.sgsoft-studio.com/](https://cms.sgsoft-studio.com/)
+- Admin demo site: [https://cms.sgsoft-studio.com/admincp](https://cms.sgsoft-studio.com/admincp) (demo/demo1234)
 
 ### Documentation
 - [Documentation page](https://webed.sgsoft-studio.com/docs/3.1/overview)
@@ -30,23 +30,40 @@ If you interested in and wanna help me on WebEd development.
 - Manage pages, blocks, blog, contact form, Google Analytics, custom fields...
 
 ## System Requirement
-On this projects, I use the latest Laravel version (currently 5.4). 
-Please go to [laravel documentation page](https://laravel.com/docs/5.4/installation) to check your system requirements.
+On this projects, I use the latest Laravel version (currently 5.5). 
+Please go to [laravel documentation page](https://laravel.com/docs/5.5/installation) to check your system requirements.
 
-## WebEd installation guide
+# WebEd installation guide
 
+## Install directly from composer
 ```
 composer create-project --prefer-dist sgsoft-studio/webed webed
 ```
 
+## Install to the existing project
+Require WebEd to your composer.json by this command
+```
+composer require sgsoft-studio/base:4.0.*
+```
+Open file `config/auth.php`, change the web login model to `WebEd\Base\Users\Models\User::class`.
+
+### Change WebEd database prefix
+By default, all WebEd tables have `we_` prefix. If you want to change them, open your `public/index.php`, add these line on top of this file:
+```
+define('WEBED_DB_PREFIX', 'we_');
+```
+
 ### Then
 ```
-composer dump-autoload
+php artisan key:generate
 php artisan cms:install
 ```
 
 Access to dashboard:
-> your-domain/admincp
+```
+php artisan serve
+http://localhost:8000/admincp
+```
 
 You can config admin route by modify the .env:
 ```
@@ -55,12 +72,9 @@ WEBED_ADMIN_ROUTE=admincp
 
 All available WebEd env config:
 ```
-#Use for backup data
-DB_DUMP_PATH=/Applications/AMPPS/mysql/bin/
-
 #Caching service
-CACHE_DRIVER=file
-CACHE_REPOSITORY=true
+CACHE_REPOSITORY_ENABLED=true
+CACHE_REPOSITORY_DRIVER=file
 CACHE_REPOSITORY_LIFETIME=-1
 
 #Admin route alias
@@ -79,7 +93,7 @@ helper. Try to run **composer dump-autoload** by yourself.
 Download the plugins and places it at **/plugins** folder.
 
 [Plugins list](https://github.com/webed-plugins)
-All plugins with released version is `3.1.*` will stable with WebEd 3.1.
+All plugins with released version is `4.0.*` will stable with WebEd 4.0.
 
 ## Need more support?
 - Email: [duyphan.developer@gmail.com](mailto:duyphan.developer@gmail.com)
