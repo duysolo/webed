@@ -6,7 +6,7 @@
 
 ## Demo
 - Demo site: [https://cms.sgsoft-studio.com/](https://cms.sgsoft-studio.com/)
-- Admin demo site: [https://cms.sgsoft-studio.com/admincp](https://cms.sgsoft-studio.com/admincp) (demo/demo1234)
+- Admin demo site: [https://cms.sgsoft-studio.com/admincp](https://cms.sgsoft-studio.com/admincp) (demo@webed.com/demo1234)
 
 ### Documentation
 - [Documentation page](https://webed.sgsoft-studio.com/docs/3.1/overview)
