@@ -8,6 +8,8 @@
 - Demo site: [https://cms.sgsoft-studio.com/](https://cms.sgsoft-studio.com/)
 - Admin demo site: [https://cms.sgsoft-studio.com/admincp](https://cms.sgsoft-studio.com/admincp) (demo@webed.com/demo1234)
 
+If you cannot login, please visit this link [https://cms.sgsoft-studio.com/reset-password](https://cms.sgsoft-studio.com/reset-password) to reset password.
+
 ### Documentation
 - [Documentation page](https://webed.sgsoft-studio.com/docs/3.1/overview)
 - Link repos documentation: [github.com/sgsoft-studio/docs-site](https://github.com/sgsoft-studio/docs-site)
