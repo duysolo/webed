@@ -43,6 +43,8 @@ class InstallCmsTest extends TestCase
     public function testInstall()
     {
         try {
+            Artisan::call('key:generate');
+
             $this->registerBaseInstallServiceProvider();
 
             $this->roleRepository = app(RoleRepositoryContract::class);
