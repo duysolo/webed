@@ -99,5 +99,3 @@ All plugins with released version is `4.0.*` will stable with WebEd 4.0.
 
 ## Need more support?
 - Email: [duyphan.developer@gmail.com](mailto:duyphan.developer@gmail.com)
-- Facebook: [Tedozi Manson](https://www.facebook.com/duyphan.developer)
-- Skype: tedozi.manson
