@@ -16,10 +16,11 @@ If you cannot login, please visit this link [https://cms.sgsoft-studio.com/reset
 
 #### WebEd is a free open source!
 
-### Donate
-If you interested in and wanna help me on WebEd development.
+# WebEd has been discontinued
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/duyphan2502)
+I would like to say thanks that you guys use this cms, but I'm so appreciated that I cannot continue develop WebEd.
+I do not have enough time and my financial situation is not good. I'm so sorry. ^^
+You guys can use another cms, such as Voyager,...
 
 ### Some cool features of WebEd CMS:
 - Modular packages.
